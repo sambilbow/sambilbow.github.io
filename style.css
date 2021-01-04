@@ -307,7 +307,7 @@ h3{
 } */
 
 
-.avatar {
+img.avatar {
     width:128px;
     margin: 10px;
     border:3px solid #8fbcbb;
@@ -317,8 +317,8 @@ h3{
 }
 
 .biotxt {
-    width: 76%;
     float: right;
+    margin-left: 20px;
     margin-bottom: 0;
 }
 
