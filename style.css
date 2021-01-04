@@ -1,23 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&display=swap');
 html {
     -webkit-text-size-adjust: 100%;
 }
 
-/* jetbrains-mono-regular - latin */
-@font-face {
-    font-family: 'JetBrainsMono';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/fonts/jetbrains-mono-v1-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('/fonts/jetbrains-mono-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/fonts/jetbrains-mono-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  }
-  
 
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'JetBrainsMono';
+    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     font-weight: 200;
     line-height: 22px;
