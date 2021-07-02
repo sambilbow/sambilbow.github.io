@@ -114,7 +114,7 @@ var num_media = 3;
 
 
 <div class="info">
-    <span class="title">northstar~</span><br />
+    <span class="title" style="text-decoration: underline;">northstar~</span><br />
     <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
@@ -123,20 +123,71 @@ var num_media = 3;
 
 <div id="text" class="text">
     
-    <h2>Summary</h2>
+    <h2>Hardware (July - December 2020)</h2>
+    <br>    
+    <h3>Shopping List</h2>
+    <p style=color:var(--gruv-red)>£300 <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">CombineReality Deck X Kit A</a> (buy Kit B if you don't have access to a 3d printer for +£100)</p>
+    <p style=color:var(--gruv-red)>£110 <a href="https://www.mouser.co.uk/new/intel/intel-realsense-t261-module/">Intel T261</a></p>
+    <p style=color:var(--gruv-red)>£100 <a href="https://www.smart-prototyping.com/index.php?route=product/product&product_id=44582">Ultraleap Stereo IR 170</a> (or use a Leap Motion Controller if you already have one)</p>
+    <p>---</p>
+    <p style=color:var(--gruv-red)>£510 Total Cost (£610 if you don't have access to a 3d printer) </p>
+    <br><br>
+    <h3>3D Printing</h3>
     <p>
-        If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing ‘Multisensory Augmented Reality (MSAR) Experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.</p>
-    <p>
-        This project (northstar~) uses the open-souce Project North Star HMD from Leap Motion, whose general documentation can be found in the resources section. I am using the Project Esky MRTK Unity Implementation for building the software in Unity3D, which is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a> (massive thank you for all the hours you have spent helping me with errors and bugs). 
+        I started printing the parts (<a href="https://github.com/CombineReality/Deck-X/tree/main/Deck_X/STL_files">which are now available here</a>) between July and September, 
     </p>
+
+    <h3>Electricals and Sensors</h3>
     <p>
-        This page outlines my use of the system which started around June of 2020 and is ongoing. To clarify, the original design has been open sourced by Leap Motion since 2018, but there have been a fair few community revisions and updates to the design (<a href="https://docs.projectnorthstar.org/#variations">see more here</a>). This page documents the development of the CombineReality Deck X version of the Project North Star HMD. CombineReality is run by Noah Zerkin, who has provided countless support to my own project, so thanks Noah! He's also pretty much the only inexpensive parts sourcer of the <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">electrical bits needed for the headset</a>.
+        Building the headset involves assembling the electrical components and the sensors into the 3D printed parts. For the Deck X, these electrical components are:
+        <ul>
+            <li>
+                Intel T261 (6DOF Sensor)
+            </li>
+            <li>
+                Ultraleap Stereo IR 170 (Hand Sensor)
+            </li>
+            <li>
+                Display Board (The board which provides power to the two displays, and receives their signal via a mini Display Port cable)
+            </li>
+            <li>
+                CombineReality Integrator (CR's solution to reduce cables: in older iterations of the HMD, you needed a USB cable to power the display board as well as each of the sensors. This amounted to four cables. The Integrator 'integrates' everything with one unidirectional USB C - A cable.
+                <ul>
+                    <li>
+                        It contains a USB C hub to power and relay sensor data from two USB 3.1 and one USB 2.0 connectors 
+                    </li>
+                    <li>
+                        Sends power to the Display Board via a connector and capacitor board.
+                    </li>
+                    <li>
+                        Contains a 3GB on-board flash drive
+                    </li>
+                    <li>
+                        Features an arduino-compoatible microcontroller (allows further sensors, and integrates the D-Pad on the lid)
+                    </li>
+                    <li>
+                        Power for a fan to cool the T261 and all other inner components
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Lid D-Pad (CR's 6 button solution to allow hassle-free calibration and easy resetting)
+            </li>
+
+            <li>
+                Capacitor Board (to power the Display Board from the Integrator)
+            </li>
+            <li>
+                Screens (two screens that add up to a 2880x1600 120Hz display extension to your computer)
+            </li>
+        </ul>
     </p>
     
-    
-    <br><br>   
+    <h3>Assembly</h3>
+    <p>The full assembly guide for the CombineReality Deck X version of the North Star HMD is available <a href="https://docs.projectnorthstar.org/mechanical/combine-reality-deck-x/deck-x-assembly-guide">here</a>.</p>
+    <br><br>  
    
-    <h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale (May - July 2020) --></a></h3>
+    <h3 style="text-align: center;" id="bottom-nav"><a href="inspiration.html"><-- Inspiration & Rationale (May - July 2020)</a><a href="calibration.html">Software: Calibration (December - May 2021) --></a></h3>
 
     <br><br>
     <div style="text-align: center;">

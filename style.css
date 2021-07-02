@@ -215,6 +215,7 @@ body {
     font-weight: 200;
     line-height: 22px;
     background-color: var(--gruv-dark);
+    height: 100%;
     /*text-transform: lowercase;*/
 }
 
@@ -226,6 +227,14 @@ div {
 
 p {
     margin-top: 0px;
+}
+
+p > a {
+    color: var(--gruv-yellow);
+}
+
+p > a:hover {
+    color: var(--gruv-blue);
 }
 
 #header {
@@ -263,13 +272,17 @@ p {
 html {
     margin-left: calc(100vw - 100%);
     margin-right: 0;
+    height: 100%;
 }
 
 
 #content {
     max-width: 800px;
     padding: 20px;
-    margin: auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
 }
 
 #grid {
@@ -381,8 +394,7 @@ html {
 
 /* Rounded border */
 hr.rounded {
-    border-top: 2px solid var(--gruv-light);
-    border-bottom: 2px solid var(--gruv-light);
+    border: 2px solid var(--gruv-light);
     border-radius: 8px;
   }
 
@@ -427,6 +439,10 @@ a {
     color: var(--gruv-light);
 }
 
+#name > a:hover {
+    color: var(--gruv-blue);
+}
+
 a:hover {
     color: var(--gruv-blue);
 }
@@ -452,6 +468,10 @@ a:hover {
     color: var(--gruv-purple);
 }
 
+#links {
+    display: flex;
+    justify-content: space-between;
+}
 
 ul {
     display: block;
@@ -538,7 +558,7 @@ img.avatar {
 }
 
 .biotxt > p {
-    color: var(--gruv-blue);
+    color: var(--gruv-light);
 }
 
 .bioavatar {
@@ -577,4 +597,42 @@ ul > li {
 
 #eng > a {
     color: var(--gruv-purple);
+}
+
+#recent > a{
+    color: var(--gruv-blue);
+    font-size: 20px;
+}
+#recent > a:hover{
+    color: var(--gruv-orange);
+}
+
+#bottom-nav > a{
+    color: var(--gruv-orange)
+}
+
+#bottom-nav > a:hover {
+    color: var(--gruv-aqua);
+}
+
+#bottom-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#bottom-nav-first > a{
+    color: var(--gruv-orange)
+}
+
+#bottom-nav-first > a:hover {
+    color: var(--gruv-aqua);
+}
+
+#bottom-nav-first {
+    display: flex;
+    justify-content: right;
+}
+
+.recent-list {
+    line-height: 4px;
 }

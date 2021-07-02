@@ -22,12 +22,8 @@
     <link rel="manifest" href="site.webmanifest.html">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" type="text/css" href="style.css" />
-
-
 </head>
 <body>
-
-
 <div id="header">
     <div id="name"><a href="index.html" alt="about" style="color: var(--gruv-blue);">sam bilbow</a></div>
     <div id="menu">
@@ -44,24 +40,30 @@
             <tr>
                 <td>
                     <div class="bioavatar">
-                        <img class="avatar"src="roses.JPG">
+                        <img class="avatar"src="roses.JPG"style="
+                        width:128px;
+                        margin: 10px;
+                        border:3px solid var(--gruv-blue);
+                        border-radius: 500px;
+                        -webkit-border-radius: 500px;
+                        -moz-border-radius: 500px;">
                     </div>
                 </td>
                 <td style="margin-left: 20px;">
-                    <div class="biotxt">
-                        <h3>about me</h3>
-                        <p>Hi! I'm a music technology PhD student at the University of Sussex. My current research is in computational art, augmented reality, and multisensory displays for human-computer interaction.</p>
+                    <div class="biotxt" style="text-align:justify">
+                        <h3 style="color: var(--gruv-blue)">about me</h3>
+                        <p style="color: var(--gruv-blue)">Hi! I'm a music technology PhD student at the University of Sussex. My current research is in computational art, augmented reality (AR), and multisensory displays for human-computer interaction.</p>
                         <br>
-                        <h3>view <a href="cv_04_23_web.pdf">cv.pdf</a></h3>
+    
                         <div id="links">
-                            <a href="https://twitter.com/sambilbow" target="_blank">twitter
-                            </a>
-                            <span>  </span>
-                            <a href="https://github.com/sambilbow" target="_blank">github
-                            </a>
-                            <span>  </span>
-                            <a href="https://profiles.sussex.ac.uk/p376006-sam-bilbow" target="_blank">sussex
-                            </a>                    
+                            <a  style="color: var(--gruv-blue);"href="cv_04_23_web.pdf">cv</a>
+                            <a  style="color: var(--gruv-blue);"href="https://twitter.com/sambilbow" target="_blank">twitter</a>
+                            <a  style="color: var(--gruv-blue);"href="https://github.com/sambilbow" target="_blank">github </a>
+
+                            <a  style="color: var(--gruv-blue);"href="https://profiles.sussex.ac.uk/p376006-sam-bilbow" target="_blank">sussex</a> 
+                            <a  style="color: var(--gruv-blue);"href="https://ko-fi.com/sambilbow">donate</a>
+                            <a  style="color: var(--gruv-blue);"href="https://github.com/belluzj/fantasque-sans">font</a>
+                            <a  style="color: var(--gruv-blue);"href="https://github.com/sainnhe/gruvbox-material">colour scheme</a>                  
                         </div>
                         
                     </div>
@@ -70,6 +72,64 @@
         </table>
         <hr class="rounded">
     </div>
+    </div>
+    <div id="grid">
+        <br>
+        <span class="title" style="color: var(--gruv-blue);">Recent Projects</span>
+        <p>All of my work can be found in the <a href="/projects/index.html">projects page</a>, but here are some highlights!</p>
+        <p>The presentation (below) and <a href="https://dl.acm.org/doi/pdf/10.1145/3430524.3443690">Paper</a> at TEI '21 GSC help in explaining my overall aims and objectives of my PhD</p>
+        <div>
+            <iframe width="768" height="425" src="https://www.youtube-nocookie.com/embed/zyO43URZZDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div>
+            
+            <p id="recent"><a href="/projects/2020_12northstar/index.html">northstar~ (ongoing)</a></p>
+            <p>This is my implementation of the open-source Project North Star AR headset in multisensory augmented reality computational art experiences. Here are some links to my creative process with it:</p>
+            
+            <p class="recent-list"><a href="projects/2020_12northstar/index.html">Summary</a></p>
+            <p class="recent-list"><a href="projects/2020_12northstar/inspiration.html">Inspiration</a></p>
+            <p class="recent-list"><a href="projects/2020_12northstar/hardware.html">Hardware</a></p>
+            <p class="recent-list"><a href="projects/2020_12northstar/calibration.html">Software: Calibration</a></p>
+            <p class="recent-list"><a href="projects/2020_12northstar/demos.html">Software: Running Demos</a></p>
+            <p class="recent-list"><a href="projects/2020_12northstar/software.html">Software: Unity3D Experiences</a></p>
+            
+        </div>
+        
+        <div>
+            <p id="recent"><a href="projects/2020_05area/index.html">area~ (2020)</a></p>
+            <p>The area~ system (augmented reality environmental audio) affords users the ability to spectromorphologically manipulate sounds from their environment into a virtual audio environment, through bone conduction headphones and head & hand tracking</p>
+            <p class="recent-list"><a href="projects/2020_05area/index.html">360 / Ambisonic Documentation (2m38s)</a></p>
+            <p class="recent-list"><a href="projects/2020_05area/index.html#area-summary">Summary</a></p>
+            <p class="recent-list"><a href="projects/2020_05area/index.html#area-tech">Technologies</a></p>
+            <p class="recent-list"><a href="projects/2020_05area/index.html#area-experience">Experiences</a></p>
+            <p class="recent-list"><a href="projects/2020_05area/index.html#audio">Audio Clips</a></p>
+        </div>
+        
+        <div>
+            <p id="recent"><a href="projects/2019_08node/index.html">nodenecklace (2019)</a></p>
+            <p>The Node Necklace is a generative, interactive, 8 channel audio installation built in Max MSP and Arduino. It uses methods of abstraction, pseudo-randomness and latency to effectively ‘black box’ interactions thus blurring the lines of agency between the participants, the system, and myself as a performer</p>
+            <p class="recent-list"><a href="projects/2019_08node/index.html">360 / Ambisonic Installation (1h20m)</a></p>
+            <p class="recent-list"><a href="projects/2019_08node/index.html">Summary</a></p>
+            <p class="recent-list"><a href="projects/2019_08node/essay.pdf">Essay</a></p>
+        </div>
+
+    </div>
+</div>
+</main>
+
+
+
+<script type="text/javascript">
+</script>
+
+</body>
+
+
+
+</html>
+
+
 
     <!-- <div>
         <iframe width="768" height="425" src="https://www.youtube-nocookie.com/embed/zyO43URZZDk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -89,9 +149,9 @@
     <p style="color: var(--gruv-yellow)">
         Funding: Leverhulme Trust Scholarship Programme: "from sensation to perception and awareness"
     </p>
-    <br> -->
+    <br>
 
-    <!-- <h3>view <a href="cv_04_23_web.pdf">cv.pdf</a></h3>
+    <h3>view <a href="cv_04_23_web.pdf">cv.pdf</a></h3>
     
     <p style="color: var(--gruv-green)">
         BA Music Technology, First Class Honours.
@@ -100,22 +160,11 @@
         </p>
     </p>
     <br>
-    <br> -->
+    <br>
 
-    <!-- <p style="color: var(--gruv-purple);">
+    <p style="color: var(--gruv-purple);">
         MA Music and Sonic Media, Distinction.
         <p style="color: var(--gruv-purple);">
             University of Sussex, UK (2018-2019)
         </p>
     </p> -->
-    
-    
-</div>
-
-
-</main>
-
-<script type="text/javascript">
-</script>
-</body>
-</html>
