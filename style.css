@@ -3,16 +3,219 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Bold.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Bold.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Bold.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Bold.svg#FantasqueSansMono-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Bold_1.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Bold_1.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Bold_1.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Bold_1.svg#FantasqueSansMono-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Bold_2.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Bold_2.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Bold_2.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Bold_2.svg#FantasqueSansMono-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Bold_3.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Bold_3.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Bold_3.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Bold_3.svg#FantasqueSansMono-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Regular.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Regular.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Regular.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Regular.svg#FantasqueSansMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Regular_1.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Regular_1.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Regular_1.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Regular_1.svg#FantasqueSansMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Regular_2.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Regular_2.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Regular_2.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Regular_2.svg#FantasqueSansMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Italic.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Italic.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Italic.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Italic.svg#FantasqueSansMono-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Italic_1.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Italic_1.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Italic_1.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Italic_1.svg#FantasqueSansMono-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Italic_2.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Italic_2.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Italic_2.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Italic_2.svg#FantasqueSansMono-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Regular_3.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Regular_3.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Regular_3.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Regular_3.svg#FantasqueSansMono-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-BoldItalic.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-BoldItalic.woff') format('woff'),
+        url('fonts/FantasqueSansMono-BoldItalic.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-BoldItalic.svg#FantasqueSansMono-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-BoldItalic_1.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-BoldItalic_1.woff') format('woff'),
+        url('fonts/FantasqueSansMono-BoldItalic_1.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-BoldItalic_1.svg#FantasqueSansMono-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-BoldItalic_2.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-BoldItalic_2.woff') format('woff'),
+        url('fonts/FantasqueSansMono-BoldItalic_2.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-BoldItalic_2.svg#FantasqueSansMono-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-BoldItalic_3.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-BoldItalic_3.woff') format('woff'),
+        url('fonts/FantasqueSansMono-BoldItalic_3.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-BoldItalic_3.svg#FantasqueSansMono-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fantasque Sans Mono';
+    src: url('fonts/FantasqueSansMono-Italic_3.woff2') format('woff2'),
+        url('fonts/FantasqueSansMono-Italic_3.woff') format('woff'),
+        url('fonts/FantasqueSansMono-Italic_3.ttf') format('truetype'),
+        url('fonts/FantasqueSansMono-Italic_3.svg#FantasqueSansMono-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+:root {
+    --nrd-dark1: #2e3440;
+    --nrd-dark2: #3b4252;
+    --nrd-dark3: #434c5e;
+    --nrd-dark4: #4c566a;
+    --nrd-light1: #d8dee9;
+    --nrd-light2: #e5e9f0;
+    --nrd-light3: #eceff4;
+    --nrd-red: #bf616a;
+    --nrd-orange: #d08770;
+    --nrd-yellow: #ebcb8b;
+    --nrd-green: #a3be8c;
+    --nrd-purple: #b48ead;
+
+    --gruv-dark: #2a2827;
+    --gruv-light: #ddc7a1;
+    --gruv-red: #ea6962;
+    --gruv-orange: #e78a4e;
+    --gruv-yellow: #d8a657;
+    --gruv-green: #a9b665;
+    --gruv-aqua: #89b482;
+    --gruv-blue: #7daea3;
+    --gruv-purple: #d3869b;
+  }
+  
 
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Fantasque Sans Mono', monospace;
     font-size: 14px;
     font-weight: 200;
     line-height: 22px;
-    background-color: #2e3440;
-    text-transform: lowercase;
+    background-color: var(--gruv-dark);
+    /*text-transform: lowercase;*/
 }
 
 div {
@@ -57,6 +260,10 @@ p {
     }
 
 }
+html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+}
 
 
 #content {
@@ -67,7 +274,7 @@ p {
 
 #grid {
     max-width: 800px;
-    padding: 20px;
+    /* padding: 20px; */
     margin: auto;
     clear: both;
 }
@@ -79,25 +286,27 @@ p {
         -webkit-transition: opacity .5s;
         transition: opacity .5s;
         transition-delay: .5s;
+        margin: auto;
+        
     }
 
         #grid .work .image {
             position: relative;
             width: 100%;
-            margin: 0px;
+            margin: auto;
             padding: 0px;
             padding-bottom: 56.25%;
-            border:3px solid #8fbcbb;
+            border:3px solid var(--gruv-aqua);
             
         }
 
         #grid .work .image_ongoing {
             position: relative;
             width: 100%;
-            margin: 0px;
+            margin: auto;
             padding: 0px;
             padding-bottom: 56.25%;
-            border:3px solid #d08770;
+            border:3px solid var(--gruv-orange);
             
         }
 
@@ -155,7 +364,7 @@ p {
         }
 
 #audio {
-    background-color: #2e3440;
+    background-color: var(--gruv-dark);
     padding: 5px;
     padding-bottom: 0px;
     margin-bottom: 30px;
@@ -169,6 +378,13 @@ p {
     clear: both;
     margin-bottom: 0px;
 }
+
+/* Rounded border */
+hr.rounded {
+    border-top: 2px solid var(--gruv-light);
+    border-bottom: 2px solid var(--gruv-light);
+    border-radius: 8px;
+  }
 
 .title {
     font-size: 24px;
@@ -196,50 +412,46 @@ iframe {
 
 p > a {
     text-decoration: none;
-    color: #ebcb8b;
+    color: var(--gruv-yellow);
 }
 a {
     text-decoration: none;
-    color: white;
+    color: var(--gruv-light);
 }
 #menu > a {
     text-decoration: none;
-    color: white;
+    color: var(--gruv-light);
 }
 #name > a {
     text-decoration: none;
-    color: white;
+    color: var(--gruv-light);
 }
 
 a:hover {
-    color: #8fbcbb;
+    color: var(--gruv-blue);
 }
 
 #menu > a:nth-child(1):hover {
-    color: #d08770;
+    color: var(--gruv-orange);
 }
 
 #menu > a:nth-child(2):hover {
-    color: #a3be8c;
+    color: var(--gruv-green);
 }
 #menu > a:nth-child(3):hover {
-    color: #b48ead;
+    color: var(--gruv-purple);
 }
 #links > a:nth-child(3):hover {
-    color: #d08770;
+    color: var(--gruv-orange);
 }
 
 #links > a:nth-child(5):hover {
-    color: #a3be8c;
+    color: var(--gruv-blue);
 }
 #links > a:nth-child(3):hover {
-    color: #b48ead;
+    color: var(--gruv-purple);
 }
 
-hr {
-    border: none;
-    border-bottom: 1px solid #eee;
-}
 
 ul {
     display: block;
@@ -249,7 +461,7 @@ ul {
     margin-top: 0px;
     margin-left: 0px;
     margin-bottom: 25px;
-    color: #d8dee9;
+    color: var(--gruv-light);
 }
 
 li {
@@ -273,30 +485,33 @@ li.news {
 }
 
 li span {
-    color: #d8dee9;
+    color: var(--gruv-light);
     padding-right: 10px;
 }
 
 li span.show {
-    color: #d8dee9;
+    color: var(--gruv-light);
 }
 
 p {
-    color: #d8dee9;
+    color: var(--gruv-light);
 }
 
 span{
-    color: #d8dee9
+    color: var(--gruv-light);
 }
 
 h1{
-    color: #d8dee9
+    color: var(--gruv-light);
 }
 h2{
-    color: #d8dee9
+    color: var(--gruv-light);
 }
 h3{
-    color: #d8dee9
+    color: var(--gruv-light);
+}
+h4{
+    color: var(--gruv-light);
 }
 
 /* #name {
@@ -310,7 +525,7 @@ h3{
 img.avatar {
     width:128px;
     margin: 10px;
-    border:3px solid #8fbcbb;
+    border:3px solid var(--gruv-blue);
     border-radius: 500px;
     -webkit-border-radius: 500px;
     -moz-border-radius: 500px;
@@ -323,7 +538,7 @@ img.avatar {
 }
 
 .biotxt > p {
-    color: #8fbcbb;
+    color: var(--gruv-blue);
 }
 
 .bioavatar {
@@ -333,20 +548,33 @@ img.avatar {
 
 .note {
     margin-top: 5px;
-    color: #bf616a;
+    color: var(--gruv-red);
     text-align: center;
     font-size: 11px;
 }
 
 h3 > a {
 
-    color: #ebcb8b;
+    color: var(--gruv-yellow);
 }
 
 text {
-    color: #d8dee9;
+    color: var(--gruv-light);
 }
 
 li > a {
-    color: #ebcb8b;
+    color: var(--gruv-yellow);
+}
+
+ul > li {
+    padding-bottom: 10px;
+}
+
+
+#paper > a {
+    color:var(--gruv-green)
+}
+
+#eng > a {
+    color: var(--gruv-purple);
 }

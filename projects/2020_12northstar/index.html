@@ -57,7 +57,7 @@ var num_media = 3;
 <div id="header">
     <div id="name"><a href="../../index.html" alt="about">sam bilbow</a></div>
     <div id="menu">
-        <a href="../../projects/index.html" alt="projects" style="color: #d08770;">projects</a>
+        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
         <a href="../../writing/index.html" alt="writing">writing</a>
         <a href="../../engagements/index.html" alt="engagements">engagements</a>
     </div>
@@ -196,11 +196,11 @@ var num_media = 3;
     
     
     <h2>Shopping List</h2>
-    <p style=color:#bf616a>£300 <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">CombineReality Deck X Kit A</a> (buy Kit B if you don't have access to a 3d printer for +£100)</p>
-    <p style=color:#bf616a>£110 <a href="https://www.mouser.co.uk/new/intel/intel-realsense-t261-module/">Intel T261</a></p>
-    <p style=color:#bf616a>£100 <a href="https://www.smart-prototyping.com/index.php?route=product/product&product_id=44582">Ultraleap Stereo IR 170</a> (or use a Leap Motion Controller if you already have one)</p>
+    <p style=color:var(--gruv-red)>£300 <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">CombineReality Deck X Kit A</a> (buy Kit B if you don't have access to a 3d printer for +£100)</p>
+    <p style=color:var(--gruv-red)>£110 <a href="https://www.mouser.co.uk/new/intel/intel-realsense-t261-module/">Intel T261</a></p>
+    <p style=color:var(--gruv-red)>£100 <a href="https://www.smart-prototyping.com/index.php?route=product/product&product_id=44582">Ultraleap Stereo IR 170</a> (or use a Leap Motion Controller if you already have one)</p>
     <p>---</p>
-    <p style=color:#bf616a>£510 Total Cost (£610 if you don't have access to a 3d printer) </p>
+    <p style=color:var(--gruv-red)>£510 Total Cost (£610 if you don't have access to a 3d printer) </p>
     <br><br>
     
     <h2>Hardware Process (July - December 2020)</h2>
@@ -263,12 +263,28 @@ var num_media = 3;
     <h2>Software Process (May 2021 - Ongoing)</h2>
 
     <h3>Initiation</h3>
-    <p></p>
+    <p>
+        Originally, my system was very temperatmental. After much deliberation, I realised I must have shorted some part of my integrator. After replacing it, 
+    </p>
     
+    <br>
     <h3>SDKs</h3>
-    <h4>Intel Realsense</h4>
-    <h4>Leap Motion Orion or Ultraleap Gemini</h4>
-
+    <h4>Intel Realsense SDK</h4>
+    <ul>
+        <li>
+            <a href="https://github.com/IntelRealSense/librealsense/releases">Latest Intel RealSense SDK 2.0</a> - you're looking for an asset file like "Intel.RealSense.SDK-WIN10-2.47.0.3309.exe"
+        </li>
+    </ul>
+    <h4>Ultraleap Gemini SDK</h4>
+    <ul>
+        <li>
+            <a href="https://developer.leapmotion.com/gemini-v5-preview/">Leap Developer Kit 5.0.0-preview+52386</a>
+        </li>
+        <li>
+            <a href="https://github.com/leapmotion/UnityModules/tree/feat-multi-device/Multidevice%20Service">Leap Developer Kit 4.0.0+52238</a> - You need to rollback to this driver if you want to run Leap Motion example demonstrations such as <a href="https://drive.google.com/drive/u/0/folders/1o6NCmuz8T7k9R7Mh66pI_O3nZSzBuHJP">Paint and Cubes</a>
+        </li>
+    </ul>
+    <br>
     <h3>Optical Calibration</h3>
     <h4></h4>
     
