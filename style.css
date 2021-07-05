@@ -256,7 +256,7 @@ p > a:hover {
         word-spacing: 10px;
     }
 
-@media screen and (max-width: 455px) {
+@media screen and (max-width: 550px) {
 
     #header #name {
         margin-bottom: 10px;
@@ -268,17 +268,18 @@ p > a:hover {
         text-align: left;
     }
 
+
 }
 html {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
+    margin-left: 17px;
+    margin-right: 17px;
     height: 100%;
+    overflow-y: scroll;
 }
 
 
 #content {
     max-width: 800px;
-    padding: 20px;
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -394,6 +395,7 @@ html {
 
 /* Rounded border */
 hr.rounded {
+    margin-top: 20px;
     border: 2px solid var(--gruv-light);
     border-radius: 8px;
   }
@@ -468,10 +470,15 @@ a:hover {
     color: var(--gruv-purple);
 }
 
-#links {
-    display: flex;
-    justify-content: space-between;
+#links *{
+    margin-right: 10px;
+
 }
+
+div > #links {
+    margin-bottom: 0px;
+}
+
 
 ul {
     display: block;
@@ -555,6 +562,7 @@ img.avatar {
     float: right;
     margin-left: 20px;
     margin-bottom: 0;
+    margin-right: 5px;
 }
 
 .biotxt > p {
