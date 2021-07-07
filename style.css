@@ -367,14 +367,14 @@ html {
         #media #media_thumbs a {
             font-size: 18px;
             font-family: monospace;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
 
         #media #media_thumbs a:hover {
             cursor: pointer;
-            color: black;
+            color: var(--gruv-orange);
         }
 
 #audio {

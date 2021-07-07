@@ -73,39 +73,22 @@ var num_media = 3;
 
 <div id="content">
 
-<div id="media">
-    <div id="media_object">
-        
-        
-        
+    <div id="media">
+        <div id="media_object">
             
-        
+                <div id="media_0" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/7m6J8W6Ib4w" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
             
-                
-                <div class="embed-container" id="media_0">
-                    <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar_1.jpg" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
-                </div>
-                
             
-        
             
                 
-                <img id="media_1" src="northstar_2.jpg" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
-                
             
-        
-            
-                
-                <img id="media_2" src="northstar_3.jpg" alt="North Star 3" onClick="displayMedia('0'); return false;" >
-                
-            
-        
+        </div>
+        <p class="note"><b><i>LeapMotion video from 2018 showcasing through-combiner footage of the robust hand tracking in North Star</b></i></p>
     </div>
     
-    <div id="media_thumbs">
-    </div>
+ 
     
-</div>
+
 <div class="clear"></div>
 
 
@@ -147,101 +130,6 @@ var num_media = 3;
         <br><br>
     </div>
    
-    <!-- 
-    <h2>Shopping List</h2>
-    <p style=color:var(--gruv-red)>£300 <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">CombineReality Deck X Kit A</a> (buy Kit B if you don't have access to a 3d printer for +£100)</p>
-    <p style=color:var(--gruv-red)>£110 <a href="https://www.mouser.co.uk/new/intel/intel-realsense-t261-module/">Intel T261</a></p>
-    <p style=color:var(--gruv-red)>£100 <a href="https://www.smart-prototyping.com/index.php?route=product/product&product_id=44582">Ultraleap Stereo IR 170</a> (or use a Leap Motion Controller if you already have one)</p>
-    <p>---</p>
-    <p style=color:var(--gruv-red)>£510 Total Cost (£610 if you don't have access to a 3d printer) </p>
-    <br><br>
-    
-    <h2>Hardware Process (July - December 2020)</h2>
-    <h3>3D Printing</h3>
-    <p>
-        I started printing the parts (<a href="https://github.com/CombineReality/Deck-X/tree/main/Deck_X/STL_files">which are now available here</a>) between July and September, 
-    </p>
-
-    <h3>Electricals and Sensors</h3>
-    <p>
-        Building the headset involves assembling the electrical components and the sensors into the 3D printed parts. For the Deck X, these electrical components are:
-        <ul>
-            <li>
-                Intel T261 (6DOF Sensor)
-            </li>
-            <li>
-                Ultraleap Stereo IR 170 (Hand Sensor)
-            </li>
-            <li>
-                Display Board (The board which provides power to the two displays, and receives their signal via a mini Display Port cable)
-            </li>
-            <li>
-                CombineReality Integrator (CR's solution to reduce cables: in older iterations of the HMD, you needed a USB cable to power the display board as well as each of the sensors. This amounted to four cables. The Integrator 'integrates' everything with one unidirectional USB C - A cable.
-                <ul>
-                    <li>
-                        It contains a USB C hub to power and relay sensor data from two USB 3.1 and one USB 2.0 connectors 
-                    </li>
-                    <li>
-                        Sends power to the Display Board via a connector and capacitor board.
-                    </li>
-                    <li>
-                        Contains a 3GB on-board flash drive
-                    </li>
-                    <li>
-                        Features an arduino-compoatible microcontroller (allows further sensors, and integrates the D-Pad on the lid)
-                    </li>
-                    <li>
-                        Power for a fan to cool the T261 and all other inner components
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Lid D-Pad (CR's 6 button solution to allow hassle-free calibration and easy resetting)
-            </li>
-
-            <li>
-                Capacitor Board (to power the Display Board from the Integrator)
-            </li>
-            <li>
-                Screens (two screens that add up to a 2880x1600 120Hz display extension to your computer)
-            </li>
-        </ul>
-    </p>
-    
-    <h3>Assembly</h3>
-    <p>The full assembly guide for the CombineReality Deck X version of the North Star HMD is available <a href="https://docs.projectnorthstar.org/mechanical/combine-reality-deck-x/deck-x-assembly-guide">here</a>.</p>
-    <br><br>
-    
-    
-    <h2>Software Process (May 2021 - Ongoing)</h2>
-
-    <h3>Initiation</h3>
-    <p>
-        Originally, my system was very temperatmental. After much deliberation, I realised I must have shorted some part of my integrator. After replacing it, 
-    </p>
-    
-    <br>
-    <h3>SDKs</h3>
-    <h4>Intel Realsense SDK</h4>
-    <ul>
-        <li>
-            <a href="https://github.com/IntelRealSense/librealsense/releases">Latest Intel RealSense SDK 2.0</a> - you're looking for an asset file like "Intel.RealSense.SDK-WIN10-2.47.0.3309.exe"
-        </li>
-    </ul>
-    <h4>Ultraleap Gemini SDK</h4>
-    <ul>
-        <li>
-            <a href="https://developer.leapmotion.com/gemini-v5-preview/">Leap Developer Kit 5.0.0-preview+52386</a>
-        </li>
-        <li>
-            <a href="https://github.com/leapmotion/UnityModules/tree/feat-multi-device/Multidevice%20Service">Leap Developer Kit 4.0.0+52238</a> - You need to rollback to this driver if you want to run Leap Motion example demonstrations such as <a href="https://drive.google.com/drive/u/0/folders/1o6NCmuz8T7k9R7Mh66pI_O3nZSzBuHJP">Paint and Cubes</a>
-        </li>
-    </ul>
-    <br>
-    <h3>Optical Calibration</h3>
-    <h4></h4>
-    
-    <h3>Unity3D MRTK Example Scene with Project Esky</h3> -->
 
 </div>
 

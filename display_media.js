@@ -4,7 +4,7 @@ var setup = function() {
     if (num_media > 1) {
         for (var m=0; m<num_media; m++) {
             var sq = document.createElement('a');
-            sq.innerHTML = "&#9675;";
+            sq.innerHTML = "&#9633;";
             sq.setAttribute('onClick', 'javascript:displayMedia(' + m + '); return false;'); 
             el.appendChild(sq);
         }
@@ -30,9 +30,9 @@ var displayMedia = function(index) {
         var el = document.getElementById('media_thumbs');
         for (c in el.childNodes) {
             if (c == index + 1) {
-                el.childNodes[c].innerHTML = "&#9679;";
+                el.childNodes[c].innerHTML = "&#9632;";
             } else {
-                el.childNodes[c].innerHTML = "&#9675;";
+                el.childNodes[c].innerHTML = "&#9633;";
             }
         }
     }
