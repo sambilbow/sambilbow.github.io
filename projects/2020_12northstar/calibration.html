@@ -73,41 +73,7 @@ var num_media = 3;
 
 <div id="content">
 
-<div id="media">
-    <div id="media_object">
-        
-        
-        
-            
-        
-            
-                
-                <div class="embed-container" id="media_0">
-                    <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-012.JPEG" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
-                </div>
-                
-            
-        
-            
-                
-                <img id="media_1" src="northstar-013.JPEG" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
-                
-            
-        
-            
-                
-                <img id="media_2" src="northstar-014.JPEG" alt="North Star 3" onClick="displayMedia('3'); return false;" >
-                <img id="media_3" src="northstar-015.JPEG" alt="North Star 4" onClick="displayMedia('0'); return false;" >
-                
-            
-        
-    </div>
-    
-    <div id="media_thumbs">
-    </div>
-    <p class="note"><b><i>Historical 2D (V2) Calibration Stand vs New T26x Hybrid Calibrator</b></i></p>
 
-</div>
 <div class="clear"></div>
 
 
@@ -121,7 +87,7 @@ var num_media = 3;
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
 </div>
-
+<h3 style="text-align: center;" id="bottom-nav"><a href="hardware.html"><-- Hardware (July - December 2020)</a><a href="demos.html">Software: Running Demos (May - July 2021) --></a></h3>
 
 <div id="text" class="text">
     
@@ -135,7 +101,7 @@ var num_media = 3;
     </p>
     
     <br>
-    <h3>SDKs (software development kits that make available the data from sensors)</h3>
+    <h3>Software Development Kits Needed</h3>
     <h4>Intel Realsense SDK (enables head tracking)</h4>
     <ul>
         <li>
@@ -167,6 +133,41 @@ var num_media = 3;
         <li>3D Calibration (V1) requires the use of two extra cameras and is therefore more expensive and a longer process. It was necessary to do this before the North Star had a 6DoF sensor with a dual-camera at its disposal</li>
         <li>2D Calibration (V2) uses the dual-camera in the 6DoF sensor (Intel T261), and is therefore cheaper and quicker.</li>
     </ul>
+    <div id="media">
+        <div id="media_object">
+            
+            
+            
+                
+            
+                
+                    
+                    <div class="embed-container" id="media_0">
+                        <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-012.JPEG" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
+                    </div>
+                    
+                
+            
+                
+                    
+                    <img id="media_1" src="northstar-013.JPEG" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
+                    
+                
+            
+                
+                    
+                    <img id="media_2" src="northstar-014.JPEG" alt="North Star 3" onClick="displayMedia('3'); return false;" >
+                    <img id="media_3" src="northstar-015.JPEG" alt="North Star 4" onClick="displayMedia('0'); return false;" >
+                    
+                
+            
+        </div>
+        
+        <div id="media_thumbs">
+        </div>
+        <p class="note"><b><i>Historical 2D (V2) Calibration Stand vs New T26x Hybrid Calibrator</b></i></p>
+    
+    </div>
     <p>2D (V2) calibration used to require placing the headset on a special calibration stand, taking the T261 and anchoring it where the eyes would sit behind the headset. These are the first photos in the slideshow.</p>
     <p>Thanks to the new <a href="https://github.com/CombineReality/Deck-X/blob/main/Deck_X/STL_files/Calibration_Accessories/DX_T261_Hybrid_Calibrator.stl">T26x Hybrid Calibrator</a>, the stand is no longer necessary, as is shown in the last two photos  </p>
     <p>Calibration is fairly simple and requires running premade python scripts. <a href="https://docs.projectnorthstar.org/calibration/2d-calibration">Instructions are here</a> (I created a custom anaconda virtual environment (venv) to install the packages and run the calibration scripts from this venv). The output are four number arrays, which can later be used in Unity to make sure that each eye receives calibrated visuals from the screens. I keep these arrays in a sacred folder called "CALIBRATIONS DO NOT TOUCH"</p>

@@ -72,41 +72,6 @@ var num_media = 3;
 
 
 <div id="content">
-
-<div id="media">
-    <div id="media_object">
-        
-        
-        
-            
-        
-            
-                
-
-                    <div id="media_0" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/4t80D4CcjSQ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-            
-        
-            
-                
-                    <div id="media_1" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/qGXAgjjVXpw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                
-                    <div id="media_2" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src=" https://www.youtube.com/embed/6XIZZD9S-dk" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-                    
-                
-                    <div id="media_3" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/XeKTBSjXWn4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-
-                
-            
-        
-    </div>
-    
-    <div id="media_thumbs">
-    </div>
-    
-</div>
 <div class="clear"></div>
 
 
@@ -120,25 +85,56 @@ var num_media = 3;
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
 </div>
-
+<h3 style="text-align: center;" id="bottom-nav"><a href="calibration.html"><-- Software: Calibration (December - May 2021)</a><a href="software.html">Software: Unity 3D (July - Ongoing 2021) --></a></h3>
 
 <div id="text" class="text">
     
     <h2>Software: Running Demos (May - July 2021)</h2>
-    <p>Now that the headset is built, the SDKs are installed, and I have a 2D optical calibration, it was time to run a few demos </p>
+    <h3>Through-Combiner Recording</h3>
+    <p>
+        In July I added a camera to the headset, to be specific, I have a Raspberry Pi Zero, taking power over USB 2 ribbon cable from the CombineReality Integrator, connected to a ZeroCam (small camera), placed just to the right of the left screen on the headset. This results in the camera being in front of my left eye. Despite making it harder to see objects, for documentation and archival purposes, the camera has been a great addition. Following these instructions, the camera shows up as a standard USB camera through the headset's USB 3 cable. This cable to the PC is now not only powering and transferring data to and from the sensors and displays, but now also the new camera, all through one cable!
+    </p>
+
+    
+    <div class="container">
+        <img src="northstar-016.JPEG" alt="">
+        <img src="northstar-017.JPEG" alt="">
+        <img src="northstar-018.JPEG" alt="">
+    </div>
+    <p class="caption"><b><i>Raspberry Pi Zero + ZeroCam Through-Combiner Setup</b></i></p>
+
+    <p>In order to take these videos, I use <a href="https://obsproject.com/">OBS</a> to composite my webcam, specific portions of my screen (during Unity Demos), as well as the through-combiner camera I have set up, and later on, binaural audio. Overall, whilst it looks and feels hacked together, and could probably do with a 3D printed enclosure, the system works perfectly well for documenting the experience of wearing the headset.</p>
+
+    <div class="youtube-video"><img src="northstar-019.gif" alt=""></div>
+    <p class="caption"><b><i>My OBS camera/screen/audio compositing setup</b></i></p>
+
+    <br>
     <h3>Paint & Cubes</h3>
-    <p>The first video above shows this original Unity demo from Leap Motion. As mentioned in the <a href="calibration.html">calibration page</a> , if you want to run this yourself, you need to be on the multi-device support SDK.</p>
+    <p>Now that the headset is built, the SDKs are installed, and I have a 2D optical calibration, it was time to run a few demos. The first video above shows this original Unity demo from Leap Motion. As mentioned in the <a href="calibration.html">calibration page</a> , if you want to run this yourself, you need to be on the multi-device support SDK.</p>  
+    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/4t80D4CcjSQ" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+  
+    <br>
     <h3>Project Esky</h3>
+   
+            
     <p>Project Esky is a open-source software platform apable of high fidelity natural hand-interactions with virtual content, high field of view, and spatial mapping for environment interactions. This is the software framework by which I am creating my AR experiences in Unity. It is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a>, who has helped a lot in helping my project run smoother. Esky allows the North Star to be emulated as a Windows Mixed Reality Headset, meaning that you can use the Microsoft Mixed Reality Toolkit in Unity3D for desigining interactions (like the Microsoft Hololens 2 does)</p>
-    <h4>Configuration</h3>
-    <p>The third video covers importing my optical calbration into the Project Esky Unity Implementation.</p>
-    <p>The fourth video covers hand alignment, which makes sure that your virtual and real hands are aligned.</p>
-    <h3>Through-Combiner Documentation [coming soon]</h3>
+    
+    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/qGXAgjjVXpw" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+    <p>There are a couple of important steps I had to go through before I could use Esky properly, importing calibration, setting up display settings, and aligning my hands. The third video covers importing my optical calbration into Project Esky, and the fourth video covers hand alignment, which makes sure that your virtual and real hands are aligned.</p>
+
+    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src=" https://www.youtube.com/embed/6XIZZD9S-dk" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    
+    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/XeKTBSjXWn4" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+
+    <p>From here on, when working in Unity 3D, it is assumed that I am referring to the Project Esky Unity Implementation</p>
+    
+
       
 
 </div>
    
-<h3 style="text-align: center;" id="bottom-nav"><a href="calibration.html"><-- Software: Calibration (December - May 2021)</a><a href="software.html">Software: Unity3D (July - Ongoing 2021) --></a></h3>
+<h3 style="text-align: center;" id="bottom-nav"><a href="calibration.html"><-- Software: Calibration (December - May 2021)</a><a href="software.html">Software: Unity 3D (July - Ongoing 2021) --></a></h3>
 
 <br><br>
 <div style="text-align: center;">

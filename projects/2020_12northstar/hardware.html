@@ -71,29 +71,7 @@ var num_media = 3;
 
 <div id="content">
 
-<div id="media">
-    <div id="media_object">
- 
-        <div class="embed-container" id="media_0">
-            <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-004.JPEG" alt="North Star 1" onClick="displayMedia('1'); return false;">
-        </div>
-        
-        <img id="media_1" src="northstar-005.JPEG" alt="North Star 2" onClick="displayMedia('2'); return false;">
-        <img id="media_2" src="northstar-006.JPEG" alt="North Star 3" onClick="displayMedia('3'); return false;">
-        <img id="media_3" src="northstar-011.JPEG" alt="North Star 8" onClick="displayMedia('4'); return false;">
-        <img id="media_4" src="northstar-007.JPEG" alt="North Star 4" onClick="displayMedia('5'); return false;">
-        <img id="media_5" src="northstar-008.JPEG" alt="North Star 5" onClick="displayMedia('6'); return false;">
-        <img id="media_6" src="northstar-009.JPEG" alt="North Star 6" onClick="displayMedia('7'); return false;">
-        <img id="media_7" src="northstar-010.JPEG" alt="North Star 7" onClick="displayMedia('0'); return false;">
-        
-        
-    </div>
-    
-    <div id="media_thumbs">
-    </div>
-    <p class="note"><b><i>Some photos of my 3D printing process. Around January I updated to the Ultraleap Stereo IR 170 hand tracker from the Leap Motion Controller, which offers higher field-of-view. This required a reprint of the main optics bracket which is why the headset might look different in some pictures further along the process</b></i></p>
 
-</div>
 <div class="clear"></div>
 
 
@@ -102,24 +80,23 @@ var num_media = 3;
 
 
 <div class="info">
-    <span class="title" style="text-decoration: underline;">northstar~</span><br />
+    <span class="title">northstar~</span><br />
     <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
 </div>
-
+<h3 style="text-align: center;" id="bottom-nav"><a href="inspiration.html"><-- Inspiration & Rationale (May - July 2020)</a><a href="calibration.html">Software: Calibration (December - May 2021) --></a></h3>
 
 <div id="text" class="text">
     
-    <h2>Hardware (July - December 2020)</h2>
-    <br>    
+    <h2>Hardware (July - December 2020)</h2>   
     <h3>Shopping List</h2>
     <p style=color:var(--gruv-red)>£300 <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">CombineReality Deck X Kit A</a> (buy Kit B if you don't have access to a 3d printer for +£100)</p>
     <p style=color:var(--gruv-red)>£110 <a href="https://www.mouser.co.uk/new/intel/intel-realsense-t261-module/">Intel T261</a></p>
     <p style=color:var(--gruv-red)>£100 <a href="https://www.smart-prototyping.com/index.php?route=product/product&product_id=44582">Ultraleap Stereo IR 170</a> (or use a Leap Motion Controller if you already have one)</p>
     <p>---</p>
     <p style=color:var(--gruv-red)>£510 Total Cost (£610 if you don't have access to a 3d printer) </p>
-    <br><br>
+        <br>
     <h3>3D Printing</h3>
     <p>
         I started printing the parts (<a href="https://github.com/CombineReality/Deck-X/tree/main/Deck_X/STL_files">which are now available here</a>) between July and September, 
@@ -170,14 +147,39 @@ var num_media = 3;
             </li>
         </ul>
     </p>
+    <div id="media">
+        <div id="media_object">
+     
+            <div class="embed-container" id="media_0">
+                <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-004.JPEG" alt="North Star 1" onClick="displayMedia('1'); return false;">
+            </div>
+            
+            <img id="media_1" src="northstar-005.JPEG" alt="North Star 2" onClick="displayMedia('2'); return false;">
+            <img id="media_2" src="northstar-006.JPEG" alt="North Star 3" onClick="displayMedia('3'); return false;">
+            <img id="media_3" src="northstar-011.JPEG" alt="North Star 8" onClick="displayMedia('4'); return false;">
+            <img id="media_4" src="northstar-007.JPEG" alt="North Star 4" onClick="displayMedia('5'); return false;">
+            <img id="media_5" src="northstar-008.JPEG" alt="North Star 5" onClick="displayMedia('6'); return false;">
+            <img id="media_6" src="northstar-009.JPEG" alt="North Star 6" onClick="displayMedia('7'); return false;">
+            <img id="media_7" src="northstar-010.JPEG" alt="North Star 7" onClick="displayMedia('0'); return false;">
+            
+            
+        </div>
+        
+        <div id="media_thumbs">
+        </div>
+        <p class="note"><b><i>Some photos of my 3D printing process. Around January I updated to the Ultraleap Stereo IR 170 hand tracker from the Leap Motion Controller, which offers higher field-of-view. This required a reprint of the main optics bracket which is why the headset might look different in some pictures further along the process</b></i></p>
     
+    </div>
     <h3>Assembly</h3>
     <p>The full assembly guide for the CombineReality Deck X version of the North Star HMD is available <a href="https://docs.projectnorthstar.org/mechanical/combine-reality-deck-x/deck-x-assembly-guide">here</a>.</p>
     <br><br>  
+
    
     <h3 style="text-align: center;" id="bottom-nav"><a href="inspiration.html"><-- Inspiration & Rationale (May - July 2020)</a><a href="calibration.html">Software: Calibration (December - May 2021) --></a></h3>
 
     <br><br>
+
+    
     <div style="text-align: center;">
         <h2>Resources</h2>
         <h3><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></h3>

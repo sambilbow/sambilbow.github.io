@@ -73,39 +73,7 @@ var num_media = 3;
 
 <div id="content">
 
-<div id="media">
-    <div id="media_object">
-        
-        
-        
-            
-        
-            
-                
-                <div class="embed-container" id="media_0">
-                    <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-001.png" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
-                </div>
-                
-            
-        
-            
-                
-                <img id="media_1" src="northstar-002.jpg" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
-                
-            
-        
-            
-                
-                <img id="media_2" src="northstar-003.jpg" alt="North Star 3" onClick="displayMedia('0'); return false;" >
-                
-            
-        
-    </div>
-    
-    <div id="media_thumbs">
-</div>
-    
-</div>
+
 <div class="clear"></div>
 
 
@@ -119,7 +87,7 @@ var num_media = 3;
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
 </div>
-
+<h3 style="text-align: center;" id="bottom-nav"><a href="index.html"><-- Summary</a><a href="hardware.html">Hardware Process (July - December 2020) --></a></h3>
 
 <div id="text" class="text">
     
@@ -132,9 +100,6 @@ var num_media = 3;
             <li>
                 2K resolution per-eye OLED displays
             </li>
-            <li>
-                Single-piece Combiner Lens
-            </li>
         </ul>
         
         <p>Tracking</p>
@@ -143,7 +108,7 @@ var num_media = 3;
                 Hand Tracking <a href="https://www.ultraleap.com/product/stereo-ir-170/">(Ultraleap Stereo IR 170)</a>
             </li>
             <li>
-                6DoF/SLAM <a href="https://dev.intelrealsense.com/docs/tracking-camera-t265-datasheet">(Intel T261)</a>
+                6DoF Body Tracking <a href="https://dev.intelrealsense.com/docs/tracking-camera-t265-datasheet">(Intel T261)</a>
             </li>
         </ul>
         
@@ -166,7 +131,7 @@ var num_media = 3;
                 .stl files for 3D Printing
             </li>
             <li>
-                Cheap in comparison to HL2 and ML-1
+                Cheap in comparison to Microsoft HL2 and Magic Leap ML-1
             </li>
         </ul>
 
@@ -176,7 +141,39 @@ var num_media = 3;
     
     
     <br><br>   
-   
+    <div id="media">
+        <div id="media_object">
+            
+            
+            
+                
+            
+                
+                    
+                    <div class="embed-container" id="media_0">
+                        <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-001.png" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
+                    </div>
+                    
+                
+            
+                
+                    
+                    <img id="media_1" src="northstar-002.jpg" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
+                    
+                
+            
+                
+                    
+                    <img id="media_2" src="northstar-003.jpg" alt="North Star 3" onClick="displayMedia('0'); return false;" >
+                    
+                
+            
+        </div>
+        
+        <div id="media_thumbs">
+    </div>
+        
+    </div>
     <h3 style="text-align: center;" id="bottom-nav"><a href="index.html"><-- Summary</a><a href="hardware.html">Hardware Process (July - December 2020) --></a></h3>
 
     <br><br>

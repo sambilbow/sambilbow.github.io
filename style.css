@@ -644,3 +644,27 @@ ul > li {
 .recent-list {
     line-height: 4px;
 }
+
+
+.container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+
+.caption {
+    margin-top: 0px;
+    color: var(--gruv-red);
+    text-align: center;
+    font-size: 11px;
+}
+
+.youtube-video {
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
