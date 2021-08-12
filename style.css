@@ -677,3 +677,11 @@ ul > li {
     text-align: left; 
     width:50%;
 }
+
+.table-youtube-video {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
