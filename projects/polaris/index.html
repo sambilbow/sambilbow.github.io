@@ -1,7 +1,7 @@
 <!doctype html>
 <html prefix="og: http://ogp.me/ns#" lang="en">
 <head>
-    <title>Sam Bilbow | northstar~</title>
+    <title>Sam Bilbow | polaris~</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Sam Bilbow" />
@@ -46,7 +46,6 @@
         margin: 0;
     }
 </style><script type="text/javascript">
-var num_media = 3;
 </script>
 <script type="text/javascript" src="../../display_media.js"></script>
 
@@ -74,6 +73,10 @@ var num_media = 3;
 <div id="content">
 
 
+    
+ 
+    
+
 <div class="clear"></div>
 
 
@@ -82,100 +85,40 @@ var num_media = 3;
 
 
 <div class="info">
-    <span class="title">northstar~</span><br />
+    <span class="title">polaris~</span><br />
     <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
     <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
     
 </div>
-<h3 style="text-align: center;" id="bottom-nav"><a href="index.html"><-- Summary</a><a href="hardware.html">Hardware Process --></a></h3>
 
+<h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale --></a></h3>
 <div id="text" class="text">
     <hr class="rounded">
 
-    <h2>Inspiration & Rationale (May - July 2020)</h2>
+    <h2>Summary</h2>
     <p>
-        During the development of the pilot study for my PhD: <a href="../2020_05area/index.html">the area~ system</a>, I came across the open-source Project North Star AR headset. It had a very clear set of advantages detailed below:
-    </p>
-        <p>Visual Display</p>
-        <ul>
-            <li>
-                2K resolution per-eye OLED displays
-            </li>
-        </ul>
-        
-        <p>Tracking</p>
-        <ul>
-            <li>
-                Hand Tracking <a href="https://www.ultraleap.com/product/stereo-ir-170/">(Ultraleap Stereo IR 170)</a>
-            </li>
-            <li>
-                6DoF Body Tracking <a href="https://dev.intelrealsense.com/docs/tracking-camera-t265-datasheet">(Intel T261)</a>
-            </li>
-        </ul>
-        
-        <p>Software</p>
-        <ul>
-            <li>
-                Unity Implementation <a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">(Project Esky)</a>
-            </li>
-        </ul>
-
-        <p>Miscellaneous</p>
-        <ul>
-            <li>
-                Community of makers (>2000 people)
-            </li>
-            <li>
-                Open-sourced design - ability to expand to other sensory modalities
-            </li>
-            <li>
-                .stl files for 3D Printing
-            </li>
-            <li>
-                Cheap in comparison to Microsoft HL2 and Magic Leap ML-1
-            </li>
-        </ul>
-
+        If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing ‘Multisensory Augmented Reality (MSAR) Experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.</p>
     <p>
-        I therefore thought it would be a good platform to design my further studies with. Either in conjunction with wireless bone conduction headphones, or via desigining, 3D printing, and implementing a bone conduction solution for the headset.
+        This project (polaris~) uses the open-souce Project North Star HMD from Leap Motion, whose general documentation can be found in the resources section. I am using the Project Esky MRTK Unity Implementation for building the software in Unity3D, which is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a> (massive thank you for all the hours you have spent helping me with errors and bugs). 
     </p>
-    
+    <p>
+        This page outlines my use of the system which started around June of 2020 and is ongoing. To clarify, the original design has been open sourced by Leap Motion since 2018, but there have been a fair few community revisions and updates to the design (<a href="https://docs.projectnorthstar.org/#variations">see more here</a>). This page documents the development of the CombineReality Deck X version of the Project North Star HMD. CombineReality is run by Noah Zerkin, who has provided countless support to my own project, so thanks Noah! He's also pretty much the only inexpensive parts sourcer of the <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">electrical bits needed for the headset</a>.
+    </p>
     
     <br><br>   
     <div id="media">
         <div id="media_object">
             
+                <div id="media_0" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/7m6J8W6Ib4w" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
             
             
-                
             
-                
-                    
-                    <div class="embed-container" id="media_0">
-                        <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-001.png" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
-                    </div>
-                    
-                
-            
-                
-                    
-                    <img id="media_1" src="northstar-002.jpg" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
-                    
-                
-            
-                
-                    
-                    <img id="media_2" src="northstar-003.jpg" alt="North Star 3" onClick="displayMedia('0'); return false;" >
-                    
                 
             
         </div>
-        
-        <div id="media_thumbs">
+        <p class="note"><b><i>LeapMotion video from 2018 showcasing through-combiner footage of the robust hand tracking in North Star</b></i></p>
     </div>
-        
-    </div>
-    <h3 style="text-align: center;" id="bottom-nav"><a href="index.html"><-- Summary</a><a href="hardware.html">Hardware Process --></a></h3>
+    <h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale --></a></h3>
 
     <br><br>
     <div style="text-align: center;">
@@ -186,7 +129,6 @@ var num_media = 3;
         <br><br>
     </div>
    
-    
 
 </div>
 
