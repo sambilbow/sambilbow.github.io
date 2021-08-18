@@ -213,7 +213,7 @@ body {
     font-family: 'Fantasque Sans Mono', monospace;
     font-size: 14px;
     font-weight: 200;
-    line-height: 22px;
+    line-height: 28px;
     background-color: var(--gruv-dark);
     height: 100%;
     /*text-transform: lowercase;*/
@@ -685,3 +685,4 @@ ul > li {
     padding-top: 5px;
     padding-bottom: 0px;
 }
+
