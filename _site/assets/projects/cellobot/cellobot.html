@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sam Bilbow | Cellobot</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Sam Bilbow" />
+    <meta name="copyright" content="Sam Bilbow" />
+    <meta name="description" content="" />
+ 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sambilbow" />
+    <meta name="twitter:creator" content="@sambilbow" />
+    <meta name="twitter:title" content="Sam Bilbow | Title" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://sambilbow.com/past/path" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest.html">
+ 
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+<style type="text/css">
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0;
+        background-color: white;
+    }
+    .embed-container iframe, .embed-container object, .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+</style><script type="text/javascript">
+var num_media = 3;
+</script>
+<script type="text/javascript" src="../../display_media.js"></script>
+
+</head>
+<body>
+
+
+<div id="header">
+    <div id="name"><a href="index.html" alt="about">sam bilbow</a></div>
+    <div id="menu">
+        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
+        <a href="../../writing/index.html" alt="writing">writing</a>
+        <a href="../../engagements/index.html" alt="engagements">engagements</a>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+
+
+<main role="main">
+
+
+
+
+<div id="content">
+
+<div id="media">
+    <div id="media_object">
+        <div class="embed-container" id="media_0">
+            <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="cellobot.jpg" alt="Cellobot"/>
+        </div>
+    </div>
+    
+
+    
+</div>
+<div class="clear"></div>
+
+
+
+
+
+<div class="info">
+    <span class="title">Cellobot for CROMT Robot Opera (June, 2019)</span><br />
+    
+    
+</div>
+
+<div id="text" class="text">
+    <p>Continuing with the themes of Performance, Embodiment and Vocality, in this new practice-based project we are looking more closely at Human / Robot interaction. Working with musicians, programmers and a Pepper Robot we will explore musical and theatrical relationships across the human / robot divide.  We will share our findings through performance, demonstrations and discussion on Friday 28th June at 3:30pm in the Sussex Humanities Lab (Silverstone 211, University of Sussex).</p>
+
+    <p>
+    CROMT launched its Robot Opera project with a <a href="http://www.sussex.ac.uk/cromt/archive/robotopera">Robot Opera Mini Symposium in 2017</a>.
+    </p>
+</div>
+
+
+
+
+</div>
+
+</main>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

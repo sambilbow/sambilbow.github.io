@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sam Bilbow | polaris~</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Sam Bilbow" />
+    <meta name="copyright" content="Sam Bilbow" />
+    <meta name="description" content="" />
+ 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sambilbow" />
+    <meta name="twitter:creator" content="@sambilbow" />
+    <meta name="twitter:title" content="Sam Bilbow | Title" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://sambilbow.com/past/path" />
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest.html">
+ 
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+<style type="text/css">
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0;
+        background-color: white;
+    }
+    .embed-container iframe, .embed-container object, .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+</style><script type="text/javascript">
+var num_media = 3;
+</script>
+<script type="text/javascript" src="../../display_media.js"></script>
+
+</head>
+<body>
+
+
+<div id="header">
+    <div id="name"><a href="../../index.html" alt="about">sam bilbow</a></div>
+    <div id="menu">
+        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
+        <a href="../../writing/index.html" alt="writing">writing</a>
+        <a href="../../engagements/index.html" alt="engagements">engagements</a>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+
+
+<main role="main">
+
+
+
+
+<div id="content">
+
+
+<div class="clear"></div>
+
+
+    
+
+
+
+<div class="info">
+    <span class="title">polaris~</span><br />
+    <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
+    <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
+    
+</div>
+<h3 style="text-align: center;" id="bottom-nav"><a href="hardware.html"><-- Hardware</a><a href="demos.html">Software: Running Demos --></a></h3>
+
+<div id="text" class="text">
+    <hr class="rounded">
+
+    <h2>Software: Calibration (December - May 2021)</h2>
+    <h3>Initiation</h3>
+    <p>
+        Originally, my system was very temperatmental. After much deliberation, I realised I must have shorted some part of my integrator. After replacing it, everything is plug and play. Luckily I was mainly working on written parts of my PhD during this period of time.
+    </p>
+    <p>
+        For best results I plug in the USB, and then the DP cable into my computer, and unplug them in the opposite order.
+    </p>
+    
+    <br>
+    <h3>Software Development Kits Needed</h3>
+    <h4>Intel Realsense SDK (enables head tracking)</h4>
+    <ul>
+        <li>
+            <a href="https://github.com/IntelRealSense/librealsense/releases">Latest Intel RealSense SDK 2.0</a> - you're looking for an asset file like "Intel.RealSense.SDK-WIN10-2.47.0.3309.exe"
+        </li>
+    </ul>
+    <h4>Ultraleap Gemini SDK (enables hand tracking)</h4>
+    <ul>
+        <li>
+            <a href="https://developer.leapmotion.com/gemini-v5-preview/">Leap Developer Kit 5.0.0-preview+52386</a>
+        </li>
+        <li>
+            <a href="https://github.com/leapmotion/UnityModules/tree/feat-multi-device/Multidevice%20Service">Leap Developer Kit 4.0.0+52238</a> -  need to rollback to this driver to run Leap Motion example demonstrations such as <a href="https://drive.google.com/drive/u/0/folders/1o6NCmuz8T7k9R7Mh66pI_O3nZSzBuHJP">Paint and Cubes</a>
+        </li>
+    </ul>
+    <br>
+    <h3>Optical Calibration</h3>
+    <p>Calibrating the headset is necessary due to the large amount of small variables between headsets this stage. Lets have a look at some things that might not be the same for everyone:</p>
+    <ul>
+        <li>3D Filament Type (material and layer height)</li>
+        <li>3D Printer Tolerances (how accurate the print is +/- mm)</li>
+        <li>Resultant Inter-Hardware Position (the above two factors might result in minute differences in position between hardware components) </li>
+    </ul>
+    <p>For this reason, it is commonplace to "calibrate" your headset through software, by creating a file which contains information about the various positions of hardware (I believe mainly the screens). This already sounds very difficult, so how does it work?</p>
+    <p>
+        Historically, there are two different types of calibration, 3D and 2D. 3D came first, and is therefore (frustratingly) sometimes referred to as V1 calibration. 2D came second, and is referred to as V2 calibration. See the differences <a href="https://docs.projectnorthstar.org/calibration/getting-started">here</a>.
+    </p>
+    <ul>
+        <li>3D Calibration (V1) requires the use of two extra cameras and is therefore more expensive and a longer process. It was necessary to do this before the North Star had a 6DoF sensor with a dual-camera at its disposal</li>
+        <li>2D Calibration (V2) uses the dual-camera in the 6DoF sensor (Intel T261), and is therefore cheaper and quicker.</li>
+    </ul>
+    <div id="media">
+        <div id="media_object">
+            
+            
+            
+                
+            
+                
+                    
+                    <div class="embed-container" id="media_0">
+                        <img onload="document.getElementById('media_object').style.opacity='1'" style="display: block;" src="northstar-012.JPEG" alt="North Star 1" onClick="displayMedia('1'); return false;"/>
+                    </div>
+                    
+                
+            
+                
+                    
+                    <img id="media_1" src="northstar-013.JPEG" alt="North Star 2" onClick="displayMedia('2'); return false;"/>
+                    
+                
+            
+                
+                    
+                    <img id="media_2" src="northstar-014.JPEG" alt="North Star 3" onClick="displayMedia('3'); return false;" >
+                    <img id="media_3" src="northstar-015.JPEG" alt="North Star 4" onClick="displayMedia('0'); return false;" >
+                    
+                
+            
+        </div>
+        
+        <div id="media_thumbs">
+        </div>
+        <p class="note"><b><i>Historical 2D (V2) Calibration Stand vs New T26x Hybrid Calibrator</b></i></p>
+    
+    </div>
+    <p>2D (V2) calibration used to require placing the headset on a special calibration stand, taking the T261 and anchoring it where the eyes would sit behind the headset. These are the first photos in the slideshow.</p>
+    <p>Thanks to the new <a href="https://github.com/CombineReality/Deck-X/blob/main/Deck_X/STL_files/Calibration_Accessories/DX_T261_Hybrid_Calibrator.stl">T26x Hybrid Calibrator</a>, the stand is no longer necessary, as is shown in the last two photos  </p>
+    <p>Calibration is fairly simple and requires running premade python scripts. <a href="https://docs.projectnorthstar.org/calibration/2d-calibration">Instructions are here</a> (I created a custom anaconda virtual environment (venv) to install the packages and run the calibration scripts from this venv). The output are four number arrays, which can later be used in Unity to make sure that each eye receives calibrated visuals from the screens. I keep these arrays in a sacred folder called "CALIBRATIONS DO NOT TOUCH"</p>
+</div>
+   
+<h3 style="text-align: center;" id="bottom-nav"><a href="hardware.html"><-- Hardware</a><a href="demos.html">Software: Running Demos --></a></h3>
+
+<br><br>
+<div style="text-align: center;">
+    <h2>Resources</h2>
+    <h3><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></h3>
+    <h3><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></h3>
+    <h3><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></h3>
+    <br><br>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+</main>
+
+<script type="text/javascript">var num_media = 4
+</script>
+</body>
+</html>
