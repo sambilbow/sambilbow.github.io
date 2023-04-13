@@ -2,96 +2,111 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Sam Bilbow
     - name: Date of Birth
-      value: 14th March 1879
+      value: February 1997
     - name: Languages
-      value: English, German
+      value: English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: PhD (Music Technologies)
+      institution: University of Sussex
+      year: 2019 - 
+      # description:
+      #   - Description 1.
+      #   - Description 2.
+      #   - title: Description 3.
+      #     contents:
+      #       - Sub-description 1.
+      #       - Sub-description 2.
+    - title: MA (Music and Sonic Media)
+      institution: University of Sussex
+      year: 2018 - 2019
+      # description:
+      #   - Description 1.
+      #   - Description 2.
+    - title: BA (Music Technology)
+      institution: University of Sussex
+      year: 2015 - 2018
+      # description:
+      #   - Description 1.
+      #   - Description 2.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+    - title: Doctoral Tutor
+      institution: University of Sussex
+      year: 2022 - 
+      # description:
+      #   - Description 1.
+      #   - Description 2.
+      #   - title: Description 3.
+      #     contents:
+      #       - Sub-description 1.
+      #       - Sub-description 2.
+    - title: Interaction Designer @ Sentinel Self
+      institution: Sissel Marie Tonn Studio
+      year: 2021 - 2022
+      # description:
+      #   - Description 1.
+      #   - Description 2.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
+    - title: Workshop Facilitator @ Embodiment Hackathon
+      institution: Sussex Humanities Lab
+      year: 2021
 
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
+    - title: Junior Research Associate @ Syncphonia
+      institution: University of Sussex
+      year: 2017
+      # description:
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+# - title: Open Source Projects
+#   type: time_table
+#   contents:
+#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
+#       year: 2015-now
+#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2023
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Leverhulme Postdoctoral Fellowship Award
+    - year: 2019
       items: 
-        - Max Planck Medal
+        - Leverhulme Doctoral Scholarship Programme
+    - year: 2018
+      items: 
+        - Sussex Masters Scholarship
+    - year: 2015
+      items: 
+        - Best Overall Performance (BA Music Technology)
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+    - title: Experimental Music Technologies
+      # items: 
+      #   - Description 1.
+      #   - Description 2.
+    - title: Human-Computer Interaction
+      # items:
+      #   - Description 1.
+      #   - Description 2.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    <u>Space:</u> Astronomy, Black Hole Physics, Stargazing
+    <br>
+    <u>Music:</u> Ambient, Experimental, Noise, Glitch
+    <br>
+    <u>Games:</u> MMO, RPGs, Simulations, FPS
+    <br>
+    <u>Hardware:</u> PC Building, Microcontroller Projects
+    <br>
+    <u>Software:</u> Open-source software, Amateur Server Deployment 

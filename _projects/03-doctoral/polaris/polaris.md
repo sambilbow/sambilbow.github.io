@@ -1,0 +1,69 @@
+---
+layout: page
+title: polaris~
+description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
+img: assets/projects/03-doctoral/polaris/polaris.jpg
+importance: 2
+permalink: /projects/polaris/
+category: doctoral
+---
+
+<div class="info">
+    <span class="title">polaris~</span><br />
+    <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
+    <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
+    
+</div>
+
+<h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale --></a></h3>
+<div id="text" class="text">
+    <hr class="rounded">
+
+    <h2>Summary</h2>
+    <p>
+        If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing ‘Multisensory Augmented Reality (MSAR) Experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.</p>
+    <p>
+        This project (polaris~) uses the open-souce Project North Star HMD from Leap Motion, whose general documentation can be found in the resources section. I am using the Project Esky MRTK Unity Implementation for building the software in Unity3D, which is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a> (massive thank you for all the hours you have spent helping me with errors and bugs). 
+    </p>
+    <p>
+        This page outlines my use of the system which started around June of 2020 and is ongoing. To clarify, the original design has been open sourced by Leap Motion since 2018, but there have been a fair few community revisions and updates to the design (<a href="https://docs.projectnorthstar.org/#variations">see more here</a>). This page documents the development of the CombineReality Deck X version of the Project North Star HMD. CombineReality is run by Noah Zerkin, who has provided countless support to my own project, so thanks Noah! He's also pretty much the only inexpensive parts sourcer of the <a href="https://www.smart-prototyping.com/AR-VR-MR-XR/North-Star-Deck-X-Kit-A">electrical bits needed for the headset</a>.
+    </p>
+    
+    <br><br>   
+    <div id="media">
+        <div id="media_object">
+            
+                <div id="media_0" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/7m6J8W6Ib4w" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+            
+            
+            
+                
+            
+        </div>
+        <p class="note"><b><i>LeapMotion video from 2018 showcasing through-combiner footage of the robust hand tracking in North Star</b></i></p>
+    </div>
+    <h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale --></a></h3>
+
+    <br><br>
+    <div style="text-align: center;">
+        <h2>Resources</h2>
+        <h3><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></h3>
+        <h3><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></h3>
+        <h3><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></h3>
+        <br><br>
+    </div>
+   
+
+</div>
+
+
+
+
+</div>
+
+</main>
+
+<script type="text/javascript">
+</script>
+</body>
+</html>

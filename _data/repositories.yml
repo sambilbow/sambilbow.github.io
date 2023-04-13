@@ -1,12 +1,11 @@
-github_users:
-  - torvalds
-  - alshedivat
+# github_users:
+#   # - sambilbow
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - sambilbow/area
+  - sambilbow/polaris
+  - sambilbow/polygons
+  - sambilbow/comuse
+  - sambilbow/thexrtspace
+  - sambilbow/Deck-X
+  - sambilbow/North-Star-Integrator

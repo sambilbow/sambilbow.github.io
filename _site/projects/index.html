@@ -12,8 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>projects | Sam  Bilbow</title>
     <meta name="author" content="Sam  Bilbow">
-    <meta name="description" content="A growing collection of your cool projects.">
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+    <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
 
 
     <!-- Bootstrap & MDB -->
@@ -30,7 +31,7 @@
 
     <!-- Styles -->
     
-    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="canonical" href="http://localhost:4000/projects/">
@@ -89,17 +90,6 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/cv/">cv</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/teaching/">teaching</a>
-              </li>
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus</a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/publications/">publications</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/projects/">projects</a>
-                </div>
-              </li>
 
               <!-- Toogle theme mode -->
               <li class="toggle-container">
@@ -129,7 +119,7 @@
 
           <header class="post-header">
             <h1 class="post-title">projects</h1>
-            <p class="post-description">A growing collection of your cool projects.</p>
+            <p class="post-description"></p>
           </header>
 
           <article>
@@ -139,6 +129,36 @@
   <h2 class="category">postdoctoral</h2>
   <!-- Generate cards for each project -->
   <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/04-postdoctoral/comuse/">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/04-postdoctoral/comuse/comuse-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/04-postdoctoral/comuse/comuse-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/04-postdoctoral/comuse/comuse-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/04-postdoctoral/comuse/comuse.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">coMuse</h2>
+          <p class="card-text">Multiplayer AR Musical Experiences (2023)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
   </div>
   <h2 class="category">doctoral</h2>
   <!-- Generate cards for each project -->
@@ -146,19 +166,79 @@
 <!-- _includes/projects.html -->
 <div class="grid-sizer"></div>
 <div class="grid-item">
-  <a href="/projects/area/">
+  <a href="/projects/polygons">
       <div class="card hoverable">
 <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/area/area-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/area/area-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/area/area-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/03-doctoral/polygons/polygons-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/03-doctoral/polygons/polygons-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/03-doctoral/polygons/polygons-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/projects/area/area.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/projects/03-doctoral/polygons/polygons.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">polygons~</h2>
+          <p class="card-text">Developing a Sound ARt Performance Practice (2022)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/polaris/">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/03-doctoral/polaris/polaris-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/03-doctoral/polaris/polaris-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/03-doctoral/polaris/polaris-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/03-doctoral/polaris/polaris.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">polaris~</h2>
+          <p class="card-text">An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/area">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/03-doctoral/area/area-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/03-doctoral/area/area-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/03-doctoral/area/area-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/03-doctoral/area/area.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -166,7 +246,161 @@
 
         <div class="card-body">
           <h2 class="card-title text-lowercase">area~</h2>
-          <p class="card-text">(May, 2020)</p>
+          <p class="card-text">Exploring Real and Virtual Environments Through Gestural Ambisonics and Audio Augmented Reality (2020)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+  </div>
+  <h2 class="category">collaborative</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/sentinel-self">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/06-collaborative/sentinel-self/sentinel-self-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/06-collaborative/sentinel-self/sentinel-self-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/06-collaborative/sentinel-self/sentinel-self-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/06-collaborative/sentinel-self/sentinel-self.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Sentinel Self</h2>
+          <p class="card-text">Interaction Design w/ Sissel Marie Tonn (October 2022)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/embodiment-hackathon">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/06-collaborative/embodiment-hackathon/embodiment-hackathon.webp-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/06-collaborative/embodiment-hackathon/embodiment-hackathon.webp-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/06-collaborative/embodiment-hackathon/embodiment-hackathon.webp-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/06-collaborative/embodiment-hackathon/embodiment-hackathon.webp" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Embodiment Hackathon</h2>
+          <p class="card-text">(April 2022)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/sensation-sussex">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/06-collaborative/sensation-sussex/sensation-sussex-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/06-collaborative/sensation-sussex/sensation-sussex-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/06-collaborative/sensation-sussex/sensation-sussex-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/06-collaborative/sensation-sussex/sensation-sussex.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Sensation Sussex Conference</h2>
+          <p class="card-text">(October 2021)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/seminar-series">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/06-collaborative/seminar-series/seminar-series-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/06-collaborative/seminar-series/seminar-series-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/06-collaborative/seminar-series/seminar-series-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/06-collaborative/seminar-series/seminar-series.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Leverhulme Seminar Series</h2>
+          <p class="card-text">(February - December 2020)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/cellobot">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/06-collaborative/cellobot/cellobot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/06-collaborative/cellobot/cellobot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/06-collaborative/cellobot/cellobot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/06-collaborative/cellobot/cellobot.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Cellobot</h2>
+          <p class="card-text">@ CROMT Robot Opera (June 2019)</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
@@ -177,6 +411,126 @@
   <h2 class="category">postgrad</h2>
   <!-- Generate cards for each project -->
   <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/node">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/02-postgrad/node/node-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/02-postgrad/node/node-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/02-postgrad/node/node-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/02-postgrad/node/node.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Node Necklace</h2>
+          <p class="card-text">(August 2019)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/gestura">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/02-postgrad/gestura/gestura-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/02-postgrad/gestura/gestura-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/02-postgrad/gestura/gestura-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/02-postgrad/gestura/gestura.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">gestur.a</h2>
+          <p class="card-text">(May 2019)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/solar">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/02-postgrad/solar/solar-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/02-postgrad/solar/solar-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/02-postgrad/solar/solar-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/02-postgrad/solar/solar.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">SolAR</h2>
+          <p class="card-text">(December 2018)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/birds">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/02-postgrad/birds/birds-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/02-postgrad/birds/birds-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/02-postgrad/birds/birds-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/02-postgrad/birds/birds.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">birds.tidal</h2>
+          <p class="card-text">(December 2018)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
   </div>
   <h2 class="category">undergrad</h2>
   <!-- Generate cards for each project -->
@@ -184,19 +538,169 @@
 <!-- _includes/projects.html -->
 <div class="grid-sizer"></div>
 <div class="grid-item">
-  <a href="/projects/pier/">
+  <a href="/projects/bandar">
       <div class="card hoverable">
 <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/pier/pier-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/pier/pier-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/pier/pier-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/bandar/bandar-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/bandar/bandar-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/bandar/bandar-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/projects/pier/pier.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/projects/01-undergrad/bandar/bandar.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">BandAR</h2>
+          <p class="card-text">(May 2018)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/therephone">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/therephone/therephone-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/therephone/therephone-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/therephone/therephone-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/01-undergrad/therephone/therephone.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Therephone</h2>
+          <p class="card-text">(December 2017)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/weathersynth">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/weathersynth/weathersynth-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/weathersynth/weathersynth-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/weathersynth/weathersynth-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/01-undergrad/weathersynth/weathersynth.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Weathersynth</h2>
+          <p class="card-text">(May 2017)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/gloveduino">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/gloveduino/gloveduino-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/gloveduino/gloveduino-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/gloveduino/gloveduino-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/01-undergrad/gloveduino/gloveduino.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">GloveDuino</h2>
+          <p class="card-text">(December 2016)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/sony">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/sony/sony-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/sony/sony-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/sony/sony-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/01-undergrad/sony/sony.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+        <div class="card-body">
+          <h2 class="card-title text-lowercase">Sony Entertainment Sampler</h2>
+          <p class="card-text">(May 2016)</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/projects/pier">
+      <div class="card hoverable">
+<figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/projects/01-undergrad/pier/pier-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/projects/01-undergrad/pier/pier-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/projects/01-undergrad/pier/pier-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/projects/01-undergrad/pier/pier.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -204,7 +708,7 @@
 
         <div class="card-body">
           <h2 class="card-title text-lowercase">Arcadian Waves</h2>
-          <p class="card-text">An acoustic portrait of Brighton Pier(December, 2015)</p>
+          <p class="card-text">An acoustic portrait of Brighton Pier (December 2015)</p>
           <div class="row ml-1 mr-1 p-0">
           </div>
         </div>
@@ -222,8 +726,8 @@
 
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
-        © Copyright 2023 Sam  Bilbow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-Last updated: April 11, 2023.
+        © Copyright 2023 Sam  Bilbow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+Last updated: April 13, 2023.
       </div>
     </footer>
 
@@ -247,8 +751,6 @@ Last updated: April 11, 2023.
   <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
 
     
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">

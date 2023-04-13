@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+# description: A growing collection of your cool projects.
 nav: true
 nav_order: 2
-display_categories: [postdoctoral,doctoral,postgrad,undergrad]
+display_categories: [postdoctoral,doctoral,collaborative,postgrad,undergrad]
 horizontal: false
 ---
 
