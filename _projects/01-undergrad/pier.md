@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Arcadian Waves
+title: Arcade Waves
 description: An acoustic portrait of Brighton Pier (December 2015)
 img: assets/projects/01-undergrad/pier/pier.jpg
 importance: 6

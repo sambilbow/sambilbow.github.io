@@ -8,20 +8,19 @@ permalink: projects/area
 category: doctoral
 ---
 
-<div align="center">
-<img src="/assets/projects/area/demo.gif" width="500"/>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        {% include figure.html path="assets/projects/03-doctoral/area/demo.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-<br>
-
-<p align="center">
-
-<a href="https://support.apple.com/macos"><img src="https://img.shields.io/badge/Platform-Mac-yellow?style=flat-square&logo=apple"></a>
-<a href="https://cycling74.com/products/max"><img src="https://img.shields.io/badge/Environment-Max-orange?style=flat-square&logo=max&logoColor=white"></a>
-<a href="https://doi.org/10.21428/66f840a4.b74711a8"><img src="https://img.shields.io/badge/Publication-SonicScope-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
-<a href="https://github.com/sambilbow/area/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
-<a href="https://github.com/sambilbow/area/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
-
-</p>
+<div class="caption">
+    <a href="https://support.apple.com/macos"><img src="https://img.shields.io/badge/Platform-Mac-yellow?style=flat-square&logo=apple"></a>
+    <a href="https://cycling74.com/products/max"><img src="https://img.shields.io/badge/Environment-Max-orange?style=flat-square&logo=max&logoColor=white"></a>
+    <a href="https://doi.org/10.21428/66f840a4.b74711a8"><img src="https://img.shields.io/badge/Publication-SonicScope-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
+</div>
 
 The area~ system, which stands loosely for ‘augmented reality environmental audio’ aims to afford users the ability to spectromorphologically manipulate sounds from their environment into a virtual audio environment. Through bone conduction headphones and head tracking, this sound field is heard in synchronicity with their actual environment. The system was created in order to explore and reveal the relationship between real and virtual environments. The following were the results:
 

@@ -91,12 +91,12 @@ category: doctoral
 
 <div class="info">
     <span class="title">polygons~</span><br />
-    <h3><a href="https://github.com/sambilbow/polygons">Project Files</a></h3>
+    <h3><a href="https://github.com/sambilbow/polygons">Project Files</a></b>
     
     
 </div>
 
-<!-- <h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale</a></h3> -> -->
+<!-- <h3 id="bottom-nav-first"><a href="inspiration.html">Inspiration & Rationale</a></b> -> -->
 <div id="text" class="text">
     <hr class="rounded">
     <img src="demo.gif" width="1040"/>
@@ -109,9 +109,9 @@ category: doctoral
         polygons~ is a fifteen-minute experimental audiovisual AR improvisation using an AR performance ecosystem including three instruments: ambi, click-+, and hands.
     </p>
 
-    <iframe width="350" height="350" src="https://www.youtube-nocookie.com/embed/9IErsDvhXjM" title="polygons~ @ The ACCA - Sam Bilbow" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="350" src="https://www.youtube-nocookie.com/embed/9IErsDvhXjM" title="polygons~ @ The ACCA - Sam Bilbow" frameborder="0" allowfullscreen></iframe></div>
 
-    <iframe width="350" height="350" src="https://www.youtube-nocookie.com/embed/zOeXI_WvzJA" title="polygons~ @ The Rosehill - Sam Bilbow" frameborder="0" allowfullscreen></iframe>
+    <iframe width="350" height="350" src="https://www.youtube-nocookie.com/embed/zOeXI_WvzJA" title="polygons~ @ The Rosehill - Sam Bilbow" frameborder="0" allowfullscreen></iframe></div>
     <!-- <p>
         If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing ‘Multisensory Augmented Reality (MSAR) Experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.</p>
     <p>

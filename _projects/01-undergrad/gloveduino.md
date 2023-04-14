@@ -1,123 +1,30 @@
 ---
 layout: page
 title: GloveDuino
-description: "(December 2016)"
+description: "MIDI mapped musical data glove (December 2016)"
 img: assets/projects/01-undergrad/gloveduino/gloveduino.jpg
 importance: 4
 permalink:  projects/gloveduino
 category: undergrad
 ---
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Sam Bilbow | GloveDuino</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Sam Bilbow" />
-    <meta name="copyright" content="Sam Bilbow" />
-    <meta name="description" content="" />
- 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@sambilbow" />
-    <meta name="twitter:creator" content="@sambilbow" />
-    <meta name="twitter:title" content="Sam Bilbow | Title" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://sambilbow.com/past/path" />
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest.html">
- 
-    <link rel="stylesheet" type="text/css" href="../../style.css" />
-<style type="text/css">
-    .embed-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin: 0;
-        background-color: white;
-    }
-    .embed-container iframe, .embed-container object, .embed-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-</style><script type="text/javascript">
-var num_media = 3;
-</script>
-<script type="text/javascript" src="../../display_media.js"></script>
-
-</head>
-<body>
 
 
-<div id="header">
-    <div id="name"><a href="index.html" alt="about">sam bilbow</a></div>
-    <div id="menu">
-        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
-        <a href="../../writing/index.html" alt="writing">writing</a>
-        <a href="../../engagements/index.html" alt="engagements">engagements</a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419610035?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+    <div class="col-sm mt-3 mt-md-1">
+        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419612454?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
     </div>
 </div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-<main role="main">
-
-
-
-
-<div id="content">
-
-<div id="media">
-    <div id="media_object">
-        <div id="media_0" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://player.vimeo.com/video/419610035?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-    </div>
+<div class="caption">
+    <a href="https://arduino.cc/"><img src="https://img.shields.io/badge/Platform-Arduino-yellow?style=flat-square&logo=arduino&logoColor=white"></a>
+    <a href="https://puredata.info/"><img src="https://img.shields.io/badge/Environment-PureData-orange?style=flat-square&logo=max&logoColor=white"></a>
+    <!-- <a href="https://github.com/sambilbow/weathersynth/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a> -->
+    <br>
+    <br>
+    <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2023/W3081-interactive-music-systems"><img src="https://img.shields.io/badge/Module-Interactive Music Systems-red?style=flat-square&logo=todoist&logoColor=white"></a>
+    <a href="../assets/projects/01-undergrad/gloveduino/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
-<br>
-<br>
-
-
-        <div id="media_1" class="embed-container"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://player.vimeo.com/video/419612454?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-
-
-<div class="clear"></div>
-
-<br>
-<div class="info">
-    <span class="title">GloveDuino (December, 2016)</span><br />
-    
-    
-</div>
-
-<div id="text" class="text">
-    <h3><a href="essay.pdf">essay.pdf</a></h3>
-    <h3>summary</h3>
-    <p>
-        This project was about creating an Arduino powered glove that enables to wearer to engage with music performance and composition on a gestural level. Inspiration for me, came from watching Imogen Heap’s demonstration of her Mi.Mu gloves at a conference. I was thoroughly impressed with the amount of flow that her instrument provided her in a performance setting. Learning about the New Instruments for Musical Expression conference also helped me set out to create not exactly a “new instrument” per se, but to allow me to explore my own compositional and performance based ideas through a gestural device of my own making. Joel Ryan proposed in his “Notes on STEIM” that the problem with computer music is the distance between the musician and the composition process (Ryan,1991). I saw the solution to this in the raw organic nature of the gestural glove.
-    </p>
-
-</div>
-
-
-
-
-</div>
-
-</main>
-
-<script type="text/javascript">
-</script>
-</body>
-</html>
+This project was about creating an Arduino powered glove that enables to wearer to engage with music performance and composition on a gestural level. Inspiration for me, came from watching Imogen Heap’s demonstration of her Mi.Mu gloves at a conference. I was thoroughly impressed with the amount of flow that her instrument provided her in a performance setting. Learning about the New Instruments for Musical Expression conference also helped me set out to create not exactly a “new instrument” per se, but to allow me to explore my own compositional and performance based ideas through a gestural device of my own making. Joel Ryan proposed in his “Notes on STEIM” that the problem with computer music is the distance between the musician and the composition process (Ryan,1991). I saw the solution to this in the raw organic nature of the gestural glove.

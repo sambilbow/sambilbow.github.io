@@ -1,155 +1,90 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Sam Bilbow | polaris~</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Sam Bilbow" />
-    <meta name="copyright" content="Sam Bilbow" />
-    <meta name="description" content="" />
- 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@sambilbow" />
-    <meta name="twitter:creator" content="@sambilbow" />
-    <meta name="twitter:title" content="Sam Bilbow | Title" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://sambilbow.com/past/path" />
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest.html">
- 
-    <link rel="stylesheet" type="text/css" href="../../style.css" />
-<style type="text/css">
-    .embed-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin: 0;
-        background-color: white;
-    }
-    .embed-container iframe, .embed-container object, .embed-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-</style><script type="text/javascript">
-var num_media = 3;
-</script>
-<script type="text/javascript" src="../../display_media.js"></script>
+---
+layout: page
+title: polaris~
+description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
+permalink: /projects/polaris/demos
+---
+<div class="caption">
+    <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
+    <a href="https://unity.com/"><img src="https://img.shields.io/badge/Environment-Unity%20&%20Pd-orange?style=flat-square&logo=unity&logoColor=white"></a>
+    <a href="https://doi.org/10.21428/92fbeb44.8abb9ce6"><img src="https://img.shields.io/badge/Publication-NIME-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
+</div>
+<b style="text-align: center;" id="bottom-nav"><a href="calibration.html">← Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments →</a></b>
+<hr class="rounded">
 
-</head>
-<body>
+## Software: Running Demos (May - July 2021)
+### Through-Combiner Recording
+In July I added a camera to the headset, to be specific, I have a Raspberry Pi Zero, taking power over USB 2 ribbon cable from the CombineReality Integrator, connected to a ZeroCam (small camera), placed just to the right of the left screen on the headset. This results in the camera being in front of my left eye. Despite making it harder to see objects, for documentation and archival purposes, the camera has been a great addition. Following these instructions, the camera shows up as a standard USB camera through the headset's USB 3 cable. This cable to the PC is now not only powering and transferring data to and from the sensors and displays, but now also the new camera, all through one cable!
 
-
-<div id="header">
-    <div id="name"><a href="../../index.html" alt="about">sam bilbow</a></div>
-    <div id="menu">
-        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
-        <a href="../../writing/index.html" alt="writing">writing</a>
-        <a href="../../engagements/index.html" alt="engagements">engagements</a>
+    
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-016.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-017.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-018.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="clear"></div>
-<div class="clear"></div>
-
-
-<main role="main">
-
-
-
-
-<div id="content">
-<div class="clear"></div>
-
-
-    
-
-
-
-<div class="info">
-    <span class="title">polaris~</span><br />
-    <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
-    <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
-    
+<div class = "caption">
+    Raspberry Pi Zero + ZeroCam Through-Combiner Setup
 </div>
-<h3 style="text-align: center;" id="bottom-nav"><a href="calibration.html"><-- Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments --></a></h3>
 
-<div id="text" class="text">
-    <hr class="rounded">
-    <h2>Software: Running Demos (May - July 2021)</h2>
-    <h3>Through-Combiner Recording</h3>
-    <p>
-        In July I added a camera to the headset, to be specific, I have a Raspberry Pi Zero, taking power over USB 2 ribbon cable from the CombineReality Integrator, connected to a ZeroCam (small camera), placed just to the right of the left screen on the headset. This results in the camera being in front of my left eye. Despite making it harder to see objects, for documentation and archival purposes, the camera has been a great addition. Following these instructions, the camera shows up as a standard USB camera through the headset's USB 3 cable. This cable to the PC is now not only powering and transferring data to and from the sensors and displays, but now also the new camera, all through one cable!
-    </p>
 
-    
-    <div class="container">
-        <img src="northstar-016.JPEG" alt="">
-        <img src="northstar-017.JPEG" alt="">
-        <img src="northstar-018.JPEG" alt="">
+In order to take these videos, I use <a href="https://obsproject.com/">OBS</a> to composite my webcam, specific portions of my screen (during Unity Demos), as well as the through-combiner camera I have set up, and later on, binaural audio. Overall, whilst it looks and feels hacked together, and could probably do with a 3D printed enclosure, the system works perfectly well for documenting the experience of wearing the headset.
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-019.gif" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <p class="caption"><b><i>Raspberry Pi Zero + ZeroCam Through-Combiner Setup</b></i></p>
-
-    <p>In order to take these videos, I use <a href="https://obsproject.com/">OBS</a> to composite my webcam, specific portions of my screen (during Unity Demos), as well as the through-combiner camera I have set up, and later on, binaural audio. Overall, whilst it looks and feels hacked together, and could probably do with a 3D printed enclosure, the system works perfectly well for documenting the experience of wearing the headset.</p>
-
-    <div class="youtube-video"><img src="northstar-019.gif" alt=""></div>
-    <p class="caption"><b><i>My OBS camera/screen/audio compositing setup</b></i></p>
-
-    <br>
-    <h3>Paint & Cubes</h3>
-    <p>Now that the headset is built, the SDKs are installed, and I have a 2D optical calibration, it was time to run a few demos. The first video above shows this original Unity demo from Leap Motion. As mentioned in the <a href="calibration.html">calibration page</a> , if you want to run this yourself, you need to be on the multi-device support SDK.</p>  
-    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/4t80D4CcjSQ" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-  
-    <br>
-    <h3>Project Esky</h3>
-   
-            
-    <p>Project Esky is a open-source software platform apable of high fidelity natural hand-interactions with virtual content, high field of view, and spatial mapping for environment interactions. This is the software framework by which I am creating my AR experiences in Unity. It is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a>, who has helped a lot in helping my project run smoother. Esky allows the North Star to be emulated as a Windows Mixed Reality Headset, meaning that you can use the Microsoft Mixed Reality Toolkit in Unity3D for desigining interactions (like the Microsoft Hololens 2 does)</p>
-    
-    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/qGXAgjjVXpw" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-    <p>There are a couple of important steps I had to go through before I could use Esky properly, importing calibration, setting up display settings, and aligning my hands. The third video covers importing my optical calbration into Project Esky, and the fourth video covers hand alignment, which makes sure that your virtual and real hands are aligned.</p>
-
-    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src=" https://www.youtube.com/embed/6XIZZD9S-dk" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-    
-    <div class="youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/XeKTBSjXWn4" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-
-    <p>From here on, when working in Unity 3D, it is assumed that I am referring to the Project Esky Unity Implementation</p>
-    
-
-      
-
 </div>
+<div class = "caption">
+    Pressing a button whilst running the OBS camera/screen/audio compositing setup
+</div>
+
+### Paint & Cubes
+Now that the headset is built, the SDKs are installed, and I have a 2D optical calibration, it was time to run a few demos. The first video above shows this original Unity demo from Leap Motion. As mentioned in the <a href="calibration.html">calibration page</a> , if you want to run this yourself, you need to be on the multi-device support SDK.  
+
+<div class="row" >
+    <div class="col-sm mt-3 mt-md-0">
+        <div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/4t80D4CcjSQ" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+</div><br>
+
+### Project Esky 
+Project Esky is a open-source software platform apable of high fidelity natural hand-interactions with virtual content, high field of view, and spatial mapping for environment interactions. This is the software framework by which I am creating my AR experiences in Unity. It is developed by <a href="https://dl.acm.org/doi/10.1145/3380867.3426220">Damien Rompapas</a>, who has helped a lot in helping my project run smoother. Esky allows the North Star to be emulated as a Windows Mixed Reality Headset, meaning that you can use the Microsoft Mixed Reality Toolkit in Unity3D for desigining interactions (like the Microsoft Hololens 2 does).
+
+<div class="row" >
+    <div class="col-sm mt-3 mt-md-0">
+        <div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/qGXAgjjVXpw" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+</div><br>
+
+There are a couple of important steps I had to go through before I could use Esky properly, importing calibration, setting up display settings, and aligning my hands. The third video covers importing my optical calbration into Project Esky, and the fourth video covers hand alignment, which makes sure that your virtual and real hands are aligned.
+
+
+<div class="row" >
+    <div class="col-sm mt-3 mt-md-0">
+        <div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/6XIZZD9S-dk" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/XeKTBSjXWn4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+    </div>
+</div><br>
+
+From here on, when working in Unity 3D, it is assumed that I am referring to the Project Esky Unity Implementation.
+
    
-<h3 style="text-align: center;" id="bottom-nav"><a href="calibration.html"><-- Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments --></a></h3>
+<b style="text-align: center;" id="bottom-nav"><a href="calibration.html">← Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments →</a></b>
 
 <br><br>
 <div style="text-align: center;">
-    <h2>Resources</h2>
-    <h3><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></h3>
-    <h3><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></h3>
-    <h3><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></h3>
+    <h3>Resources</h3>
+    <b><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></b><br>
+    <b><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></b><br>
+    <b><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></b><br>
     <br><br>
 </div>
-
-</div>
-
-
-
-
-</div>
-
-</main>
-
-<script type="text/javascript">var num_media = 4
-</script>
-</body>
-</html>

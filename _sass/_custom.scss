@@ -11,3 +11,35 @@
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.embed-responsive::before {
+    display: block;
+    content: "";
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+/* Rounded border */
+hr.rounded {
+    margin-top: 20px;
+    border: 1px solid grey;
+    border-radius: 8px;
+  }

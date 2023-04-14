@@ -1,87 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Sam Bilbow | polaris~</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="author" content="Sam Bilbow" />
-    <meta name="copyright" content="Sam Bilbow" />
-    <meta name="description" content="" />
- 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@sambilbow" />
-    <meta name="twitter:creator" content="@sambilbow" />
-    <meta name="twitter:title" content="Sam Bilbow | Title" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://sambilbow.com/past/path" />
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="../../site.webmanifest.html">
- 
-    <link rel="stylesheet" type="text/css" href="../../style.css" />
-<style type="text/css">
-    .embed-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin: 0;
-        background-color: white;
-    }
-    .embed-container iframe, .embed-container object, .embed-container embed {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-</style><script type="text/javascript">
-var num_media = 3;
-</script>
-<script type="text/javascript" src="../../display_media.js"></script>
-
-</head>
-<body>
-
-
-<div id="header">
-    <div id="name"><a href="../../index.html" alt="about">sam bilbow</a></div>
-    <div id="menu">
-        <a href="../../projects/index.html" alt="projects" style="color: var(--gruv-orange);">projects</a>
-        <a href="../../writing/index.html" alt="writing">writing</a>
-        <a href="../../engagements/index.html" alt="engagements">engagements</a>
-    </div>
+---
+layout: page
+title: polaris~
+description: "Software: Planning Musical AR Instruments (July - August 2021)"
+permalink: /projects/polaris/software
+---
+<div class="caption">
+    <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
+    <a href="https://unity.com/"><img src="https://img.shields.io/badge/Environment-Unity%20&%20Pd-orange?style=flat-square&logo=unity&logoColor=white"></a>
+    <a href="https://doi.org/10.21428/92fbeb44.8abb9ce6"><img src="https://img.shields.io/badge/Publication-NIME-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<div class="clear"></div>
-<div class="clear"></div>
+<b style="text-align: center;" id="bottom-nav"><a href="calibration.html">← Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments →</a></b>
+<hr class="rounded">
 
-
-<main role="main">
-
-
-
-
-<div id="content">
-
-<div class="clear"></div>
-
-
-    
-
-
-
-<div class="info">
-    <span class="title">polaris~</span><br />
-    <h3><a href="https://www.youtube.com/watch?v=zyO43URZZDk">Project Presentation: TEI '21 Student Consortium</a></h3>
-    <h3><a href="https://dl.acm.org/doi/10.1145/3430524.3443690">Project Outline: TEI '21 Student Consortium Paper</a></h3>
-    
+## Software: Planning Musical AR Instruments (July - August 2021)    
 </div>
-<h3 style="text-align: center;" id="bottom-nav"><a href="demos.html"><-- Software: Running Demos</a><a href="pd.html">Software: Musical AR Instruments in PureData --></a></h3>
+<b style="text-align: center;" id="bottom-nav"><a href="demos.html">← Software: Running Demos</a><a href="pd.html">Software: Musical AR Instruments in PureData →</a></b>
 
 <div id="text" class="text">
     <hr class="rounded">
@@ -162,7 +97,7 @@ var num_media = 3;
                 <span style="color: var(--gruv-red);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Open-Source, Free, and Cross-Platform <br>
             </td>
             <td>
-                No real-time synthesis means that instruments would be fairly simple sample triggerers with not much parameterisation available.  <div class="table-youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/ngH9x8HtTaU" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                No real-time synthesis means that instruments would be fairly simple sample triggerers with not much parameterisation available.  <div class="table-youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/ngH9x8HtTaU" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
             </td>
         </tr>
     </table>
@@ -181,7 +116,7 @@ var num_media = 3;
                 <span style="color: var(--gruv-red);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Open-Source, Free, and Cross-Platform <br>
             </td>
             <td>
-                Granular synthesis only, would be a fairly limited set of options for building parameterised instruments.     <div class="table-youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/qqEANHSY1hY" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                Granular synthesis only, would be a fairly limited set of options for building parameterised instruments.     <div class="table-youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/qqEANHSY1hY" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
             </td>
         </tr>
     </table>
@@ -257,34 +192,20 @@ var num_media = 3;
                 <span style="color: var(--gruv-red);">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Open-Source, Free, and Cross-Platform <br>
             </td>
             <td>
-                This is the way to go!<div class="table-youtube-video"><iframe onload="document.getElementById('media_object').style.opacity='1'" src="https://www.youtube.com/embed/CzJlEEcOt-A" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                This is the way to go!<div class="table-youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/CzJlEEcOt-A" frameborder="0" height="200" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
             </td>
         </tr>
     </table>
 
     <br>
    
-<h3 style="text-align: center;" id="bottom-nav"><a href="demos.html"><-- Software: Running Demos</a><a href="pd.html">Software: Musical AR Instruments in PureData --></a></h3>
+<b style="text-align: center;" id="bottom-nav"><a href="demos.html">← Software: Running Demos</a><a href="pd.html">Software: Musical AR Instruments in PureData →</a></b>
 
 <br><br>
 <div style="text-align: center;">
-    <h2>Resources</h2>
-    <h3><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></h3>
-    <h3><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></h3>
-    <h3><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></h3>
+    <h3>Resources</h3>
+    <b><a href="https://docs.projectnorthstar.org/">Headset Documentation: Project North Star</a></b><br>
+    <b><a href="https://discord.gg/wBsV2ehpq2">Community: Project North Star Discord Server</a></b><br>
+    <b><a href="https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration">Repository: Project Esky Renderer</a></b><br>
     <br><br>
 </div>
-
-</div>
-
-
-
-
-</div>
-
-</main>
-
-<script type="text/javascript">
-</script>
-</body>
-</html>
