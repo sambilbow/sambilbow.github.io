@@ -11,7 +11,7 @@ permalink: /projects/polaris/hardware
     <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
     <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<b style="text-align: center;" id="bottom-nav"><a href="inspiration.html">← Inspiration & Rationale</a><a href="calibration.html">Software: Calibration →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../inspiration/">← Inspiration & Rationale</a><a href="../calibration/">Software: Calibration →</a></b>
 <hr class="rounded">
 
 ## Hardware (July - December 2020)
@@ -93,7 +93,7 @@ Building the headset involves assembling the electrical components and the senso
 ### Assembly
 The full assembly guide for the CombineReality Deck X version of the North Star HMD is available [here](https://docs.projectnorthstar.org/mechanical/combine-reality-deck-x/deck-x-assembly-guide).
 
-<b style="text-align: center;" id="bottom-nav"><a href="inspiration.html">← Inspiration & Rationale</a><a href="calibration.html">Software: Calibration →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../inspiration/">← Inspiration & Rationale</a><a href="../calibration/">Software: Calibration →</a></b>
 
 <br><br>
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: polaris~
+description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
 permalink: /projects/polaris/calibration
 ---
 <div class="caption">
@@ -10,7 +11,7 @@ permalink: /projects/polaris/calibration
     <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
     <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<b style="text-align: center;" id="bottom-nav"><a href="hardware.html">← Hardware</a><a href="demos.html">Software: Running Demos →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../hardware/">← Hardware</a><a href="../demos/">Software: Running Demos →</a></b>
 <hr class="rounded">
 
 ## Software: Calibration (December - May 2021)
@@ -72,7 +73,7 @@ Thanks to the new <a href="https://github.com/AheadIO/Deck-X/blob/main/Deck_X/ST
 
 Calibration is fairly simple and requires running premade python scripts. <a href="https://docs.projectnorthstar.org/calibration/2d-calibration">Instructions are here</a> (I created a custom anaconda virtual environment (venv) to install the packages and run the calibration scripts from this venv). The output are four number arrays, which can later be used in Unity to make sure that each eye receives calibrated visuals from the screens. I keep these arrays in a sacred folder called `CALIBRATIONS DO NOT TOUCH/`.
    
-<b style="text-align: center;" id="bottom-nav"><a href="hardware.html">← Hardware</a><a href="demos.html">Software: Running Demos →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../hardware/">← Hardware</a><a href="../demos/">Software: Running Demos →</a></b>
 
 <br><br>
 <div style="text-align: center;">

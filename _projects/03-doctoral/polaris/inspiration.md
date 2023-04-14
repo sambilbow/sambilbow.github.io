@@ -12,7 +12,7 @@ permalink: /projects/polaris/inspiration
     <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
 
-<b style="text-align: center;" id="bottom-nav"><a href="./">← Summary</a><a href="hardware.html">Hardware Process →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../">← Summary</a><a href="../hardware/">Hardware Process →</a></b>
 <hr class="rounded">      
 
 ## Inspiration & Rationale (May - July 2020)
@@ -60,7 +60,7 @@ I therefore thought it would be a good platform to design my further studies wit
     </div>
 </div>
                 
-<b style="text-align: center;" id="bottom-nav"><a href="index.html">← Summary</a><a href="hardware.html">Hardware Process →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../">← Summary</a><a href="../hardware/">Hardware Process →</a></b>
 
 <br><br>
 <div style="text-align: center;">

@@ -1,43 +1,55 @@
 ---
 layout: page
 title: polaris~
-description: "Software: Musical AR Instruments in PureData (August 2021 - August 2022)"
+description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
 permalink: /projects/polaris/pd
 ---
-
-    
+<div class="caption">
+    <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
+    <a href="https://unity.com/"><img src="https://img.shields.io/badge/Environment-Unity%20&%20Pd-orange?style=flat-square&logo=unity&logoColor=white"></a>
+    <a href="https://doi.org/10.21428/92fbeb44.8abb9ce6"><img src="https://img.shields.io/badge/Publication-NIME-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
+    <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<b style="text-align: center;" id="bottom-nav"><a href="software.html">← Software: Planning Musical AR Instruments</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../software/">← Software: Planning Musical AR Instruments</a></b>
+<hr class="rounded">
 
-<div id="text" class="text">
-    <hr class="rounded">
-    <h2>Software: Musical AR Instruments in PureData (August 2021 - Ongoing)</h2>
+## Software: Musical AR Instruments in PureData (August 2021 - August 2022)
+### The NEW Current state of the ARt
+In the last section, I went through the available choices for developing the audio section of my AR instruments. Out of these choices, the system that makes the most sense is developing PureData patches for the audio end of the instrument, and then implementinng Niall Moody's <a href="https://github.com/LibPdIntegration/LibPdIntegration">LibPdIntegration</a> project, which allows PureData patches to be run in Unity.
+ 
+#### Parameterised GameObject AR Synthesizers
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <div class ="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/CzJlEEcOt-A" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<br>
+
+### Finger Reactive (10x synth gens) AR Synthesiser
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <div class ="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/dJUd0186NbA" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<br>
+
+### Palm Reactive (2x synth gens) AR Synthesiser
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <div class ="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/miQI4jetETs" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<br>
 
 
-    <h3>The NEW Current state of the ARt</h3>
-    <p>
-        In the last section, I went through the available choices for developing the audio section of my AR instruments. Out of these choices, the system that makes the most sense is developing PureData patches for the audio end of the instrument, and then implementinng Niall Moody's <a href="https://github.com/LibPdIntegration/LibPdIntegration">LibPdIntegration</a> project, which allows PureData patches to be run in Unity.
-    </p>
-        
-    
-
-    <h4>Parameterised GameObject AR Synthesizers</h4>
-    <p>
-        <div class="youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/CzJlEEcOt-A" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
-    </p>
-   
-    <h4>Finger Reactive (10x synth gens) AR Synthesiser</h4>
-    <p>
-        <div class="youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/dJUd0186NbA" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
-    </p>
-
-    <h4>Palm Reactive (2x synth gens) AR Synthesiser</h4>
-    <p>
-        <div class="youtube-video"><div class ="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube.com/embed/miQI4jetETs" frameborder="0" height="300" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
-    </p>
-
-
-<b style="text-align: center;" id="bottom-nav"><a href="software.html">← Software: Planning Musical AR Instruments</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../software">← Software: Planning Musical AR Instruments</a></b>
 
 <br><br>
 <div style="text-align: center;">

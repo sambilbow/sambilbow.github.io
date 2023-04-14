@@ -11,7 +11,7 @@ permalink: /projects/polaris/demos
     <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
     <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<b style="text-align: center;" id="bottom-nav"><a href="calibration.html">← Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../calibration/">← Software: Calibration</a><a href="../software/">Software: Planning Musical AR Instruments →</a></b>
 <hr class="rounded">
 
 ## Software: Running Demos (May - July 2021)
@@ -78,7 +78,7 @@ There are a couple of important steps I had to go through before I could use Esk
 From here on, when working in Unity 3D, it is assumed that I am referring to the Project Esky Unity Implementation.
 
    
-<b style="text-align: center;" id="bottom-nav"><a href="calibration.html">← Software: Calibration</a><a href="software.html">Software: Planning Musical AR Instruments →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../calibration/">← Software: Calibration</a><a href="../software/">Software: Planning Musical AR Instruments →</a></b>
 
 <br><br>
 <div style="text-align: center;">
