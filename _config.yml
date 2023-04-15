@@ -237,6 +237,7 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+      seo_title: "" # For non-image tab titles
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
