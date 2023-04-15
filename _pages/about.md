@@ -23,7 +23,7 @@ social: false  # includes social icons at the bottom of the page
 I am an experimental musician, creative programmer, and postdoctoral researcher based in Brighton. My current research is in computational art and music, collaborative augmented reality, and multi-sensory displays for human-computer interaction. Currently, I am awaiting viva examination. In Feb 2023, I started a Leverhulme funded post-doctoral project entitled Collective Musical Sensehacking [(CoMuse)](projects/comuse/). It is a year-long investigation into multiplayer musical AR experiences.
 
 <!-- Table of recent projects -->
-<h2><a href="/projects/" style="color: inherit;">current projects :tada:</a></h2>
+<h2><a href="/projects/" style="color: inherit;">ongoing projects :tada:</a></h2>
 <div class="news">
   <div class="table-responsive">
     <table class="table table-sm table-borderless">          
@@ -36,7 +36,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
       <tr>
         <th scope="row">Feb 2022</th>
         <td>
-          <a href="projects/polygons/">:performing_arts: polygons~</a>
+          <a href="projects/polygons/"><img id="emoji" src="/assets/img/emoji/ul_wave.webp"> polygons~</a>
         </td>
       </tr>
       <tr>
@@ -45,7 +45,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
           <a href="https://thexrt.space/">:speech_balloon: The XRt Space</a>
         </td>
       </tr>
-      <tr>
+      <!-- <tr>
         <th scope="row">May 2021</th>
         <td>
           <a href="projects/polaris/"><img id="emoji" src="/assets/img/emoji/ul_ok.webp"> polaris~</a>
@@ -56,7 +56,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
         <td>
           <a href="projects/area/"><img id="emoji" src="/assets/img/emoji/ul_wave.webp"> area~</a>
         </td>
-      </tr>
+      </tr> -->
       </tbody>
     </table>
   </div>
