@@ -4,7 +4,7 @@ title: birds.tidal
 description: "Live-coded composition featuring virtual birds (December 2018)"
 img: assets/projects/02-postgrad/birds/birds.jpg
 importance: 4
-permalink:  projects/birds
+permalink:  projects/birds/
 category: postgrad
 ---
 

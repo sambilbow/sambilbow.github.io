@@ -4,7 +4,7 @@ title: BandAR
 description: "AR live-mixing musical experience. (May 2018)"
 img: assets/projects/01-undergrad/bandar/bandar.jpg
 importance: 1
-permalink:  projects/bandar
+permalink:  projects/bandar/
 category: undergrad
 ---
 

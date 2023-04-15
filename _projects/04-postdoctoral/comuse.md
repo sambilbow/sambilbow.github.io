@@ -4,7 +4,7 @@ title: coMuse
 description: "Collective Musical Sensehacking : Towards Ensemble Sound ARt  (2023)"
 img: assets/projects/04-postdoctoral/comuse/comuse.png
 importance: 100
-permalink: /projects/comuse
+permalink: /projects/comuse/
 category: postdoctoral
 ---
 

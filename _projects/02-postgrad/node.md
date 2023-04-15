@@ -4,7 +4,7 @@ title: Node Necklace
 description: "8 Channel Guitar / Gesture Installation (August 2019)"
 img: assets/projects/02-postgrad/node/node.jpg
 importance: 1
-permalink:  projects/node
+permalink:  projects/node/
 category: postgrad
 ---
 

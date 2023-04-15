@@ -4,7 +4,7 @@ title: Cellobot
 description: "@ CROMT Robot Opera (June 2019)"
 img: assets/projects/06-collaborative/cellobot/cellobot.jpg
 importance: 100
-permalink:  projects/cellobot
+permalink:  projects/cellobot/
 category: collaborative
 ---
 

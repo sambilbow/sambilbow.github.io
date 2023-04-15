@@ -2,7 +2,7 @@
 layout: page
 title: polaris~
 description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
-permalink: /projects/polaris/inspiration
+permalink: /projects/polaris/inspiration/
 ---
 <div class="caption">
     <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
@@ -29,7 +29,7 @@ permalink: /projects/polaris/inspiration
     LeapMotion video from 2018 showcasing through-combiner footage of the robust hand tracking in North Star        
 </div>     
 
-During the development of the pilot study for my PhD: [the area~ system](../area/index.html), I came across the open-source Project North Star AR headset. It had a very clear set of advantages detailed below:
+During the development of the pilot study for my PhD: [the area~ system](../../area/), I came across the open-source Project North Star AR headset. It had a very clear set of advantages detailed below:
 
 **Visual Display**
 - 2K resolution per-eye OLED displays

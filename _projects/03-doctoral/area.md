@@ -4,7 +4,7 @@ title: area~
 description: Exploring Real and Virtual Environments Through Gestural Ambisonics and Audio Augmented Reality (2020)
 img: assets/projects/03-doctoral/area/area.jpg
 importance: 3
-permalink: projects/area
+permalink: projects/area/
 category: doctoral
 ---
 

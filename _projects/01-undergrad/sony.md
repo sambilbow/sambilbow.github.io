@@ -4,7 +4,7 @@ title: S*ny Sampler
 description: "MIDI mapped musical game controller (May 2016)"
 img: assets/projects/01-undergrad/sony/sony.jpg
 importance: 5
-permalink:  projects/sony
+permalink:  projects/sony/
 category: undergrad
 ---
 

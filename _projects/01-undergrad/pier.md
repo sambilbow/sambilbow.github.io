@@ -4,7 +4,7 @@ title: Arcade Waves
 description: An acoustic portrait of Brighton Pier (December 2015)
 img: assets/projects/01-undergrad/pier/pier.jpg
 importance: 6
-permalink:  projects/pier
+permalink:  projects/pier/
 category: undergrad
 ---
 <div class="row">

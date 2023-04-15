@@ -4,7 +4,7 @@ title: GloveDuino
 description: "MIDI mapped musical data glove (December 2016)"
 img: assets/projects/01-undergrad/gloveduino/gloveduino.jpg
 importance: 4
-permalink:  projects/gloveduino
+permalink:  projects/gloveduino/
 category: undergrad
 ---
 

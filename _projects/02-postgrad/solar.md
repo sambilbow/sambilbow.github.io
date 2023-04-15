@@ -4,7 +4,7 @@ title: SolAR
 description: "Spatial Audio AR Synth Experience (December 2018)"
 img: assets/projects/02-postgrad/solar/solar.jpg
 importance: 3
-permalink:  projects/solar
+permalink:  projects/solar/
 category: postgrad
 ---
 

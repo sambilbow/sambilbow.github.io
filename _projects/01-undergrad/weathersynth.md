@@ -4,7 +4,7 @@ title: WeatherSynth
 description: "UK weather API sonification (May 2017)"
 img: assets/projects/01-undergrad/weathersynth/weathersynth.jpg
 importance: 3
-permalink:  projects/weathersynth
+permalink:  projects/weathersynth/
 category: undergrad
 ---
 

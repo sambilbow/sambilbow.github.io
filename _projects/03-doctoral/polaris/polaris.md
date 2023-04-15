@@ -4,7 +4,7 @@ title: polaris~
 description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
 img: assets/projects/03-doctoral/polaris/polaris.jpg
 importance: 2
-permalink: /projects/polaris
+permalink: /projects/polaris/
 category: doctoral
 ---
 <b style="text-align: center;" id="bottom-nav"><a href="#"> </a><a href="inspiration/">Inspiration & Rationale →</a></b>

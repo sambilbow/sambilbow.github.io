@@ -4,7 +4,7 @@ title: Therephone
 description: "Motion-sensing solenoid xylophone. (December 2017)"
 img: assets/projects/01-undergrad/therephone/therephone.jpg
 importance: 2
-permalink:  projects/therephone
+permalink:  projects/therephone/
 category: undergrad
 ---
 

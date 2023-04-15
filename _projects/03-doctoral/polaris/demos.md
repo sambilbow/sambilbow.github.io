@@ -2,7 +2,7 @@
 layout: page
 title: polaris~
 description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
-permalink: /projects/polaris/demos
+permalink: /projects/polaris/demos/
 ---
 <div class="caption">
     <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>

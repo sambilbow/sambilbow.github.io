@@ -2,7 +2,7 @@
 layout: page
 title: polaris~
 description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
-permalink: /projects/polaris/pd
+permalink: /projects/polaris/pd/
 ---
 <div class="caption">
     <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
@@ -50,7 +50,7 @@ In the last section, I went through the available choices for developing the aud
 <br>
 
 
-<b style="text-align: center;" id="bottom-nav"><a href="../software">← Software: Planning Musical AR Instruments</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="../software/">← Software: Planning Musical AR Instruments</a></b>
 
 <br><br>
 <div style="text-align: center;">
