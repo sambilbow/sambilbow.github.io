@@ -4,9 +4,18 @@ title: polaris~
 description: An Audiovisual Augmented Reality Experience Built on Open-Source Hardware and Software (2021)
 img: assets/projects/03-doctoral/polaris/polaris.jpg
 importance: 2
-permalink: /projects/polaris/
+permalink: /projects/polaris
 category: doctoral
 ---
+<b style="text-align: center;" id="bottom-nav"><a href="#"> </a><a href="inspiration/">Inspiration & Rationale →</a></b>
+<hr class="rounded">      
+
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        {% include figure.html path="assets/projects/03-doctoral/polaris/demo.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
     <a href="https://www.microsoft.com/en-gb/windows/"><img src="https://img.shields.io/badge/Platform-Windows-yellow?style=flat-square&logo=windows"></a>
     <a href="https://unity.com/"><img src="https://img.shields.io/badge/Environment-Unity%20&%20Pd-orange?style=flat-square&logo=unity&logoColor=white"></a>
@@ -14,22 +23,13 @@ category: doctoral
     <a href="https://github.com/sambilbow/polaris/wiki"><img src="https://img.shields.io/badge/Guide-Wiki-red?style=flat-square&logo=todoist&logoColor=white"></a>
     <a href="https://github.com/sambilbow/polaris/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
-<b style="text-align: center;" id="bottom-nav"><a href="/"> </a><a href="inspiration">Inspiration & Rationale →</a></b>
-<hr class="rounded">      
 
 ## Summary
-
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/demo.gif" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
 If an AR system can be thought of as one that combines real and virtual processes, is interactive in real-time, and is registered in three dimensions; why do we witness the majority of AR applications utilising primarily visual displays of information? I propose a practice-led compositional approach for developing multisensory AR experiences’, arguing that, as an medium that combines real and virtual multisensory processes, it must explored with a multisensory approach.
 
 This project uses the open-source [Project North Star](https://docs.projectnorthstar.org/) HMD from Leap Motion alongside bone-conduction headphones to deliver a spatialised audio-visual experience via Unity called polaris~. This repository started off as a fork of the [Software Companion](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration) for Project North Star, hence the other repository contributors and long list of commits. However, the experience itself including all audio-visual / artistic / musical content was added afterwards.    
 
-This page outlines my use of the system which started around June of 2020 and is ongoing. To clarify, the original design has been open sourced by Leap Motion since 2018, but there have been a fair few community revisions and updates to the design [see more here](https://docs.projectnorthstar.org/#variations). This page documents the development of the Combine Reality Deck X version of the Project North Star HMD. Combine Reality is run by Noah Zerkin, who has provided countless support to my own project, so thanks Noah! He's also pretty much the only inexpensive parts sourcer of the electrical bits needed for the headset. These pages act more like a devblog of my first year with North Star as a platform, its not to be taken as project instructions. They can be found on the [wiki guide](https://github.com/sambilbow/polaris/wiki)
+This page outlines my use of the system which started around June of 2020 and is ongoing. To clarify, the original design has been open sourced by Leap Motion since 2018, but there have been a fair few community revisions and updates to the design [see more here](https://docs.projectnorthstar.org/#variations). This page documents the development of the Combine Reality Deck X version of the Project North Star HMD. Combine Reality is run by Noah Zerkin, who has provided countless support to my own project, so thanks Noah! He's also pretty much the only inexpensive parts sourcer of the electrical bits needed for the headset. **These pages act more like a devblog of my first year with North Star as a platform, its not to be taken as project instructions. Those can be found on the [wiki guide](https://github.com/sambilbow/polaris/wiki)**
 
 
 [![{Presentation}](https://ytcards.demolab.com/?id=eCdQku5hFOE&title=Presentation&lang=en&timestamp=1655660340&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=548 "Presentation")](https://youtu.be/eCdQku5hFOE)
@@ -62,7 +62,7 @@ This page outlines my use of the system which started around June of 2020 and is
 - [Automatonism](https://www.automatonism.com/the-software) is developed by [Johan Erikkson](https://www.linkedin.com/in/johan-eriksson-ph-d-84393a56/).
 
 
-<b style="text-align: center;" id="bottom-nav"><a href="/"> </a><a href="inspiration">Inspiration & Rationale →</a></b>
+<b style="text-align: center;" id="bottom-nav"><a href="#"> </a><a href="inspiration/">Inspiration & Rationale →</a></b>
 <br><br>
 <div style="text-align: center;">
     <h3>Resources</h3>

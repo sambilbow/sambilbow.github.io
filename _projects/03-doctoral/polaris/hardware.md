@@ -14,10 +14,11 @@ permalink: /projects/polaris/hardware
 <b style="text-align: center;" id="bottom-nav"><a href="../inspiration/">← Inspiration & Rationale</a><a href="../calibration/">Software: Calibration →</a></b>
 <hr class="rounded">
 
-## Hardware (July - December 2020)
+## Hardware 
+**(July - December 2020)**
 
 
-**Shopping List (prices / stores outdated)** 
+### Shopping List (prices / stores outdated)
 
 £300 [CombineReality Deck X Kit A (pending refresh)](https://shop.ahead.io/product/deck-x-kit-one/)
 

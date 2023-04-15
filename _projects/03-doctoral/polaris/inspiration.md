@@ -15,7 +15,8 @@ permalink: /projects/polaris/inspiration
 <b style="text-align: center;" id="bottom-nav"><a href="../">← Summary</a><a href="../hardware/">Hardware Process →</a></b>
 <hr class="rounded">      
 
-## Inspiration & Rationale (May - July 2020)
+## Inspiration & Rationale 
+**(May - July 2020)**
 
 <div class="row">
     <div class="col-sm mt-1 mt-md-0" align="center">

@@ -14,9 +14,10 @@ permalink: /projects/polaris/pd
 <b style="text-align: center;" id="bottom-nav"><a href="../software/">← Software: Planning Musical AR Instruments</a></b>
 <hr class="rounded">
 
-## Software: Musical AR Instruments in PureData (August 2021 - August 2022)
+## Software: Musical AR Instruments in PureData 
+**(August 2021 - February 2022)**
 ### The NEW Current state of the ARt
-In the last section, I went through the available choices for developing the audio section of my AR instruments. Out of these choices, the system that makes the most sense is developing PureData patches for the audio end of the instrument, and then implementinng Niall Moody's <a href="https://github.com/LibPdIntegration/LibPdIntegration">LibPdIntegration</a> project, which allows PureData patches to be run in Unity.
+In the last section, I went through the available choices for developing the audio section of my AR instruments. Out of these choices, the system that makes the most sense is developing PureData patches for the audio end of the instrument, and then implementinng Niall Moody's [LibPdIntegration](https://github.com/LibPdIntegration/LibPdIntegration) project, which allows PureData patches to be run in Unity.
  
 #### Parameterised GameObject AR Synthesizers
 <div class="row">

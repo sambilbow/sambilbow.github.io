@@ -14,7 +14,8 @@ permalink: /projects/polaris/demos
 <b style="text-align: center;" id="bottom-nav"><a href="../calibration/">← Software: Calibration</a><a href="../software/">Software: Planning Musical AR Instruments →</a></b>
 <hr class="rounded">
 
-## Software: Running Demos (May - July 2021)
+## Software: Running Demos 
+**(May - July 2021)**
 ### Through-Combiner Recording
 In July I added a camera to the headset, to be specific, I have a Raspberry Pi Zero, taking power over USB 2 ribbon cable from the CombineReality Integrator, connected to a ZeroCam (small camera), placed just to the right of the left screen on the headset. This results in the camera being in front of my left eye. Despite making it harder to see objects, for documentation and archival purposes, the camera has been a great addition. Following these instructions, the camera shows up as a standard USB camera through the headset's USB 3 cable. This cable to the PC is now not only powering and transferring data to and from the sensors and displays, but now also the new camera, all through one cable!
 

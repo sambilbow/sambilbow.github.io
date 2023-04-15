@@ -17,7 +17,47 @@ profile:
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
-Sam is an experimental musician, creative programmer and postdoctoral researcher based in Brighton, his current research is in computational art and music, collaborative augmented reality and multi-sensory displays for human-computer interaction. Sam is currently awaiting viva examination. In February 2023 he started a Leverhulme funded post-doctoral project entitled Collective Musical Sensehacking (CoMuse), a year-long investigation into multiplayer musical AR experiences.
+I am an experimental musician, creative programmer, and postdoctoral researcher based in Brighton. My current research is in computational art and music, collaborative augmented reality, and multi-sensory displays for human-computer interaction. Currently, I am awaiting viva examination. In Feb 2023, I started a Leverhulme funded post-doctoral project entitled Collective Musical Sensehacking [(CoMuse)](projects/comuse/). It is a year-long investigation into multiplayer musical AR experiences.
+
+<!-- Table of recent projects -->
+<h2><a href="/projects/" style="color: inherit;">current projects :tada:</a></h2>
+<div class="news">
+  <div class="table-responsive">
+    <table class="table table-sm table-borderless">          
+      <tbody id="blog-post-home"><tr>
+        <th scope="row">Feb 2023</th>
+        <td>
+          <a href="projects/comuse/">:paintbrush: coMuse</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Feb 2022</th>
+        <td>
+          <a href="projects/polygons/">:performing_arts: polygons~</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Aug 2021</th>
+        <td>
+          <a href="https://thexrt.space/">:speech_balloon: The XRt Space</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">May 2021</th>
+        <td>
+          <a href="projects/polaris/"><img id="emoji" src="/assets/img/emoji/ul_ok.webp"> polaris~</a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Mar 2020</th>
+        <td>
+          <a href="projects/area/"><img id="emoji" src="/assets/img/emoji/ul_wave.webp"> area~</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

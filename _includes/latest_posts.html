@@ -13,7 +13,7 @@
               {% for item in latest_posts limit: latest_posts_limit %}
                 <tr>
                   <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-                  <td>
+                  <td id="blog-post-home" >
                     <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                   </td>
                 </tr>

@@ -39,8 +39,8 @@ html[data-theme=dark] {
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #e8e8e8;
-  --global-theme-color: #2698BA;
-  --global-hover-color: #2698BA;
+  --global-theme-color: #fc9cc7;
+  --global-hover-color: #fc9cc7;
   --global-footer-bg-color: #e8e8e8;
   --global-footer-text-color: #1C1C1D;
   --global-footer-link-color: #000000;
@@ -113,6 +113,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+  font-family: "Ubuntu", sans-serif;
 }
 
 hr {
@@ -917,7 +918,7 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
   }
 }
 #audio {
-  background-color: var(--gruv-dark);
+  background-color: #2a2827;
   padding: 5px;
   padding-bottom: 0px;
   margin-bottom: 30px;
@@ -958,11 +959,38 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover {
   font-size: larger;
 }
 
-/* Rounded border */
 hr.rounded {
   margin-top: 20px;
   border: 1px solid grey;
   border-radius: 8px;
+}
+
+#emoji {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.social .contact-icons {
+  padding-top: 1rem;
+  font-size: 2.7rem;
+}
+
+.table-responsive th:first-child,
+.table-responsive td:first-child {
+  width: 16.5%;
+}
+
+a:hover, table.table a:hover {
+  text-decoration: none;
+}
+
+#blog-post-home a {
+  color: var(--global-text-color);
+}
+#blog-post-home a:hover {
+  color: var(--global-theme-color);
 }
 
 /*# sourceMappingURL=main.css.map */

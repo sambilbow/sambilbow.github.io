@@ -1,6 +1,6 @@
 ---
 layout: post
-title: northstar on linux
+title: <img id="emoji" src="/assets/img/emoji/collabora.png"><span> </span><img id="emoji" src="/assets/img/emoji/oxr.webp"> northstar on linux
 date: 2023-04-12 11:12:00-0400
 description: towards an open-source workflow
 tags: open-source linux augmented-reality

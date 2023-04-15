@@ -99,14 +99,10 @@
       #   - Description 2.
 
 - title: Other Interests
-  type: list
+  type: nested_list
   contents:
-    <u>Space:</u> Astronomy, Black Hole Physics, Stargazing
-    <br>
-    <u>Music:</u> Ambient, Experimental, Noise, Glitch
-    <br>
-    <u>Games:</u> MMO, RPGs, Simulations, FPS
-    <br>
-    <u>Hardware:</u> PC Building, Microcontroller Projects
-    <br>
-    <u>Software:</u> Open-source software, Amateur Server Deployment 
+    - title: "<b>Space</b>: Astronomy, Black Hole Physics, Stargazing"
+    - title: "<b>Music</b>: Ambient, Experimental, Noise, Glitch"
+    - title: "<b>Games</b>: MMO, RPGs, Simulations, FPS"
+    - title: "<b>Hardware</b>: PC Building, Microcontroller Projects"
+    - title: "<b>Software</b>: Open-source software, Amateur server deployment"

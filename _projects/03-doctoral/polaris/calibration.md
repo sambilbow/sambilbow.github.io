@@ -14,7 +14,8 @@ permalink: /projects/polaris/calibration
 <b style="text-align: center;" id="bottom-nav"><a href="../hardware/">← Hardware</a><a href="../demos/">Software: Running Demos →</a></b>
 <hr class="rounded">
 
-## Software: Calibration (December - May 2021)
+## Software: Calibration 
+**(December - May 2021)**
 ### Initiation
 Originally, my system was very temperatmental. After much deliberation, I realised I must have shorted some part of my integrator. After replacing it, everything is plug and play. Luckily I was mainly working on written parts of my PhD during this period of time.
 
