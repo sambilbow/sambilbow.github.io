@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-15T15:49:25+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html">northstar on linux</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of CoMuse I hope to move towards a fully open-source stack for multi-user musical AR experience. Instructions are for Arch-based systems, e.g. EndeavourOS, and assumes a Wayland compositor (rather than X11).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-15T20:23:32+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">northstar on linux [wip]</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux [wip]" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
+<hr />
+<p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. Instructions are for <a href="https://wiki.archlinux.org/">Arch-based systems</a>, e.g. <a href="https://endeavouros.com/">EndeavourOS</a>, and assumes a <a href="https://wiki.archlinux.org/title/wayland#Compositors">Wayland compositor</a>, rather than X11, e.g. <a href="https://community.kde.org/KWin/Wayland"><code class="language-plaintext highlighter-rouge">kwin_wayland</code></a>.</p>
 
 <p><strong>Current Windows Workflow</strong></p>
 
@@ -9,38 +11,85 @@
 
 <p>North Star → OpenXR → Monado → Application</p>
 
-<h2 id="openxr-open-standard-xr-api">OpenXR (Open Standard XR API)</h2>
-<ul>
-  <li>openxr-git</li>
-</ul>
+<p><br /></p>
 
-<h2 id="monado-openxr-runtime-for-gnulinux">Monado (OpenXR Runtime for GNU/Linux)</h2>
-<ul>
-  <li>monado-git</li>
-</ul>
+<h2 id="installation">Installation</h2>
+<hr />
+<h3><img id="emoji" src="/assets/img/emoji/oxr.webp" /> OpenXR (Open Standard XR API)</h3>
 
-<h2 id="ultraleap-hand-tracking">Ultraleap (Hand Tracking)</h2>
-<p>📄 <a href="https://docs.ultraleap.com/linux/">Linux Documentation</a></p>
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">openxr-git</code> from the <a href="https://aur.archlinux.org/packages/monado-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S monado-git</code></p>
+
+<p><br /></p>
+<h3><img id="emoji" src="/assets/img/emoji/collabora.png" /> Monado (OpenXR Runtime for GNU/Linux)</h3>
+
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">monado-git</code> from the <a href="https://aur.archlinux.org/packages/openxr-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S openxr-git</code></p>
+
+<p>Make sure you Monado is set as your active OpenXR runtime. Check via the environment variable: <code class="language-plaintext highlighter-rouge">echo $XR_RUNTIME_JSON</code>. If there is no output, follow <a href="https://monado.freedesktop.org/getting-started.html#selecting-the-monado-runtime-for-openxr-applications">these</a> instructions.</p>
+
+<p><br /></p>
+<h3><img id="emoji" src="/assets/img/emoji/ul_wave.webp" /> Ultraleap (Hand Tracking)</h3>
+
+<p><a href="https://docs.ultraleap.com/linux/">Linux Documentation</a></p>
 
 <p>Ultraleap have released their Gemini V5 tracking software as a beta for Ubuntu 22.04 LTS. However, the binaries are still accessible via their repository for non-Debian Linux systems. The repository links are provided below for those not on Debian-based systems:</p>
 <ul>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">⬇️</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code>  - a background service that attaches to Ultraleap devices.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">⬇️</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code>  - a GUI application that shows cameras &amp; info.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">⬇️</a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code>  - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code>  - a background service that attaches to Ultraleap devices.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code>  - a GUI application that shows cameras &amp; info.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code>  - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
 </ul>
 
 <p>Unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package), and place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
 
-<p>A quirk of running North Star on Linux is that the UVC</p>
-
-<h2 id="intel-realsense-6dof-tracking">Intel RealSense (6DoF Tracking)</h2>
-
-<h2 id="uploading-sketches-to-the-north-star-integrator">Uploading sketches to the North Star Integrator</h2>
+<p><br /></p>
+<h3><img id="emoji" src="/assets/img/emoji/intel.png" /> RealSense (6DoF Tracking)</h3>
 <ul>
-  <li>Arduino IDE</li>
-  <li>North-Star-Integrator <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches">Sketches</a></li>
+  <li><code class="language-plaintext highlighter-rouge">librealsense</code> is installed as part of <code class="language-plaintext highlighter-rouge">monado-git</code></li>
 </ul>
 
-<!-- **EndeavourOS**
+<p><br /></p>
+<h3><img id="emoji" src="/assets/img/emoji/arduino.png" /> Arduino (Firmware)</h3>
+<ul>
+  <li>Download, build, and install <code class="language-plaintext highlighter-rouge">arduino</code> from the <code class="language-plaintext highlighter-rouge">community</code> repository, i.e. <code class="language-plaintext highlighter-rouge">yay -S arduino</code></li>
+  <li>Linux compatible <code class="language-plaintext highlighter-rouge">North-Star-Integrator</code> <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches">sketches</a></li>
+</ul>
 
-`yay -S openxr-git monado-git` -->]]></content><author><name></name></author><category term="wip" /><category term="open-source" /><category term="linux" /><category term="augmented-reality" /><summary type="html"><![CDATA[towards an open-source workflow]]></summary></entry></feed>
+<p><br /></p>
+
+<h2 id="running-demos">Running Demos</h2>
+<hr />
+<p>Plug in your North Star via USB 2.0 (either use a hub or a motherboard port, depending on whether or not you have a 2.0 port)</p>
+
+<h3 id="ironing-out-wayland-quirks">Ironing out Wayland Quirks</h3>
+<ul>
+  <li>If you want <a href="https://monado.freedesktop.org/direct-mode.html">direct-mode</a>, you have to use an X11 compositor, its not currently supported on Wayland. That said, I wanted to use Wayland because :shrug:, I’m also used to extended-mode from the Unity Windows workflow.</li>
+</ul>
+
+<p><br /></p>
+
+<h3><img id="emoji" src="/assets/img/emoji/stardust.gif" /> StardustXR</h3>
+<p><code class="language-plaintext highlighter-rouge">tba</code></p>
+
+<p><br /></p>
+
+<h2 id="uploading-sketches">Uploading Sketches</h2>
+<hr />
+<p>On Linux, you may have to add yourself to the usergroup that <code class="language-plaintext highlighter-rouge">/dev/ttyACM0</code> (the Arduino Leonardo’s serial port) is part of if you are receiving errors uploading sketches.</p>
+
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">stat /dev/ttyACM0</code> in a terminal</li>
+  <li>Note the user group that the serial port is assigned to, e.g. <code class="language-plaintext highlighter-rouge">dialout</code> or <code class="language-plaintext highlighter-rouge">plugdev</code></li>
+  <li>Add your user to this group with <code class="language-plaintext highlighter-rouge">sudo usermod -a -G [group] [username]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo</code> run command as superuser</li>
+  <li><code class="language-plaintext highlighter-rouge">usermod</code> modify user attributes</li>
+  <li><code class="language-plaintext highlighter-rouge">-a</code> append</li>
+  <li><code class="language-plaintext highlighter-rouge">-G</code> group</li>
+  <li>Add the <code class="language-plaintext highlighter-rouge">../libraries/SX1508</code> folder to your Arduino library directory (default on Linux: <code class="language-plaintext highlighter-rouge">/home/[user]/Arduino/libraries</code>)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">../libraries/SX1508/src/util/sx1508_registers.h</code> has been renamed to <code class="language-plaintext highlighter-rouge">SX1508_registers.h</code> in this repo because I was getting errors when I tried to access this file in the Arduino IDE on Linux, I believe this was because of <a href="https://en.wikipedia.org/wiki/Case_sensitivity">UNIX case-sensitivity</a>.</li>
+    </ul>
+  </li>
+  <li>Open a sketch in Arduino IDE</li>
+  <li>Install any additionally required libraries (on Linux I needed to add the <code class="language-plaintext highlighter-rouge">Keyboard</code> library)</li>
+  <li>Set the correct Port and Board in <code class="language-plaintext highlighter-rouge">Tools &gt; </code></li>
+  <li>Verify and Upload the sketch.</li>
+</ol>]]></content><author><name></name></author><category term="wip" /><category term="open-source" /><category term="linux" /><category term="augmented-reality" /><summary type="html"><![CDATA[towards an open-source workflow]]></summary></entry></feed>
