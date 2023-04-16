@@ -2,6 +2,7 @@
 .bundle
 .sass-cache
 .jekyll-cache
+.tweet-cache
 .jekyll-metadata
 .DS_store
 .ruby-version
