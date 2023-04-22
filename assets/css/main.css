@@ -993,4 +993,60 @@ a:hover, table.table a:hover {
   color: var(--global-theme-color);
 }
 
+.highlight {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.highlight pre {
+  background-color: var(--global-bg-color) !important;
+}
+
+pre {
+  padding: 8px 12px;
+  position: relative;
+  /* Copy code to clipboard button */
+  /* Go to gist URL */
+}
+pre .copy {
+  background: var(--global-card-bg-color);
+  border-color: var(--global-bg-color);
+  border-radius: 0.3rem;
+  border-style: solid;
+  color: var(--global-text-color);
+  font-size: medium;
+  opacity: 0.2;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+}
+pre .copy:active, pre .copy:focus, pre .copy:hover {
+  color: var(--global-hover-color);
+  opacity: 1;
+}
+pre:active .copy, pre:focus .copy, pre:hover .copy {
+  color: var(--global-hover-color);
+  opacity: 1;
+}
+pre .github {
+  background: var(--global-card-bg-color);
+  border-color: var(--global-bg-color);
+  border-radius: 0.3rem;
+  border-style: solid;
+  color: var(--global-text-color);
+  font-size: medium;
+  opacity: 0.2;
+  position: absolute;
+  right: 2rem;
+  top: 0.25rem;
+}
+pre .github:active, pre .github:focus, pre .github:hover {
+  color: var(--global-hover-color);
+  opacity: 1;
+}
+pre:active .github, pre:focus .github, pre:hover .github {
+  color: var(--global-hover-color);
+  opacity: 1;
+}
+
 /*# sourceMappingURL=main.css.map */

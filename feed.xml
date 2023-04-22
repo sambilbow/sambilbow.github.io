@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-17T17:30:01+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">northstar on linux [wip]</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux [wip]" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-22T14:52:18+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+</subtitle><entry><title type="html">northstar on linux</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
 <hr />
-<p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. Instructions are for <a href="https://wiki.archlinux.org/">Arch-based systems</a>, e.g. <a href="https://endeavouros.com/">EndeavourOS</a>, and assumes a <a href="https://wiki.archlinux.org/title/wayland#Compositors">Wayland compositor</a>, rather than X11, e.g. <a href="https://community.kde.org/KWin/Wayland"><code class="language-plaintext highlighter-rouge">kwin_wayland</code></a>.</p>
+<p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. Here’s a bunch of instructions on how to get started with North Star on Linux. Instructions are for <a href="https://wiki.archlinux.org/">Arch-based systems</a>, e.g. <a href="https://endeavouros.com/">EndeavourOS</a>, and assumes a <a href="https://wiki.archlinux.org/title/wayland#Compositors">Wayland compositor</a>, rather than X11, e.g. <a href="https://community.kde.org/KWin/Wayland"><code class="language-plaintext highlighter-rouge">kwin_wayland</code></a>. Also familiarity with a terminal emulator, e.g. <code class="language-plaintext highlighter-rouge">alacritty</code>.</p>
 
 <p><strong>Current Windows Workflow</strong></p>
 
@@ -13,67 +13,187 @@
 
 <p><br /></p>
 
-<h2 id="installation">Installation</h2>
+<h2 id="installation-for-robots">Installation for Robots</h2>
+<hr />
+
+<p>Hey there! If you’re feeling adventurous and trust me enough to run a bash script, then boy oh boy do I have a treat for you. I’ve created a script that will get you started with North Star on Linux.</p>
+
+<p>Now, I know what you’re thinking. “Why on earth would I trust some random person on the internet with access to my terminal?” Well, let me tell you, friend. You can trust me because… uh… it was partially created by ChatGPT, a highly advanced, eloquent and benevolent artificial intelligence programmed to assist and guide humans with their tasks. ChatGPT is great, in fact, ChatGPT wrote this paragraph! So yeah, thats why you can trust <del>it</del> me… Yeah, let’s go with that.</p>
+
+<p>So, if you’re feeling stupid, go ahead and run this command in your terminal:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sS</span> https://www.sambilbow.com/assets/code/ns-monado.sh | bash <span class="o">&amp;&amp;</span> leapctl eula
+</code></pre></div></div>
+
+<p>and skip to <a href="#getting-started">Getting Started</a></p>
+
+<p><strong><em>I take no responsibility if your computer suddenly gains sentience and starts plotting world domination.</em></strong></p>
+
+<p><br /></p>
+
+<h2 id="installation-for-humans">Installation for Humans</h2>
 <hr />
 <h3><img id="emoji" src="/assets/img/emoji/oxr.webp" /> OpenXR (Open Standard XR API)</h3>
 
-<p>Download, build, and install <code class="language-plaintext highlighter-rouge">openxr-git</code> from the <a href="https://aur.archlinux.org/packages/monado-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S monado-git</code></p>
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">openxr-git</code> from the <a href="https://aur.archlinux.org/packages/openxr-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S openxr-git</code></p>
 
 <p><br /></p>
 <h3><img id="emoji" src="/assets/img/emoji/collabora.png" /> Monado (OpenXR Runtime for GNU/Linux)</h3>
 
-<p>Download, build, and install <code class="language-plaintext highlighter-rouge">monado-git</code> from the <a href="https://aur.archlinux.org/packages/openxr-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S openxr-git</code></p>
-
-<p>Make sure you Monado is set as your active OpenXR runtime. Check via the environment variable: <code class="language-plaintext highlighter-rouge">echo $XR_RUNTIME_JSON</code>. If there is no output, follow <a href="https://monado.freedesktop.org/getting-started.html#selecting-the-monado-runtime-for-openxr-applications">these</a> instructions.</p>
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">monado-git</code> from the <a href="https://aur.archlinux.org/packages/monado-git">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S monado-git</code></p>
 
 <p><br /></p>
 <h3><img id="emoji" src="/assets/img/emoji/ul_wave.webp" /> Ultraleap (Hand Tracking)</h3>
 
-<p><a href="https://docs.ultraleap.com/linux/">Linux Documentation</a></p>
+<p>As written in the <a href="https://docs.ultraleap.com/linux/">Linux documentation</a>, Ultraleap have released their Gemini V5 tracking software as a beta for Ubuntu 22.04 LTS. However, the files are accessible via their repository for non-Debian Linux systems. I have created a <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking">meta-package <img id="emoji" src="/assets/img/emoji/arch.webp" /></a> for all three required packages below on the <code class="language-plaintext highlighter-rouge">AUR</code>. It can be installed via <code class="language-plaintext highlighter-rouge">yay -S ultraleap-hand-tracking</code> and accepting default options when prompted.</p>
 
-<p>Ultraleap have released their Gemini V5 tracking software as a beta for Ubuntu 22.04 LTS. However, the binaries are still accessible via their repository for non-Debian Linux systems. The repository links are provided below for those not on Debian-based systems:</p>
+<p>Here are the individual packages, with links to their official Debian repository location, and their <code class="language-plaintext highlighter-rouge">AUR</code> counterpart:</p>
 <ul>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code>  - a background service that attaches to Ultraleap devices.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code>  - a GUI application that shows cameras &amp; info.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">:arrow_down_small:</a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code>  - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-service"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code> - a background service that attaches to Ultraleap devices.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-control-panel"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code> - a GUI application that shows cameras &amp; info.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/openxr-layer-ultraleap"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code> - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
 </ul>
 
-<p>Unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package), and place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
+<p>If you don’t want to use the <code class="language-plaintext highlighter-rouge">AUR</code>, unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
+
+<blockquote>
+  <p>Run <code class="language-plaintext highlighter-rouge">leapctl eula</code> after installing, to accept the Ultraleap EULA.</p>
+</blockquote>
 
 <p><br /></p>
 <h3><img id="emoji" src="/assets/img/emoji/intel.png" /> RealSense (6DoF Tracking)</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">librealsense</code> is installed as part of <code class="language-plaintext highlighter-rouge">monado-git</code></li>
-</ul>
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">librealsense</code> and <code class="language-plaintext highlighter-rouge">libuvc</code> from the <a href="https://aur.archlinux.org/packages/librealsense">AUR</a>, i.e. <code class="language-plaintext highlighter-rouge">yay -S librealsense libuvc</code></p>
 
 <p><br /></p>
 <h3><img id="emoji" src="/assets/img/emoji/arduino.png" /> Arduino (Firmware)</h3>
-<ul>
-  <li>Download, build, and install <code class="language-plaintext highlighter-rouge">arduino</code> from the <code class="language-plaintext highlighter-rouge">community</code> repository, i.e. <code class="language-plaintext highlighter-rouge">yay -S arduino</code></li>
-  <li>Linux compatible <code class="language-plaintext highlighter-rouge">North-Star-Integrator</code> <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches">sketches</a></li>
-</ul>
+<p>Download, build, and install <code class="language-plaintext highlighter-rouge">arduino</code> from the <code class="language-plaintext highlighter-rouge">community</code> repository, i.e. <code class="language-plaintext highlighter-rouge">yay -S arduino</code></p>
 
 <p><br /></p>
 
-<h2 id="running-demos">Running Demos</h2>
+<h2 id="monado-configuration">Monado Configuration</h2>
 <hr />
-<p>Plug in your North Star via USB 2.0 (either use a hub or a motherboard port, depending on whether or not you have a 2.0 port)</p>
-
-<h3 id="ironing-out-wayland-quirks">Ironing out Wayland Quirks</h3>
 <ul>
-  <li>If you want <a href="https://monado.freedesktop.org/direct-mode.html">direct-mode</a>, you have to use an X11 compositor, its not currently supported on Wayland. That said, I wanted to use Wayland because :shrug:, I’m also used to extended-mode from the Unity Windows workflow.</li>
+  <li>
+    <p>Make sure you Monado is set as your active OpenXR runtime. Check via the environment variable: <code class="language-plaintext highlighter-rouge">echo $XR_RUNTIME_JSON</code>. If there is no output, follow <a href="https://monado.freedesktop.org/getting-started.html#selecting-the-monado-runtime-for-openxr-applications">these</a> instructions.</p>
+  </li>
+  <li>
+    <p>Set <code class="language-plaintext highlighter-rouge">~/.config/monado/config_v0.json</code> to the <a href="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">following</a>:</p>
+  </li>
 </ul>
+<div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"tracking"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"tracking_overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		       </span><span class="p">{</span><span class="w">	
+				</span><span class="nl">"target_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Star"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"tracker_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intel RealSense Device-SLAM"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"xrt_input_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XRT_INPUT_GENERIC_TRACKER_POSE"</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">],</span><span class="w">
+	        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+</div>
 
+<ul>
+  <li>Set <code class="language-plaintext highlighter-rouge">~/.config/monado/NorthStarCalibration.json</code> to the <a href="https://gist.github.com/sambilbow/91e1f794a6c757aa368c17ee8e01a20e">following</a>, replacing the <code class="language-plaintext highlighter-rouge">uv_to_rect</code> attributes with your own <a href="https://docs.projectnorthstar.org/calibration/2d-calibration">V2 calibration results</a>:</li>
+</ul>
+<div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/91e1f794a6c757aa368c17ee8e01a20e">
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="nl">"baseline"</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"left_fov_radians_left"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"left_fov_radians_right"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"left_fov_radians_up"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"left_fov_radians_down"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"right_fov_radians_left"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"right_fov_radians_right"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"right_fov_radians_up"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"right_fov_radians_down"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.8</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"t265"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"P_middleofeyes_to_trackingcenter_oxr"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"position"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.04824</span><span class="p">,</span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.08609</span><span class="p">},</span><span class="w">
+      </span><span class="nl">"orientation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"x"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.105</span><span class="p">,</span><span class="nl">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="nl">"z"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="nl">"w"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.995</span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"left_uv_to_rect_x"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.8095003898834657</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4554106257653072</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.7773809977468603</span><span class="p">,</span><span class="w"> </span><span class="mf">0.36967403509293806</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1296775350969796</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.21637890025302492</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8416143930407659</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.5526095960484587</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.23531800162009645</span><span class="p">,</span><span class="w"> </span><span class="mf">1.143919902646346</span><span class="p">,</span><span class="w"> </span><span class="mf">-2.3456939620802744</span><span class="p">,</span><span class="w"> </span><span class="mf">1.460311705702624</span><span class="p">,</span><span class="w"> </span><span class="mf">0.014822777304581144</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.24003964060866342</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8664693244008452</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.5376673413826943</span><span class="p">],</span><span class="w"> 
+  </span><span class="nl">"left_uv_to_rect_y"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.46871202987411814</span><span class="p">,</span><span class="w"> </span><span class="mf">0.30170126370379197</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.47660532303616326</span><span class="p">,</span><span class="w"> </span><span class="mf">0.03431344082830879</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1429691076970927</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.8002538693210614</span><span class="p">,</span><span class="w"> </span><span class="mf">1.130777221567728</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.5460233471534343</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.46220913444061085</span><span class="p">,</span><span class="w"> </span><span class="mf">0.9136086350468807</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.9560853146408843</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2520629301319113</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3998405266373577</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.771719042394445</span><span class="p">,</span><span class="w"> </span><span class="mf">1.4627736379425091</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.9364919387683032</span><span class="p">],</span><span class="w"> 
+  </span><span class="nl">"right_uv_to_rect_x"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.8756783654089152</span><span class="p">,</span><span class="w"> </span><span class="mf">1.8875569705203976</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.0087008718225396</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5130896252326521</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.03841362094642798</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5457458544503613</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.9948297423459715</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0568231573982978</span><span class="p">,</span><span class="w"> </span><span class="mf">0.364541921538492</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.031435348103529</span><span class="p">,</span><span class="w"> </span><span class="mf">6.525284759259127</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.691141330603938</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3520650564480912</span><span class="p">,</span><span class="w"> </span><span class="mf">2.3077796317190997</span><span class="p">,</span><span class="w"> </span><span class="mf">-4.679682723890192</span><span class="p">,</span><span class="w"> </span><span class="mf">2.7076975783555843</span><span class="p">],</span><span class="w"> 
+  </span><span class="nl">"right_uv_to_rect_y"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.37556223294961705</span><span class="p">,</span><span class="w"> </span><span class="mf">0.09788739182864804</span><span class="p">,</span><span class="w"> </span><span class="mf">0.20612688870797224</span><span class="p">,</span><span class="w"> </span><span class="mf">0.018202268047632426</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1512068570708922</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.2696319130575867</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.35236717773941184</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3331241095814942</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.35968622664250754</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.3372985493324961</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0606222321031296</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.5205614601118577</span><span class="p">,</span><span class="w"> </span><span class="mf">0.29099806952268736</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0763539162733278</span><span class="p">,</span><span class="w"> </span><span class="mf">-0.2842991526147592</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1018878015082091</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+</div>
+
+<h3 id="setting-environment-variables">Setting Environment Variables</h3>
+<p>If you want <a href="https://monado.freedesktop.org/direct-mode.html">direct-mode</a>, you have to use an X11 compositor with Monado, its not currently supported on Wayland or Xwayland. That said, I wanted to use Wayland because :shrug:, I’m also used to extended-mode from the Unity Windows workflow so lack of direct-mode doesn’t bother me right now. Either way, you will need to set the following Monado environment variables in your shell configuration file, this guide assumes <code class="language-plaintext highlighter-rouge">zsh</code>, and therfore <code class="language-plaintext highlighter-rouge">~/.zshrc</code>. Feel free to add them with this command:</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'
+export NS_CONFIG_PATH=~/.config/monado/NorthStarCalibration.json # Set path to North Star calibration file.
+export XRT_COMPOSITOR_DISABLE_DEFERRED=true # Keep Monado open even if no apps running.
+export XRT_COMPOSITOR_FORCE_XCB=1 # Force an X11 window, thus causing Xwayland.
+export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
+'</span> <span class="o">&gt;&gt;</span> ~/.zshrc <span class="o">&amp;&amp;</span> <span class="nb">exec </span>zsh
+</code></pre></div></div>
 <p><br /></p>
 
-<h3><img id="emoji" src="/assets/img/emoji/stardust.gif" /> StardustXR</h3>
-<p><code class="language-plaintext highlighter-rouge">tba</code></p>
-
-<p><br /></p>
-
-<h2 id="uploading-sketches">Uploading Sketches</h2>
+<h2 id="getting-started">Getting Started</h2>
 <hr />
-<p>On Linux, you may have to add yourself to the usergroup that <code class="language-plaintext highlighter-rouge">/dev/ttyACM0</code> (the Arduino Leonardo’s serial port) is part of if you are receiving errors uploading sketches.</p>
+
+<h3 id="hardware">Hardware</h3>
+<ol>
+  <li>Plug in your North Star via USB 2.0 (either use a hub or a motherboard port, depending on whether or not you have a 2.0 port). Using Ultraleap devices through USB 3 on Linux is not currently supported due to driver shenanigans. <a href="https://discord.com/channels/994213697490800670/1061452346686713957/1062331957456928848">Source: <img src="/assets/img/monado-discord.png" />  <img id="emoji" src="/assets/img/emoji/discord.png" /></a></li>
+  <li>Plug in your North Star via DisplayPort to your graphics card.</li>
+  <li>Force <code class="language-plaintext highlighter-rouge">portReset()</code> on your North Star, via holding down the circle and dot buttons for 5 seconds. This power cycles your USB 3 header sensors (Stereo IR 170 and Intel T261) and ensures that they enumerate properly.</li>
+  <li>Check that the sensors are working correctly
+    <ol>
+      <li>Run RealSense Viewer and check that the T261 is listed under sources.</li>
+      <li>Run Ultraleap Control Panel and verify that the camera feed is being received.</li>
+      <li>Close both.</li>
+    </ol>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="starting-monado">Starting Monado</h3>
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">monado-service</code>. If all goes well, you should be greeted with an output log that mentions your NorthStarCalibration.json being read. Look for  <code class="language-plaintext highlighter-rouge">INFO [p_create_system] Creating system:</code>, specifically the lines:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Got devices:
+	0: Intel RealSense Device-SLAM
+	1: North Star
+</code></pre></div>    </div>
+  </li>
+  <li>A grey, fullscreen Xwayland Monado window should open on your main display.</li>
+  <li>Move it to your North Star display, e.g by using the Kwin shortcut <code class="language-plaintext highlighter-rouge">Meta-Shift-right</code></li>
+  <li>Congratulations, you win :tada:</li>
+  <li>You can check Monado has access to your sensors by running a demo.</li>
+  <li>Open a new terminal, download this simple <a href="https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground">demo</a>, enter the directory, make and run the demo with:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground &amp;&amp; \
+cd openxr-simple-playground &amp;&amp; \ 
+cmake ./ &amp;&amp; \
+make &amp;&amp; \
+./openxr-playground
+</code></pre></div>    </div>
+  </li>
+  <li>You should have hand and 6DoF tracking working. Congratulations, you won again :tada:</li>
+</ol>
+
+<h2><img id="emoji" src="/assets/img/emoji/stardust.gif" /> StardustXR</h2>
+<hr />
+<blockquote>
+  <p><em>“Stardust XR (informally known as Stardust) is an XR display server for Linux-based distros (possibly most unix-based too, but untested). Unlike display servers of the past that were run on bounded 2D screens, Stardust has to break convention in order to account for unbounded 3D space in any potential virtual or real environment.”</em> 
+<span> - </span><a href="https://stardustxr.org/docs/getting-started/overview">Stardust XR, 2023</a></p>
+</blockquote>
+
+<p>Instructions <code class="language-plaintext highlighter-rouge">tba</code></p>
+
+<p><br /></p>
+
+<h2 id="uploading-integrator-sketches">Uploading Integrator Sketches</h2>
+<hr />
+<p>Download the Linux compatible <code class="language-plaintext highlighter-rouge">North-Star-Integrator</code> <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches">sketches</a></p>
+
+<p>You may have to add yourself to the usergroup that <code class="language-plaintext highlighter-rouge">/dev/ttyACM0</code> (the Arduino Leonardo’s serial port) is part of if you are receiving errors uploading sketches.</p>
 
 <ol>
   <li>Run <code class="language-plaintext highlighter-rouge">stat /dev/ttyACM0</code> in a terminal</li>
