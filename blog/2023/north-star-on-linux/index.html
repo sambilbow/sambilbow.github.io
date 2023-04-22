@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>northstar on linux [wip] | Sam  Bilbow</title>    
+    <title>🐧 northstar on linux | Sam  Bilbow</title>    
     <meta name="author" content="Sam  Bilbow">
-    <meta name="description" content="towards an open-source workflow">
+    <meta name="description" content="towards an open-source workflow for AR musical instruments">
     <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
 
 
@@ -128,10 +128,6 @@
           <i class="fas fa-hashtag fa-sm"></i> linux</a>  
           <a href="/blog/tag/augmented-reality">
           <i class="fas fa-hashtag fa-sm"></i> augmented-reality</a>  
-          
-        ·  
-        <a href="/blog/category/wip">
-          <i class="fas fa-tag fa-sm"></i> wip</a>  
           
 
     </p>
@@ -319,17 +315,19 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
 </li>
   <li>You can check Monado has access to your sensors by running a demo.</li>
   <li>Open a new terminal, download this simple <a href="https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground" rel="external nofollow noopener" target="_blank">demo</a>, enter the directory, make and run the demo with:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>git clone https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground &amp;&amp; \
-cd openxr-simple-playground &amp;&amp; \ 
-cmake ./ &amp;&amp; \
-make &amp;&amp; \
+    <div class="language-zsh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>git clone https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd </span>openxr-simple-playground <span class="o">&amp;&amp;</span> <span class="se">\ </span>
+cmake ./ <span class="o">&amp;&amp;</span> <span class="se">\</span>
+make <span class="o">&amp;&amp;</span> <span class="se">\</span>
 ./openxr-playground
 </code></pre></div>    </div>
   </li>
   <li>You should have hand and 6DoF tracking working. Congratulations, you won again <img class="emoji" title=":tada:" alt=":tada:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f389.png" height="20" width="20">
 </li>
 </ol>
+
+<p><br></p>
 
 <h2>
 <img id="emoji" src="/assets/img/emoji/stardust.gif"> StardustXR</h2>
@@ -345,31 +343,41 @@ make &amp;&amp; \
 
 <h2 id="uploading-integrator-sketches">Uploading Integrator Sketches</h2>
 <hr>
-<p>Download the Linux compatible <code class="language-plaintext highlighter-rouge">North-Star-Integrator</code> <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches" rel="external nofollow noopener" target="_blank">sketches</a></p>
-
-<p>You may have to add yourself to the usergroup that <code class="language-plaintext highlighter-rouge">/dev/ttyACM0</code> (the Arduino Leonardo’s serial port) is part of if you are receiving errors uploading sketches.</p>
-
 <ol>
-  <li>Run <code class="language-plaintext highlighter-rouge">stat /dev/ttyACM0</code> in a terminal</li>
-  <li>Note the user group that the serial port is assigned to, e.g. <code class="language-plaintext highlighter-rouge">dialout</code> or <code class="language-plaintext highlighter-rouge">plugdev</code>
+  <li>Download the Linux compatible <code class="language-plaintext highlighter-rouge">North-Star-Integrator</code> <a href="https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches" rel="external nofollow noopener" target="_blank">sketches</a>:
+    <div class="language-zsh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>git clone https://github.com/sambilbow/North-Star-Integrator.git <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd </span>North-Star-Integrator/firmware/ExampleSketches
+</code></pre></div>    </div>
+  </li>
+  <li>You may have to add yourself to the usergroup that <code class="language-plaintext highlighter-rouge">/dev/ttyACM0</code> (the Arduino Leonardo’s serial port) is part of if you are receiving errors uploading sketches.
+    <ol>
+      <li>Run <code class="language-plaintext highlighter-rouge">stat /dev/ttyACM0</code> in a terminal</li>
+      <li>Note the user group that the serial port is assigned to, e.g. <code class="language-plaintext highlighter-rouge">dialout</code> or <code class="language-plaintext highlighter-rouge">plugdev</code>
 </li>
-  <li>Add your user to this group with <code class="language-plaintext highlighter-rouge">sudo usermod -a -G [group] [username]</code>
+      <li>Add your user to this group with <code class="language-plaintext highlighter-rouge">sudo usermod -a -G [group] [username]</code>
 </li>
-  <li>
+      <li>
 <code class="language-plaintext highlighter-rouge">sudo</code> run command as superuser</li>
-  <li>
+      <li>
 <code class="language-plaintext highlighter-rouge">usermod</code> modify user attributes</li>
-  <li>
+      <li>
 <code class="language-plaintext highlighter-rouge">-a</code> append</li>
-  <li>
+      <li>
 <code class="language-plaintext highlighter-rouge">-G</code> group</li>
+    </ol>
+  </li>
   <li>Add the <code class="language-plaintext highlighter-rouge">../libraries/SX1508</code> folder to your Arduino library directory (default on Linux: <code class="language-plaintext highlighter-rouge">/home/[user]/Arduino/libraries</code>)
+    <div class="language-zsh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/Arduino/libraries <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cp</span> ../libraries/SX1508 ~/Arduino/libraries/
+</code></pre></div>    </div>
     <ul>
       <li>
 <code class="language-plaintext highlighter-rouge">../libraries/SX1508/src/util/sx1508_registers.h</code> has been renamed to <code class="language-plaintext highlighter-rouge">SX1508_registers.h</code> in this repo because I was getting errors when I tried to access this file in the Arduino IDE on Linux, I believe this was because of <a href="https://en.wikipedia.org/wiki/Case_sensitivity" rel="external nofollow noopener" target="_blank">UNIX case-sensitivity</a>.</li>
     </ul>
   </li>
-  <li>Open a sketch in Arduino IDE</li>
+  <li>Open a sketch from the folder in Arduino IDE</li>
   <li>Install any additionally required libraries (on Linux I needed to add the <code class="language-plaintext highlighter-rouge">Keyboard</code> library)</li>
   <li>Set the correct Port and Board in <code class="language-plaintext highlighter-rouge">Tools &gt; </code>
 </li>
