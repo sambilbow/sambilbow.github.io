@@ -1,12 +1,12 @@
 ---
 layout: post
 title: <img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux
-seo_title: northstar on linux [wip]
+seo_title: 🐧 northstar on linux
 date: 2023-04-12 11:12:00-0400
-description: towards an open-source workflow
+description: towards an open-source workflow for AR musical instruments
 tags: open-source linux augmented-reality
-categories: wip
 related_posts: false
+img: /assets/projects/04-postdoctoral/comuse/banner.png
 ---
 ## Summary
 ---
@@ -127,7 +127,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
 4. Congratulations, you win :tada:
 5. You can check Monado has access to your sensors by running a demo.
 6. Open a new terminal, download this simple [demo](https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground), enter the directory, make and run the demo with:
-   ```
+   ```zsh
    git clone https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground && \
    cd openxr-simple-playground && \ 
    cmake ./ && \
@@ -135,6 +135,8 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
    ./openxr-playground
    ```
 7. You should have hand and 6DoF tracking working. Congratulations, you won again :tada:
+
+<br>
 
 <h2><img id="emoji" src="/assets/img/emoji/stardust.gif"> StardustXR</h2>
 ---
@@ -148,20 +150,26 @@ Instructions `tba`
 
 ## Uploading Integrator Sketches
 ---
-Download the Linux compatible `North-Star-Integrator` [sketches](https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches)
-
-You may have to add yourself to the usergroup that `/dev/ttyACM0` (the Arduino Leonardo's serial port) is part of if you are receiving errors uploading sketches.
-
-1. Run `stat /dev/ttyACM0` in a terminal
-2. Note the user group that the serial port is assigned to, e.g. `dialout` or `plugdev`
-3. Add your user to this group with `sudo usermod -a -G [group] [username]` 
- 4. `sudo` run command as superuser 
- 5. `usermod` modify user attributes
- 6.  `-a` append 
- 7.  `-G` group
-4. Add the `../libraries/SX1508` folder to your Arduino library directory (default on Linux: `/home/[user]/Arduino/libraries`)
+1. Download the Linux compatible `North-Star-Integrator` [sketches](https://github.com/sambilbow/North-Star-Integrator/tree/master/firmware/ExampleSketches):
+   ```zsh
+   git clone https://github.com/sambilbow/North-Star-Integrator.git && \
+   cd North-Star-Integrator/firmware/ExampleSketches
+   ```
+2. You may have to add yourself to the usergroup that `/dev/ttyACM0` (the Arduino Leonardo's serial port) is part of if you are receiving errors uploading sketches.
+   1. Run `stat /dev/ttyACM0` in a terminal
+   2. Note the user group that the serial port is assigned to, e.g. `dialout` or `plugdev`
+   3. Add your user to this group with `sudo usermod -a -G [group] [username]` 
+    4. `sudo` run command as superuser 
+    5. `usermod` modify user attributes
+    6.  `-a` append 
+    7.  `-G` group
+3. Add the `../libraries/SX1508` folder to your Arduino library directory (default on Linux: `/home/[user]/Arduino/libraries`)
+   ```zsh
+   mkdir -p ~/Arduino/libraries && \
+   cp ../libraries/SX1508 ~/Arduino/libraries/
+   ```
    - `../libraries/SX1508/src/util/sx1508_registers.h` has been renamed to `SX1508_registers.h` in this repo because I was getting errors when I tried to access this file in the Arduino IDE on Linux, I believe this was because of [UNIX case-sensitivity](https://en.wikipedia.org/wiki/Case_sensitivity).
-5. Open a sketch in Arduino IDE
-6. Install any additionally required libraries (on Linux I needed to add the `Keyboard` library)
-7. Set the correct Port and Board in `Tools > `
-8. Verify and Upload the sketch.
+4. Open a sketch from the folder in Arduino IDE
+5. Install any additionally required libraries (on Linux I needed to add the `Keyboard` library)
+6. Set the correct Port and Board in `Tools > `
+7. Verify and Upload the sketch.

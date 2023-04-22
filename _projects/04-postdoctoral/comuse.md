@@ -18,8 +18,8 @@ category: postdoctoral
     <a href="https://github.com/sambilbow/comuse/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
 
-## Summary
-`tba`
+## Towards an Open-Source Workflow
+First blog post can be found here [<img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux](/blog/2023/north-star-on-linux)
 
 {: .text-center}
 [![{coMuse Proposal}](https://ytcards.demolab.com/?id=lkLRmX3Kumw&title=coMuse+Proposal&lang=en&timestamp=1657900736&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=157 "area~ Demonstration")](https://youtu.be/lkLRmX3Kumw)
