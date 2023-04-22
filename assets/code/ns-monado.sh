@@ -61,5 +61,9 @@ else
   echo 'export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.' >> ~/.zshrc
   echo "XRT_COMPOSITOR_XCB_FULLSCREEN is set in ~/.zshrc"
 fi
+
+
+systemctl enable ultraleap-hand-tracking-service --now
+
 # Reload the shell to apply changes
 exec zsh
