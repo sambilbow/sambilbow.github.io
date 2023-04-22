@@ -1,5 +1,243 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-22T17:47:44+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">northstar on linux</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-22T20:46:21+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+</subtitle><entry><title type="html">💎 jekyll + chatgpt</title><link href="https://sambilbow.com/blog/2023/jekyll-chatgpt/" rel="alternate" type="text/html" title="💎 jekyll + chatgpt" /><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/jekyll-chatgpt</id><content type="html" xml:base="https://sambilbow.com/blog/2023/jekyll-chatgpt/"><![CDATA[<h2 id="summary">Summary</h2>
+<p>I’ve been learning more Jekyll-related things like Ruby, some new Markdown tricks, and the web trio to make a nicer site. ChatGPT has been really helpful in moving towards a working understanding of how I can edit the template that I’m using (<a href="https://github.com/alshedivat/al-folio">al-folio</a>). It takes a fair amount of time to engineer prompts, but it helps that I know generally what the code I want should perform.</p>
+
+<p><br /></p>
+
+<h2 id="code-blocks">Code Blocks</h2>
+<p>For example, I wanted to edit the way that code blocks were rendered in my recent <a href="/blog/2023/north-star-on-linux">blog post</a>. One thing led to another and I ended up trying to render codeblocks straight from files in my <code class="language-plaintext highlighter-rouge">/assets/</code> folder instead of adding the code to the <code class="language-plaintext highlighter-rouge">.md</code> file. This way, if I needed to update the code (in this case, <code class="language-plaintext highlighter-rouge">.json</code> configuration files), I could upload an update to my site folder via a git commit.</p>
+
+<p>This was achieved by some Ruby code that ChatGPT generated that rendered the contents of the file within the correct HTML tags, generating the code block with a Liquid template called <code class="language-plaintext highlighter-rouge">code_block.html</code>.</p>
+
+<p><br /></p>
+
+<h2 id="gist-code-blocks">Gist Code Blocks</h2>
+<p>After a couple of hours of co-engineering 🤔, I ended up deciding to host the file on Gist, and prompting ChatGPT to edit the code, which it “decided” to do by writing a Ruby plugin. Brilliant! A later iteration added an error fallback in the event that I was being rate-limited by GitHub’s API.</p>
+
+<div class="language-rb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">class</span> <span class="nc">GistTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">input</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+      <span class="k">super</span>
+      <span class="vi">@gist_id</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="nf">strip</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.github.com/gists/</span><span class="si">#{</span><span class="vi">@gist_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="s2">"API rate limit exceeded"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">"`Error: API rate-limited by GitHub, follow link instead`"</span>
+      <span class="k">end</span>
+
+      <span class="n">json</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+      <span class="c1"># Extract the first file from the gist</span>
+      <span class="n">filename</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s1">'files'</span><span class="p">].</span><span class="nf">first</span>
+
+      <span class="c1"># Capture the file contents as a string</span>
+      <span class="n">captured</span> <span class="o">=</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"{% capture gist_content %}</span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]</span><span class="si">}</span><span class="s2">{% endcapture %}"</span><span class="p">).</span><span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+
+      <span class="c1"># Build the code block with the captured contents and custom data attribute</span>
+      <span class="n">code_block</span> <span class="o">=</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"{% highlight </span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'language'</span><span class="p">]</span><span class="si">}</span><span class="s2"> %}{{ gist_content }}{% endhighlight %}"</span><span class="p">).</span><span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+
+      <span class="c1"># Wrap the code block in a div with the correct classes and custom data attribute</span>
+      <span class="n">code_block</span> <span class="o">=</span> <span class="s2">"&lt;div class='language-</span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'language'</span><span class="p">].</span><span class="nf">downcase</span><span class="si">}</span><span class="s2"> highlighter-rouge' data-gist-url='https://gist.github.com/</span><span class="si">#{</span><span class="n">json</span><span class="p">[</span><span class="s1">'owner'</span><span class="p">][</span><span class="s1">'login'</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="vi">@gist_id</span><span class="si">}</span><span class="s2">'&gt;</span><span class="si">#{</span><span class="n">code_block</span><span class="si">}</span><span class="s2">&lt;/div&gt;"</span>
+
+      <span class="c1"># Return the generated code block</span>
+      <span class="n">code_block</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_tag</span><span class="p">(</span><span class="s1">'gist'</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">GistTag</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This allows me to add the following tag to my <code class="language-plaintext highlighter-rouge">.md</code> posts:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% gist 3b7b257b535b3dd6fa7b53ad7e453ed0 %}
+</code></pre></div></div>
+
+<p>and have it render in a native Jekyll codeblock, using <code class="language-plaintext highlighter-rouge">rouge</code> and <code class="language-plaintext highlighter-rouge">highlight</code>.</p>
+
+<div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"tracking"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"tracking_overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		       </span><span class="p">{</span><span class="w">	
+				</span><span class="nl">"target_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Star"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"tracker_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intel RealSense Device-SLAM"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"xrt_input_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XRT_INPUT_GENERIC_TRACKER_POSE"</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">],</span><span class="w">
+	        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+</div>
+
+<p><br /></p>
+
+<h2 id="link-to-gist-button">Link to Gist button</h2>
+
+<p>Additionally, I prompted ChatGPT to create a button in the top right hand corner of Gist codeblocks that links to their page, in the same style as the copy to clipboard button:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">gistUrl</span> <span class="o">=</span> <span class="nx">codeBlock</span><span class="p">.</span><span class="nf">closest</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">gistUrl</span><span class="p">;</span>
+<span class="nf">if </span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">githubButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">github</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">ariaLabel</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">View Gist on GitHub</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">&lt;i class="fab fa-github"&gt;&lt;/i&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">codeBlock</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="nx">githubButton</span><span class="p">);</span>
+
+    <span class="c1">// open GitHub link to view Gist</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">,</span> <span class="dl">'</span><span class="s1">_blank</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="advantages-compared-to-gistidjs">Advantages compared to <code class="language-plaintext highlighter-rouge">GistID.js</code></h2>
+
+<p>I think this suits the styling of the website more than the native <code class="language-plaintext highlighter-rouge">GistID.js</code> codeblock, which is provided by sourcing <code class="language-plaintext highlighter-rouge">https://gist.github.com/&lt;githubUser&gt;/&lt;gistID&gt;.js</code> for example.  The <code class="language-plaintext highlighter-rouge">jekyll-gist</code> <a href="https://github.com/jekyll/jekyll-gist">plugin</a> provides a Liquid tag that does this for you when calling <code class="language-plaintext highlighter-rouge">{% gist &lt;gistID&gt; %}</code>. It looks like this:
+<script src="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0.js"> </script></p>
+
+<p>I like the border, line numbers, and file name so I might implement that. But overall, the styling from <code class="language-plaintext highlighter-rouge">rouge</code> is nicer, the functionality of the copy to clipboard button is brilliant, and overall it relies on less JavaScript I believe.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>]]></content><author><name></name></author><category term="open-source" /><category term="website" /><summary type="html"><![CDATA[supercharged blog learning]]></summary></entry><entry><title type="html">🌔 open astro tech</title><link href="https://sambilbow.com/blog/2023/open-astro-tech/" rel="alternate" type="text/html" title="🌔 open astro tech" /><published>2023-04-17T12:00:00+00:00</published><updated>2023-04-17T12:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/open-astro-tech</id><content type="html" xml:base="https://sambilbow.com/blog/2023/open-astro-tech/"><![CDATA[<p><a href="https://openastrotech.com/">OpenAstroTech</a> looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space :smiley: :space_invader::rocket:</p>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+  <video autoplay="" muted="" playsinline="" class="img-fluid rounded z-depth-1" width="auto" height="auto">
+  <source src="https://openastrotech.com/wp-content/uploads/revslider/Hero-Website-42/OAT_Assembly.mp4" type="video/mp4" />&lt;/source&gt;
+</video>
+
+<script>
+  function reverse(video) {
+    if (video.currentTime == 0) {
+      video.playbackRate = 1;
+    }
+    if (video.currentTime == video.duration) {
+      video.currentTime = video.duration;
+      video.playbackRate = -1;
+    }
+  }
+</script>
+
+
+  
+</figure>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="https://camo.githubusercontent.com/764767653f6faf61163d80047c5ba87caabe81d0ba7f92245b68e5dc04134857/68747470733a2f2f692e696d6775722e636f6d2f35454e757548762e6a7067" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1626519451/Openastrotech/OAM_crop/OAM_crop.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    The OpenAstroTracker (OAT) with OpenAstroGuider (OAG), and OpenAstroMount (OAM)
+</div>
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199481/Openastrotech/Veil_500mm_dunkler_3674b531/Veil_500mm_dunkler-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1614199094/Openastrotech/50193493973_558caaa48e_o-794x1080_crop_1422b4677/50193493973_558caaa48e_o-794x1080_crop_1422b4677.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-1 mt-md-0" align="center">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199485/Openastrotech/Cygnus-Wall_50-scaled_383eced5/Cygnus-Wall_50-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Some tracked shots using the OpenAstroTech devices with a DSLR camera. Veil Nebula :heart_eyes:, M32, and Cygnus 
+</div>]]></content><author><name></name></author><category term="open-source" /><category term="physics" /><category term="astronomy" /><summary type="html"><![CDATA[open-source astrophotography]]></summary></entry><entry><title type="html">northstar on linux</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
 <hr />
 <p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. Here’s a bunch of instructions on how to get started with North Star on Linux. Instructions are for <a href="https://wiki.archlinux.org/">Arch-based systems</a>, e.g. <a href="https://endeavouros.com/">EndeavourOS</a>, and assumes a <a href="https://wiki.archlinux.org/title/wayland#Compositors">Wayland compositor</a>, rather than X11, e.g. <a href="https://community.kde.org/KWin/Wayland"><code class="language-plaintext highlighter-rouge">kwin_wayland</code></a>. Also familiarity with a terminal emulator, e.g. <code class="language-plaintext highlighter-rouge">alacritty</code>.</p>
 
@@ -180,7 +418,7 @@ make <span class="o">&amp;&amp;</span> <span class="se">\</span>
 
 <p><br /></p>
 
-<h2><img id="emoji" src="/assets/img/emoji/stardust.gif" /> StardustXR</h2>
+<h2><img id="emoji" src="/assets/img/emoji/stardust.gif" /> Stardust XR</h2>
 <hr />
 <blockquote>
   <p><em>“Stardust XR (informally known as Stardust) is an XR display server for Linux-based distros (possibly most unix-based too, but untested). Unlike display servers of the past that were run on bounded 2D screens, Stardust has to break convention in order to account for unbounded 3D space in any potential virtual or real environment.”</em> 
@@ -222,132 +460,4 @@ make <span class="o">&amp;&amp;</span> <span class="se">\</span>
   <li>Install any additionally required libraries (on Linux I needed to add the <code class="language-plaintext highlighter-rouge">Keyboard</code> library)</li>
   <li>Set the correct Port and Board in <code class="language-plaintext highlighter-rouge">Tools &gt; </code></li>
   <li>Verify and Upload the sketch.</li>
-</ol>]]></content><author><name></name></author><category term="open-source" /><category term="linux" /><category term="augmented-reality" /><summary type="html"><![CDATA[towards an open-source workflow for AR musical instruments]]></summary></entry><entry><title type="html">🌔 open astro tech</title><link href="https://sambilbow.com/blog/2023/open-astro-tech/" rel="alternate" type="text/html" title="🌔 open astro tech" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/open-astro-tech</id><content type="html" xml:base="https://sambilbow.com/blog/2023/open-astro-tech/"><![CDATA[<p><a href="https://openastrotech.com/">OpenAstroTech</a> looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space :smiley: :space_invader::rocket:</p>
-
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-  <video autoplay="" muted="" playsinline="" class="img-fluid rounded z-depth-1" width="auto" height="auto">
-  <source src="https://openastrotech.com/wp-content/uploads/revslider/Hero-Website-42/OAT_Assembly.mp4" type="video/mp4" />&lt;/source&gt;
-</video>
-
-<script>
-  function reverse(video) {
-    if (video.currentTime == 0) {
-      video.playbackRate = 1;
-    }
-    if (video.currentTime == video.duration) {
-      video.currentTime = video.duration;
-      video.playbackRate = -1;
-    }
-  }
-</script>
-
-
-  
-</figure>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://camo.githubusercontent.com/764767653f6faf61163d80047c5ba87caabe81d0ba7f92245b68e5dc04134857/68747470733a2f2f692e696d6775722e636f6d2f35454e757548762e6a7067" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1626519451/Openastrotech/OAM_crop/OAM_crop.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    The OpenAstroTracker (OAT) with OpenAstroGuider (OAG), and OpenAstroMount (OAM)
-</div>
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199481/Openastrotech/Veil_500mm_dunkler_3674b531/Veil_500mm_dunkler-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1614199094/Openastrotech/50193493973_558caaa48e_o-794x1080_crop_1422b4677/50193493973_558caaa48e_o-794x1080_crop_1422b4677.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199485/Openastrotech/Cygnus-Wall_50-scaled_383eced5/Cygnus-Wall_50-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Some tracked shots using the OpenAstroTech devices with a DSLR camera. Veil Nebula :heart_eyes:, M32, and Cygnus 
-</div>]]></content><author><name></name></author><category term="open-source" /><category term="physics" /><category term="astronomy" /><summary type="html"><![CDATA[open-source astrophotography]]></summary></entry></feed>
+</ol>]]></content><author><name></name></author><category term="open-source" /><category term="linux" /><category term="augmented-reality" /><summary type="html"><![CDATA[towards an open-source workflow for AR musical instruments]]></summary></entry></feed>

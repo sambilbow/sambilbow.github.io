@@ -1002,6 +1002,10 @@ a:hover, table.table a:hover {
   background-color: var(--global-bg-color) !important;
 }
 
+code span {
+  font-family: "Fira Mono", monospace !important;
+}
+
 pre {
   padding: 8px 12px;
   position: relative;

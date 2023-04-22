@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>💎 jekyll + chatgpt | Sam  Bilbow</title>    
+    <meta name="author" content="Sam  Bilbow">
+    <meta name="description" content="supercharged blog learning">
+    <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://sambilbow.com/blog/2023/jekyll-chatgpt/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/">Sam Bilbow<span> </span><img class="rounded-circle" id="emoji" src="/assets/img/emoji/catsty.gif"></a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">💎 jekyll + chatgpt</h1>
+    <p class="post-meta">April 22, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/open-source">
+          <i class="fas fa-hashtag fa-sm"></i> open-source</a>  
+          <a href="/blog/tag/website">
+          <i class="fas fa-hashtag fa-sm"></i> website</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h2 id="summary">Summary</h2>
+<p>I’ve been learning more Jekyll-related things like Ruby, some new Markdown tricks, and the web trio to make a nicer site. ChatGPT has been really helpful in moving towards a working understanding of how I can edit the template that I’m using (<a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a>). It takes a fair amount of time to engineer prompts, but it helps that I know generally what the code I want should perform.</p>
+
+<p><br></p>
+
+<h2 id="code-blocks">Code Blocks</h2>
+<p>For example, I wanted to edit the way that code blocks were rendered in my recent <a href="/blog/2023/north-star-on-linux">blog post</a>. One thing led to another and I ended up trying to render codeblocks straight from files in my <code class="language-plaintext highlighter-rouge">/assets/</code> folder instead of adding the code to the <code class="language-plaintext highlighter-rouge">.md</code> file. This way, if I needed to update the code (in this case, <code class="language-plaintext highlighter-rouge">.json</code> configuration files), I could upload an update to my site folder via a git commit.</p>
+
+<p>This was achieved by some Ruby code that ChatGPT generated that rendered the contents of the file within the correct HTML tags, generating the code block with a Liquid template called <code class="language-plaintext highlighter-rouge">code_block.html</code>.</p>
+
+<p><br></p>
+
+<h2 id="gist-code-blocks">Gist Code Blocks</h2>
+<p>After a couple of hours of co-engineering 🤔, I ended up deciding to host the file on Gist, and prompting ChatGPT to edit the code, which it “decided” to do by writing a Ruby plugin. Brilliant! A later iteration added an error fallback in the event that I was being rate-limited by GitHub’s API.</p>
+
+<div class="language-rb highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">class</span> <span class="nc">GistTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">input</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+      <span class="k">super</span>
+      <span class="vi">@gist_id</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="nf">strip</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.github.com/gists/</span><span class="si">#{</span><span class="vi">@gist_id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+
+      <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="s2">"API rate limit exceeded"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">"`Error: API rate-limited by GitHub, follow link instead`"</span>
+      <span class="k">end</span>
+
+      <span class="n">json</span> <span class="o">=</span> <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+      <span class="c1"># Extract the first file from the gist</span>
+      <span class="n">filename</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s1">'files'</span><span class="p">].</span><span class="nf">first</span>
+
+      <span class="c1"># Capture the file contents as a string</span>
+      <span class="n">captured</span> <span class="o">=</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"{% capture gist_content %}</span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]</span><span class="si">}</span><span class="s2">{% endcapture %}"</span><span class="p">).</span><span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+
+      <span class="c1"># Build the code block with the captured contents and custom data attribute</span>
+      <span class="n">code_block</span> <span class="o">=</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"{% highlight </span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'language'</span><span class="p">]</span><span class="si">}</span><span class="s2"> %}{{ gist_content }}{% endhighlight %}"</span><span class="p">).</span><span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+
+      <span class="c1"># Wrap the code block in a div with the correct classes and custom data attribute</span>
+      <span class="n">code_block</span> <span class="o">=</span> <span class="s2">"&lt;div class='language-</span><span class="si">#{</span><span class="n">file</span><span class="p">[</span><span class="s1">'language'</span><span class="p">].</span><span class="nf">downcase</span><span class="si">}</span><span class="s2"> highlighter-rouge' data-gist-url='https://gist.github.com/</span><span class="si">#{</span><span class="n">json</span><span class="p">[</span><span class="s1">'owner'</span><span class="p">][</span><span class="s1">'login'</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="vi">@gist_id</span><span class="si">}</span><span class="s2">'&gt;</span><span class="si">#{</span><span class="n">code_block</span><span class="si">}</span><span class="s2">&lt;/div&gt;"</span>
+
+      <span class="c1"># Return the generated code block</span>
+      <span class="n">code_block</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_tag</span><span class="p">(</span><span class="s1">'gist'</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">GistTag</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This allows me to add the following tag to my <code class="language-plaintext highlighter-rouge">.md</code> posts:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% gist 3b7b257b535b3dd6fa7b53ad7e453ed0 %}
+</code></pre></div></div>
+
+<p>and have it render in a native Jekyll codeblock, using <code class="language-plaintext highlighter-rouge">rouge</code> and <code class="language-plaintext highlighter-rouge">highlight</code>.</p>
+
+<div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"tracking"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+		</span><span class="nl">"tracking_overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+		       </span><span class="p">{</span><span class="w">	
+				</span><span class="nl">"target_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Star"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"tracker_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intel RealSense Device-SLAM"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
+				</span><span class="nl">"xrt_input_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XRT_INPUT_GENERIC_TRACKER_POSE"</span><span class="w">
+			</span><span class="p">}</span><span class="w">
+		</span><span class="p">],</span><span class="w">
+	        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+	</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+</div>
+
+<p><br></p>
+
+<h2 id="link-to-gist-button">Link to Gist button</h2>
+
+<p>Additionally, I prompted ChatGPT to create a button in the top right hand corner of Gist codeblocks that links to their page, in the same style as the copy to clipboard button:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">gistUrl</span> <span class="o">=</span> <span class="nx">codeBlock</span><span class="p">.</span><span class="nf">closest</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">gistUrl</span><span class="p">;</span>
+<span class="nf">if </span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">githubButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">github</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">ariaLabel</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">View Gist on GitHub</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">&lt;i class="fab fa-github"&gt;&lt;/i&gt;</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">codeBlock</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="nx">githubButton</span><span class="p">);</span>
+
+    <span class="c1">// open GitHub link to view Gist</span>
+    <span class="nx">githubButton</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">,</span> <span class="dl">'</span><span class="s1">_blank</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br></p>
+
+<h2 id="advantages-compared-to-gistidjs">Advantages compared to <code class="language-plaintext highlighter-rouge">GistID.js</code>
+</h2>
+
+<p>I think this suits the styling of the website more than the native <code class="language-plaintext highlighter-rouge">GistID.js</code> codeblock, which is provided by sourcing <code class="language-plaintext highlighter-rouge">https://gist.github.com/&lt;githubUser&gt;/&lt;gistID&gt;.js</code> for example.  The <code class="language-plaintext highlighter-rouge">jekyll-gist</code> <a href="https://github.com/jekyll/jekyll-gist" rel="external nofollow noopener" target="_blank">plugin</a> provides a Liquid tag that does this for you when calling <code class="language-plaintext highlighter-rouge">{% gist &lt;gistID&gt; %}</code>. It looks like this:
+<script src="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0.js"> </script></p>
+
+<p>I like the border, line numbers, and file name so I might implement that. But overall, the styling from <code class="language-plaintext highlighter-rouge">rouge</code> is nicer, the functionality of the copy to clipboard button is brilliant, and overall it relies on less JavaScript I believe.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>
+
+  </article>
+</div>
+
+    </div>
+
+    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+      <div class="container">
+        © Copyright 2023 Sam  Bilbow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+Last updated: April 22, 2023.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
