@@ -84,14 +84,20 @@ a:hover, table.table a:hover {
 }
 
 // Code block padding
-.highlight{
+.highlight {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .highlight pre {
     background-color: var(--global-bg-color) !important;
+    
 }
+
+code span {
+  font-family: 'Fira Mono', monospace !important;
+}
+
 
 pre {
     

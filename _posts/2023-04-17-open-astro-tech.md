@@ -2,7 +2,7 @@
 layout: post
 title: "🌔 open astro tech"
 seo_title: "🌔 open astro tech"
-date: 2023-04-12 11:12:00-0400
+date: 2023-04-17 12:00:00-0000
 description: open-source astrophotography
 tags: open-source physics astronomy
 related_posts: false
