@@ -34,10 +34,10 @@ Download, build, and install `openxr-git` from the [AUR](https://aur.archlinux.o
 - Download, build, and install `monado-git` from the [AUR](https://aur.archlinux.org/packages/openxr-git), i.e. `yay -S openxr-git`
 - Make sure you Monado is set as your active OpenXR runtime. Check via the environment variable: `echo $XR_RUNTIME_JSON`. If there is no output, follow [these](https://monado.freedesktop.org/getting-started.html#selecting-the-monado-runtime-for-openxr-applications) instructions.
 
-- Set `~/.config/monado/config_v0.json` to the following: 
+- Set `~/.config/monado/config_v0.json` to the [following](https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0): 
 {% gist 3b7b257b535b3dd6fa7b53ad7e453ed0 %}
 
-- Set `~/.config/monado/NorthStarCalibration.json` to the following:
+- Set `~/.config/monado/NorthStarCalibration.json` to the [following](https://gist.github.com/sambilbow/91e1f794a6c757aa368c17ee8e01a20e):
 {% gist 91e1f794a6c757aa368c17ee8e01a20e %}
 
 
@@ -56,6 +56,8 @@ Here are the individual packages, with links to their official Debian repository
 - [:arrow_down_small:](https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/openxr-layer-ultraleap) `openxr-layer-ultraleap` - an OpenXR layer that allows Ultraleap devices connect at the API layer.
 
 If you don't want to use the `AUR`, unarchive the `.deb` from each repository, then do the same with the `data.tar.xz` inside (you can ignore `control.tar.xz`, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using `sudo mv [file path] [destination path]`.
+
+> Run `leapctl eula` after installing, to accept the Ultraleap EULA.
 
 <br>
 <h3><img id="emoji" src="/assets/img/emoji/intel.png"> RealSense (6DoF Tracking)</h3>
@@ -95,7 +97,8 @@ After setting these variables, either restart your terminal or run `exec zsh`.
 2. Plug in your North Star via DisplayPort to your graphics card.
 3. Force `portReset()` on your North Star, via holding down the circle and dot buttons for 5 seconds. This power cycles your USB 3 header sensors (Stereo IR 170 and Intel T261) and ensures that they enumerate properly.
 4. Check that the sensors are working correctly
-   1. 
+   1. Run RealSense Viewer and check that the T261 is listed under sources.
+   2. Run Ultraleap Control Panel and verify that the camera feed is being received.
 
 
 <br>
