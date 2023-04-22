@@ -17,8 +17,10 @@ group :jekyll_plugins do
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
+    gem 'jekyll-remote-theme'
 end
 group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
+    gem 'open-uri'
 end

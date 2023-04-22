@@ -82,3 +82,74 @@ a:hover, table.table a:hover {
         color: var(--global-theme-color);
     }
 }
+
+// Code block padding
+.highlight{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.highlight pre {
+    background-color: var(--global-bg-color) !important;
+}
+
+pre {
+    
+    padding: 8px 12px;
+    position: relative;
+  
+    /* Copy code to clipboard button */
+    .copy {
+      background: var(--global-card-bg-color);
+      border-color: var(--global-bg-color);
+      border-radius: .3rem;
+      border-style: solid;
+      color: var(--global-text-color);
+      font-size: medium;
+      opacity: 0.2;
+      position: absolute;
+      right: .25rem;
+      top: .25rem;
+  
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--global-hover-color);
+        opacity: 1;
+      }
+    }
+  
+    &:active .copy,
+    &:focus .copy,
+    &:hover .copy {
+      color: var(--global-hover-color);
+      opacity: 1;
+    }
+
+    /* Go to gist URL */
+    .github {
+      background: var(--global-card-bg-color);
+      border-color: var(--global-bg-color);
+      border-radius: .3rem;
+      border-style: solid;
+      color: var(--global-text-color);
+      font-size: medium;
+      opacity: 0.2;
+      position: absolute;
+      right: 2rem;
+      top: .25rem;
+  
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--global-hover-color);
+        opacity: 1;
+      }
+    }
+    &:active .github,
+    &:focus .github,
+    &:hover .github {
+      color: var(--global-hover-color);
+      opacity: 1;
+    }
+  }

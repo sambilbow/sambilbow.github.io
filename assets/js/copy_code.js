@@ -1,4 +1,4 @@
-// create element for copy button in code blocks
+// create elements for GitHub and copy buttons in code blocks
 var codeBlocks = document.querySelectorAll('pre');
 codeBlocks.forEach(function (codeBlock) {
   if (codeBlock.querySelector('pre:not(.lineno)') || codeBlock.querySelector('code')) {
@@ -9,6 +9,21 @@ codeBlocks.forEach(function (codeBlock) {
     copyButton.innerText = 'Copy';
     copyButton.innerHTML = '<i class="fas fa-clipboard"></i>';
     codeBlock.append(copyButton);
+
+    var gistUrl = codeBlock.closest('div').dataset.gistUrl;
+    if (gistUrl) {
+      var githubButton = document.createElement('button');
+      githubButton.className = 'github';
+      githubButton.type = 'button';
+      githubButton.ariaLabel = 'View Gist on GitHub';
+      githubButton.innerHTML = '<i class="fab fa-github"></i>';
+      codeBlock.append(githubButton);
+
+      // open GitHub link to view Gist
+      githubButton.addEventListener('click', function () {
+        window.open(gistUrl, '_blank');
+      });
+    }
 
     // get code from code block and copy to clipboard
     copyButton.addEventListener('click', function () {
