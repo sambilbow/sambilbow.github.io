@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-22T21:12:39+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-23T10:00:39+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
 </subtitle><entry><title type="html">💎 jekyll + chatgpt</title><link href="https://sambilbow.com/blog/2023/jekyll-chatgpt/" rel="alternate" type="text/html" title="💎 jekyll + chatgpt" /><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/jekyll-chatgpt</id><content type="html" xml:base="https://sambilbow.com/blog/2023/jekyll-chatgpt/"><![CDATA[<h2 id="summary">Summary</h2>
 <p>I’ve been learning more Jekyll-related things like Ruby, some new Markdown tricks, and the web trio to make a nicer site. ChatGPT has been really helpful in moving towards a working understanding of how I can edit the template that I’m using (<a href="https://github.com/alshedivat/al-folio">al-folio</a>). It takes a fair amount of time to engineer prompts, but it helps that I know generally what the code I want should perform.</p>
 
@@ -294,9 +294,10 @@
 
 <p>If you don’t want to use the <code class="language-plaintext highlighter-rouge">AUR</code>, unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
 
-<blockquote>
-  <p>Run <code class="language-plaintext highlighter-rouge">leapctl eula</code> after installing, to accept the Ultraleap EULA.</p>
-</blockquote>
+<p>Run the following after installing, to enable the service at startup, and accept the Ultraleap EULA.</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>ultraleap-hand-tracking-service <span class="nt">--now</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+leapctl eula 
+</code></pre></div></div>
 
 <p><br /></p>
 <h3><img id="emoji" src="/assets/img/emoji/intel.png" /> RealSense (6DoF Tracking)</h3>

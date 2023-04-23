@@ -199,9 +199,10 @@
 
 <p>If you don’t want to use the <code class="language-plaintext highlighter-rouge">AUR</code>, unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
 
-<blockquote>
-  <p>Run <code class="language-plaintext highlighter-rouge">leapctl eula</code> after installing, to accept the Ultraleap EULA.</p>
-</blockquote>
+<p>Run the following after installing, to enable the service at startup, and accept the Ultraleap EULA.</p>
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>ultraleap-hand-tracking-service <span class="nt">--now</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+leapctl eula 
+</code></pre></div></div>
 
 <p><br></p>
 <h3>
@@ -394,7 +395,7 @@ make <span class="o">&amp;&amp;</span> <span class="se">\</span>
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
         © Copyright 2023 Sam  Bilbow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: April 22, 2023.
+Last updated: April 23, 2023.
       </div>
     </footer>
 
