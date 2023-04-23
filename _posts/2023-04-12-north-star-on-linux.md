@@ -64,7 +64,11 @@ Here are the individual packages, with links to their official Debian repository
 
 If you don't want to use the `AUR`, unarchive the `.deb` from each repository, then do the same with the `data.tar.xz` inside (you can ignore `control.tar.xz`, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using `sudo mv [file path] [destination path]`.
 
-> Run `leapctl eula` after installing, to accept the Ultraleap EULA.
+Run the following after installing, to enable the service at startup, and accept the Ultraleap EULA.
+```zsh
+sudo systemctl enable ultraleap-hand-tracking-service --now && \
+leapctl eula 
+``` 
 
 <br>
 <h3><img id="emoji" src="/assets/img/emoji/intel.png"> RealSense (6DoF Tracking)</h3>
