@@ -1,5 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-23T10:00:39+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">💎 jekyll + chatgpt</title><link href="https://sambilbow.com/blog/2023/jekyll-chatgpt/" rel="alternate" type="text/html" title="💎 jekyll + chatgpt" /><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/jekyll-chatgpt</id><content type="html" xml:base="https://sambilbow.com/blog/2023/jekyll-chatgpt/"><![CDATA[<h2 id="summary">Summary</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-26T16:12:37+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+</subtitle><entry><title type="html">🔭 siril + gimp for foss astrophotography</title><link href="https://sambilbow.com/blog/2023/siril/" rel="alternate" type="text/html" title="🔭 siril + gimp for foss astrophotography" /><published>2023-04-26T00:00:00+00:00</published><updated>2023-04-26T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/siril</id><content type="html" xml:base="https://sambilbow.com/blog/2023/siril/"><![CDATA[<h2 id="summary">Summary</h2>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <div class="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube-nocookie.com/embed/TibmrYJEgVA" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+    </div>
+</div>
+<div class="caption">
+    I followed along to this video by Nebula Photos, stacking, and editing a JWST <a href="https://www.nasa.gov/feature/goddard/2022/nasa-s-webb-takes-star-filled-portrait-of-pillars-of-creation/">image</a> of the Pillars of Creation.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/pillars.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    Not great, not terrible, but lots of fun! :telescope:
+</div>]]></content><author><name></name></author><category term="open-source" /><category term="astronomy" /><summary type="html"><![CDATA[free and open-source image stacking / editing]]></summary></entry><entry><title type="html">💎 jekyll + chatgpt</title><link href="https://sambilbow.com/blog/2023/jekyll-chatgpt/" rel="alternate" type="text/html" title="💎 jekyll + chatgpt" /><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/jekyll-chatgpt</id><content type="html" xml:base="https://sambilbow.com/blog/2023/jekyll-chatgpt/"><![CDATA[<h2 id="summary">Summary</h2>
 <p>I’ve been learning more Jekyll-related things like Ruby, some new Markdown tricks, and the web trio to make a nicer site. ChatGPT has been really helpful in moving towards a working understanding of how I can edit the template that I’m using (<a href="https://github.com/alshedivat/al-folio">al-folio</a>). It takes a fair amount of time to engineer prompts, but it helps that I know generally what the code I want should perform.</p>
 
 <p><br /></p>
@@ -61,18 +94,7 @@
 
 <div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="p">,</span><span class="w">
-	</span><span class="nl">"tracking"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nl">"tracking_overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-		       </span><span class="p">{</span><span class="w">	
-				</span><span class="nl">"target_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Star"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"tracker_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intel RealSense Device-SLAM"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"xrt_input_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XRT_INPUT_GENERIC_TRACKER_POSE"</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">],</span><span class="w">
-	        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-	</span><span class="p">}</span><span class="w">
+	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 </div>
 
@@ -321,18 +343,7 @@ leapctl eula
 </ul>
 <div class="language-json highlighter-rouge" data-gist-url="https://gist.github.com/sambilbow/3b7b257b535b3dd6fa7b53ad7e453ed0">
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="p">,</span><span class="w">
-	</span><span class="nl">"tracking"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-		</span><span class="nl">"tracking_overrides"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-		       </span><span class="p">{</span><span class="w">	
-				</span><span class="nl">"target_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"North Star"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"tracker_device_serial"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Intel RealSense Device-SLAM"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"direct"</span><span class="p">,</span><span class="w">
-				</span><span class="nl">"xrt_input_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XRT_INPUT_GENERIC_TRACKER_POSE"</span><span class="w">
-			</span><span class="p">}</span><span class="w">
-		</span><span class="p">],</span><span class="w">
-	        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-	</span><span class="p">}</span><span class="w">
+	</span><span class="nl">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://monado.pages.freedesktop.org/monado/config_v0.schema.json"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 </div>
 
