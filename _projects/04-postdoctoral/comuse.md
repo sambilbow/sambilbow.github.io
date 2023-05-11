@@ -18,8 +18,23 @@ category: postdoctoral
     <a href="https://github.com/sambilbow/comuse/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
 </div>
 
+## Ensemble musical AR experience
+CoMuse will enable musicians to develop, design, play, compose, and perform novel and experimental instruments in AR in real time, and collaboratively. For audiences, this may look, sound, and feel like sharing a hybrid perceptual world with another person (or people!). This project builds on findings in [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/).
+
 ## Towards an Open-Source Workflow
-First blog post can be found here [<img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux](/blog/2023/north-star-on-linux)
+As part of CoMuse I hope to move towards a fully open-source stack for multi-user musical AR experience. Currently, [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/) both rely on the closed-source game engine Unity. While powerful in its own right, I felt like this next chapter of research might benefit from fully embracing open-source.
+
+The advantages of this lie in the modularity, community, and spirit behind open-source projects. In all likelihood, this will mean moving to: 
+- [Linux](https://wiki.archlinux.org/) from [Windows](https://www.microsoft.com/en-gb/windows/windows-11) 
+- [Godot](https://godotengine.org/) from [Unity](https://unity.com/)
+- [Monado](monado.dev/) / [Stardust XR](stardustxr.org/) & [StereoKit](https://stereokit.net/) from [Project Esky](https://github.com/HyperLethalVector/ProjectEsky-UnityIntegration).
+- Writing a Godot integration for Project Esky?
+
+Progress will be recorded through development blogs, research papers, and workshops throughout the year.
+
+## Development blogs
+- [<img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux (2023-04-12)](/blog/2023/north-star-on-linux)
+- [<img id="emoji" src="/assets/img/emoji/stardust.gif"> getting started with stardust xr (2023-05-11)](/blog/2023/getting-started-with-stardust-xr)
 
 {: .text-center}
 [![{coMuse Proposal}](https://ytcards.demolab.com/?id=lkLRmX3Kumw&title=coMuse+Proposal&lang=en&timestamp=1657900736&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=157 "area~ Demonstration")](https://youtu.be/lkLRmX3Kumw)
