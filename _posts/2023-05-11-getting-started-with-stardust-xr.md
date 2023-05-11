@@ -53,9 +53,9 @@ North Star → OpenXR → Monado → Stardust XR → Application(s), both 2D and
    cd ../comet && \
    cargo build --release
    ```
-6. For ease, lets add the binaries that have been build in each `target/release/` folder to our `zsh` `PATH` so that we can run them from anywhere. Add the following to your `~/.zshrc` using a text editor like `vim` or `nano`
+6. For ease, lets add the binaries that have been build in each `target/release/` folder to our `zsh` `PATH` so that we can run them from anywhere. Add the following to your `~/.zshrc` using a text editor like `vim` or `nano`, taking care to replace `<telescope location>` with the absolute path to `telescope/`, i.e. `find ~/Documents/repos/telescope/repos/*/target/release/]`
    ```sh
-   export PATH=$PATH$(find <repository location>/StardustXR/telescope/repos/*/target/release/ -maxdepth 1 -type f -executable -printf ":%h")
+   export PATH=$PATH$(find <telescope location>/repos/*/target/release/ -maxdepth 1 -type f -executable -printf ":%h")
    ```
 7. Close and open a new terminal window or run `exec zsh` to refresh. Check that `PATH` was updated with `echo $PATH`. You should see the Stardust release folders added at the end.
 
