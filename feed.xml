@@ -1,5 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-04-26T16:13:12+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">🔭 siril + gimp for foss astrophotography</title><link href="https://sambilbow.com/blog/2023/siril/" rel="alternate" type="text/html" title="🔭 siril + gimp for foss astrophotography" /><published>2023-04-26T00:00:00+00:00</published><updated>2023-04-26T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/siril</id><content type="html" xml:base="https://sambilbow.com/blog/2023/siril/"><![CDATA[<h2 id="summary">Summary</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-11T14:16:27+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+</subtitle><entry><title type="html">getting started with stardust xr</title><link href="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr-copy/" rel="alternate" type="text/html" title="getting started with stardust xr" /><published>2023-05-11T00:00:00+00:00</published><updated>2023-05-11T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/getting-started-with-stardust-xr%20copy</id><content type="html" xml:base="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr-copy/"><![CDATA[<h2 id="summary">Summary</h2>
+<hr />
+<p>As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/">Stardust XR</a>.</p>
+
+<p>Stardust is a system UI framework where multiple different clients (programs that connect to Stardust directly) can create objects for the user to interact with their apps and device. The user can choose to use the objects that work best for their current scenario, and default setups can easily be created so users start out with all the essentials.</p>
+
+<p>The value of this for <a href="/projects/comuse/">CoMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
+
+<p>Some preliminary ideas for developer workflow bindings</p>
+<ul>
+  <li>Gestural interactions with already visual languages like <a href="https://puredata.info/">PureData</a></li>
+  <li>Adding gestural interactivity for code-based computer music languages, like <a href="https://supercollider.github.io/">Supercollider</a> and <a href="https://glicol.org/">Glicol</a></li>
+</ul>
+
+<p>Some preliminary ideas for audience interface with Stardust</p>
+<ul>
+  <li>Ease of switching between experiences via panel shells</li>
+  <li>Menu style launcher</li>
+  <li>Modularity between instruments, which could be their own OpenXR applications.</li>
+</ul>
+
+<p><strong>Revised Linux Stack</strong></p>
+
+<p>North Star → OpenXR → Monado → Stardust XR → Application(s), both 2D and 3D</p>
+
+<p><br /></p>
+
+<h2 id="installation-of-stardust-xr">Installation of Stardust XR</h2>
+<hr />
+<ol>
+  <li>Install prerequisites found <a href="https://stardustxr.org/docs/getting-started/install">here</a>, i.e.:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes <span class="nt">--needed</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Download <a href="https://github.com/StardustXR/telescope">telescope</a>, a bash setup guide for Stardust XR.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/StardustXR/telescope
+</code></pre></div>    </div>
+  </li>
+  <li>Enter the folder and run the setup to download Stardust XR’s first party clients.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>telescope <span class="o">&amp;&amp;</span> <span class="se">\</span>
+./setup.sh
+</code></pre></div>    </div>
+  </li>
+  <li>For each first-party client you want to run, enter its folder now downloaded into <code class="language-plaintext highlighter-rouge">repos/</code> and build. We’ll build <code class="language-plaintext highlighter-rouge">stardust-xr-server</code> and <code class="language-plaintext highlighter-rouge">comet</code>.
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>server <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo build <span class="nt">--release</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd</span> ../comet <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo build <span class="nt">--release</span>
+</code></pre></div>    </div>
+  </li>
+  <li>For ease, lets add the binaries that have been build in each <code class="language-plaintext highlighter-rouge">target/release/</code> folder to our <code class="language-plaintext highlighter-rouge">zsh</code> <code class="language-plaintext highlighter-rouge">PATH</code> so that we can run them from anywhere. Add the following to your ~/.zshrc using a text editor like <code class="language-plaintext highlighter-rouge">vim</code> or <code class="language-plaintext highlighter-rouge">nano</code>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span><span class="si">$(</span>find &lt;repository location&gt;/StardustXR/telescope/repos/<span class="k">*</span>/target/release/ <span class="nt">-maxdepth</span> 1 <span class="nt">-type</span> f <span class="nt">-executable</span> <span class="nt">-printf</span> <span class="s2">":%h"</span><span class="si">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Close and open a new terminal window or run <code class="language-plaintext highlighter-rouge">exec zsh</code> to refresh. Check that <code class="language-plaintext highlighter-rouge">PATH</code> was updated with <code class="language-plaintext highlighter-rouge">echo $PATH</code>. You should see the Stardust release folders added at the end.</li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="running-a-comet-a-first-party-stardust-xr-client">Running a <code class="language-plaintext highlighter-rouge">comet</code>, a first-party Stardust XR client</h2>
+<hr />
+<p>Stardust XR is an OpenXR client itself, but it runs on top of Monado for now. This means that you must have <code class="language-plaintext highlighter-rouge">monado-service</code> running, so that the server can connect to it, and serve clients.</p>
+<ol>
+  <li>Plug in your North Star headset via USB 2.0</li>
+  <li>Plug in your North Star via DisplayPort to your graphics card.</li>
+  <li>Force <code class="language-plaintext highlighter-rouge">portReset()</code> on your North Star, via holding down the circle and dot buttons for 5 seconds.</li>
+  <li>Open three terminal windows</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">monado-service</code> in the first terminal window.</li>
+  <li>A grey, fullscreen Xwayland Monado window should open on your main display. Move it to your North Star display, e.g by using the Kwin shortcut <code class="language-plaintext highlighter-rouge">Meta-Shift-right</code></li>
+  <li>In the second terminal window, run <code class="language-plaintext highlighter-rouge">stardust-xr-server</code>. The display of the headset should switch from grey to black</li>
+  <li>In the third terminal window, run <code class="language-plaintext highlighter-rouge">comet</code></li>
+  <li>If all goes well you should have 6DoF and hand tracking running in Stardust XR, and you should be able to grab the red pen in front of / above you and draw with it.</li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="example-video">Example video</h2>
+<hr />
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <div class="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube-nocookie.com/embed/zG__m-gV1qI" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+    </div>
+</div>
+
+<blockquote>
+  <p>I have to use <code class="language-plaintext highlighter-rouge">gravity</code> here to run <code class="language-plaintext highlighter-rouge">comet</code> with an offset, as it seems all of my clients like to run about a metre above my head for some reason!</p>
+</blockquote>]]></content><author><name></name></author><category term="open-source" /><category term="linux" /><category term="augmented-reality" /><summary type="html"><![CDATA[an open-source linux xr display server]]></summary></entry><entry><title type="html">🎩 moving to bobovr headgear</title><link href="https://sambilbow.com/blog/2023/bobovr-headgear/" rel="alternate" type="text/html" title="🎩 moving to bobovr headgear" /><published>2023-05-10T00:00:00+00:00</published><updated>2023-05-10T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/bobovr-headgear</id><content type="html" xml:base="https://sambilbow.com/blog/2023/bobovr-headgear/"><![CDATA[<h2 id="bobovr-m2-plus">BoboVR M2 Plus</h2>
+
+<p>Adaptor designed and shared by Noah Zerkin</p>
+<blockquote>
+  <p>Had to cut and grind down the slide receivers on that headgear. Want to make one more tweak tomorrow and will post. Ergonomics aren’t bad, even without the foam forehead pad that’s missing from this one. Adjustability isn’t as smooth or clever as FLZero’s, but there’s actually a little more of it in terms of vertical repositioning, and slides out at least far enough to accommodate my glasses.</p>
+</blockquote>
+
+<div align="right"><i>
+@noazark, August 2022 | Project North Star Discord Server | <a href="https://discord.com/channels/456107915514871828/456857961344532492/1007685576348151900">#3d-printing</a>
+</i></div>
+
+<p><br /></p>
+
+<div class="row" align="center">
+    <div class="col-sm mt-1 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/bobovr-1.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-1 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/bobovr-2.png" class="img-fluid rounded z-depth-1" width="180px" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an original calibration stand, and a cable view of the BoboVR with Velcro &amp; zip tie solution
+</div>
+
+<h2 id="what-to-print">What to print</h2>
+<p><code class="language-plaintext highlighter-rouge">BoboAdapterL.stl</code> (<a href="https://github.com/sambilbow/Deck-X/blob/main/Deck_X/STL_files/Headgear/BoboVR_Headgear_Adaptor/BoboAdapterL.stl">link</a>), for the left side, then again but flip on the x-axis for the right side.</p>
+
+<h2 id="what-to-buy">What to buy</h2>
+<p>BoboVR M2 Plus (model without the battery) <a href="https://www.amazon.co.uk/dp/B0B2RP1N4F?psc=1&amp;ref=ppx_yo2ov_dt_b_product_details">[Amazon]</a> <a href="https://www.aliexpress.com/item/1005002603950456.html?pdp_npi=2%40dis%21GBP%21%EF%BF%A1128.91%21%EF%BF%A197.28%21%21%21%21%21%40211b5e2216837427439044000ed3e8%2112000029657337934%21btf&amp;_t=pvid:fa3b44d5-9a29-4a37-8afc-d58acfa30403&amp;afTraceInfo=1005002603950456__pc__pcBridgePPC__xxxxxx__1683742744&amp;spm=a2g0o.ppclist.product.mainProduct">[AliExpress]</a></p>
+
+<h2 id="assembly">Assembly</h2>
+<ol>
+  <li>Add the hex screws provided with the Deck X kit into the adaptors.</li>
+  <li>Connect the adaptors to each side of the headgear</li>
+  <li>Tighten the new headgear to the optics bracket via the hex screw</li>
+  <li>Adjust fit using adaptor angle and tightness to bring optics bracket closer to the face.</li>
+</ol>]]></content><author><name></name></author><category term="open-source" /><category term="augmented-reality" /><summary type="html"><![CDATA[a comfier headgear solution]]></summary></entry><entry><title type="html">🔭 siril + gimp for foss astrophotography</title><link href="https://sambilbow.com/blog/2023/siril/" rel="alternate" type="text/html" title="🔭 siril + gimp for foss astrophotography" /><published>2023-04-26T00:00:00+00:00</published><updated>2023-04-26T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/siril</id><content type="html" xml:base="https://sambilbow.com/blog/2023/siril/"><![CDATA[<h2 id="summary">Summary</h2>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -427,17 +580,6 @@ make <span class="o">&amp;&amp;</span> <span class="se">\</span>
   </li>
   <li>You should have hand and 6DoF tracking working. Congratulations, you won again :tada:</li>
 </ol>
-
-<p><br /></p>
-
-<h2><img id="emoji" src="/assets/img/emoji/stardust.gif" /> Stardust XR</h2>
-<hr />
-<blockquote>
-  <p><em>“Stardust XR (informally known as Stardust) is an XR display server for Linux-based distros (possibly most unix-based too, but untested). Unlike display servers of the past that were run on bounded 2D screens, Stardust has to break convention in order to account for unbounded 3D space in any potential virtual or real environment.”</em> 
-<span> - </span><a href="https://stardustxr.org/docs/getting-started/overview">Stardust XR, 2023</a></p>
-</blockquote>
-
-<p>Instructions <code class="language-plaintext highlighter-rouge">tba</code></p>
 
 <p><br /></p>
 

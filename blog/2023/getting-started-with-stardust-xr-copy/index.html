@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Arcade Waves | Sam  Bilbow</title>    
+    <title>✨ getting started with stardust xr | Sam  Bilbow</title>    
     <meta name="author" content="Sam  Bilbow">
-    <meta name="description" content="An acoustic portrait of Brighton Pier (December 2015)">
+    <meta name="description" content="an open-source linux xr display server">
     <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
 
 
@@ -36,7 +36,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://sambilbow.com/projects/pier/">
+    <link rel="canonical" href="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr-copy/">
     
     <!-- Dark Mode -->
     
@@ -75,8 +75,8 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
               </li>
 
               <!-- Other pages -->
@@ -113,81 +113,128 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
-        <div class="post">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">Arcade Waves</h1>
-            <p class="post-description">An acoustic portrait of Brighton Pier (December 2015)</p>
-          </header>
+<div class="post">
 
-          <article>
-            <div class="row">
-    <div class="col-sm mt-1 mt-md-0">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
-      
+  <header class="post-header">
+    <h1 class="post-title">
+<img id="emoji" src="/assets/img/emoji/stardust.gif"> getting started with stardust xr</h1>
+    <p class="post-meta">May 11, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/open-source">
+          <i class="fas fa-hashtag fa-sm"></i> open-source</a>  
+          <a href="/blog/tag/linux">
+          <i class="fas fa-hashtag fa-sm"></i> linux</a>  
+          <a href="/blog/tag/augmented-reality">
+          <i class="fas fa-hashtag fa-sm"></i> augmented-reality</a>  
+          
 
-      <!-- Fallback to the original file -->
-      <img src="/assets/projects/01-undergrad/pier/pier_2.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    </p>
+  </header>
 
-    </picture>
-  
-</figure>
+  <article class="post-content">
+    <h2 id="summary">Summary</h2>
+<hr>
+<p>As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/" rel="external nofollow noopener" target="_blank">Stardust XR</a>.</p>
 
-    </div>
-</div>
+<p>Stardust is a system UI framework where multiple different clients (programs that connect to Stardust directly) can create objects for the user to interact with their apps and device. The user can choose to use the objects that work best for their current scenario, and default setups can easily be created so users start out with all the essentials.</p>
+
+<p>The value of this for <a href="/projects/comuse/">CoMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
+
+<p>Some preliminary ideas for developer workflow bindings</p>
+<ul>
+  <li>Gestural interactions with already visual languages like <a href="https://puredata.info/" rel="external nofollow noopener" target="_blank">PureData</a>
+</li>
+  <li>Adding gestural interactivity for code-based computer music languages, like <a href="https://supercollider.github.io/" rel="external nofollow noopener" target="_blank">Supercollider</a> and <a href="https://glicol.org/" rel="external nofollow noopener" target="_blank">Glicol</a>
+</li>
+</ul>
+
+<p>Some preliminary ideas for audience interface with Stardust</p>
+<ul>
+  <li>Ease of switching between experiences via panel shells</li>
+  <li>Menu style launcher</li>
+  <li>Modularity between instruments, which could be their own OpenXR applications.</li>
+</ul>
+
+<p><strong>Revised Linux Stack</strong></p>
+
+<p>North Star → OpenXR → Monado → Stardust XR → Application(s), both 2D and 3D</p>
+
+<p><br></p>
+
+<h2 id="installation-of-stardust-xr">Installation of Stardust XR</h2>
+<hr>
+<ol>
+  <li>Install prerequisites found <a href="https://stardustxr.org/docs/getting-started/install" rel="external nofollow noopener" target="_blank">here</a>, i.e.:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes <span class="nt">--needed</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Download <a href="https://github.com/StardustXR/telescope" rel="external nofollow noopener" target="_blank">telescope</a>, a bash setup guide for Stardust XR.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>git clone https://github.com/StardustXR/telescope
+</code></pre></div>    </div>
+  </li>
+  <li>Enter the folder and run the setup to download Stardust XR’s first party clients.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>telescope <span class="o">&amp;&amp;</span> <span class="se">\</span>
+./setup.sh
+</code></pre></div>    </div>
+  </li>
+  <li>For each first-party client you want to run, enter its folder now downloaded into <code class="language-plaintext highlighter-rouge">repos/</code> and build. We’ll build <code class="language-plaintext highlighter-rouge">stardust-xr-server</code> and <code class="language-plaintext highlighter-rouge">comet</code>.
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>server <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo build <span class="nt">--release</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd</span> ../comet <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo build <span class="nt">--release</span>
+</code></pre></div>    </div>
+  </li>
+  <li>For ease, lets add the binaries that have been build in each <code class="language-plaintext highlighter-rouge">target/release/</code> folder to our <code class="language-plaintext highlighter-rouge">zsh</code> <code class="language-plaintext highlighter-rouge">PATH</code> so that we can run them from anywhere. Add the following to your ~/.zshrc using a text editor like <code class="language-plaintext highlighter-rouge">vim</code> or <code class="language-plaintext highlighter-rouge">nano</code>
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span><span class="si">$(</span>find &lt;repository location&gt;/StardustXR/telescope/repos/<span class="k">*</span>/target/release/ <span class="nt">-maxdepth</span> 1 <span class="nt">-type</span> f <span class="nt">-executable</span> <span class="nt">-printf</span> <span class="s2">":%h"</span><span class="si">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Close and open a new terminal window or run <code class="language-plaintext highlighter-rouge">exec zsh</code> to refresh. Check that <code class="language-plaintext highlighter-rouge">PATH</code> was updated with <code class="language-plaintext highlighter-rouge">echo $PATH</code>. You should see the Stardust release folders added at the end.</li>
+</ol>
+
+<p><br></p>
+
+<h2 id="running-a-comet-a-first-party-stardust-xr-client">Running a <code class="language-plaintext highlighter-rouge">comet</code>, a first-party Stardust XR client</h2>
+<hr>
+<p>Stardust XR is an OpenXR client itself, but it runs on top of Monado for now. This means that you must have <code class="language-plaintext highlighter-rouge">monado-service</code> running, so that the server can connect to it, and serve clients.</p>
+<ol>
+  <li>Plug in your North Star headset via USB 2.0</li>
+  <li>Plug in your North Star via DisplayPort to your graphics card.</li>
+  <li>Force <code class="language-plaintext highlighter-rouge">portReset()</code> on your North Star, via holding down the circle and dot buttons for 5 seconds.</li>
+  <li>Open three terminal windows</li>
+  <li>Run <code class="language-plaintext highlighter-rouge">monado-service</code> in the first terminal window.</li>
+  <li>A grey, fullscreen Xwayland Monado window should open on your main display. Move it to your North Star display, e.g by using the Kwin shortcut <code class="language-plaintext highlighter-rouge">Meta-Shift-right</code>
+</li>
+  <li>In the second terminal window, run <code class="language-plaintext highlighter-rouge">stardust-xr-server</code>. The display of the headset should switch from grey to black</li>
+  <li>In the third terminal window, run <code class="language-plaintext highlighter-rouge">comet</code>
+</li>
+  <li>If all goes well you should have 6DoF and hand tracking running in Stardust XR, and you should be able to grab the red pen in front of / above you and draw with it.</li>
+</ol>
+
+<p><br></p>
+
+<h2 id="example-video">Example video</h2>
+<hr>
 <div class="row">
-    <div class="col-sm mt-2 mt-md-0">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
-      
-
-      <!-- Fallback to the original file -->
-      <img src="/assets/projects/01-undergrad/pier/pier_1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-2 mt-md-0">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
-      
-
-      <!-- Fallback to the original file -->
-      <img src="/assets/projects/01-undergrad/pier/pier_3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-    </picture>
-  
-</figure>
-
+    <div class="col-sm mt-3 mt-md-0">
+        <div class="embed-responsive embed-responsive-16by9"><iframe src="https://www.youtube-nocookie.com/embed/zG__m-gV1qI" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
     </div>
 </div>
 
-<div id="audio">
-    <iframe frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309873660&amp;color=d08770&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;inverse=true&amp;font=Helvetica"></iframe>
+<blockquote>
+  <p>I have to use <code class="language-plaintext highlighter-rouge">gravity</code> here to run <code class="language-plaintext highlighter-rouge">comet</code> with an offset, as it seems all of my clients like to run about a metre above my head for some reason!</p>
+</blockquote>
+
+  </article>
 </div>
-
-          </article>
-
-        </div>
 
     </div>
 
