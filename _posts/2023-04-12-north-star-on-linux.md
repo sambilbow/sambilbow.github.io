@@ -142,15 +142,6 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
 
 <br>
 
-<h2><img id="emoji" src="/assets/img/emoji/stardust.gif"> Stardust XR</h2>
----
-> _"Stardust XR (informally known as Stardust) is an XR display server for Linux-based distros (possibly most unix-based too, but untested). Unlike display servers of the past that were run on bounded 2D screens, Stardust has to break convention in order to account for unbounded 3D space in any potential virtual or real environment."_ 
-> <span> - </span>[Stardust XR, 2023](https://stardustxr.org/docs/getting-started/overview)
-
-Instructions `tba`
-
-
-<br>
 
 ## Uploading Integrator Sketches
 ---
