@@ -2,10 +2,10 @@
 layout: page
 title: Cellobot
 description: "@ CROMT Robot Opera (June 2019)"
-img: assets/projects/06-collaborative/cellobot/cellobot.jpg
+img: assets/collaborations/cellobot/cellobot.jpg
 importance: 100
-permalink:  projects/cellobot/
-category: collaborative
+permalink:  collaborations/cellobot/
+category: creative
 ---
 
 
