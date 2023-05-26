@@ -27,7 +27,7 @@ North Star → OpenXR → Monado → Application
 
 Hey there! If you're feeling adventurous and trust me enough to run a bash script, then boy oh boy do I have a treat for you. I've created a script that will get you started with North Star on Linux.
 
-Now, I know what you're thinking. "Why on earth would I trust some random person on the internet with access to my terminal?" Well, let me tell you, friend. You can trust me because... uh... it was partially created by ChatGPT, a highly advanced, eloquent and benevolent artificial intelligence programmed to assist and guide humans with their tasks. ChatGPT is great, in fact, ChatGPT wrote this paragraph! So yeah, thats why you can trust ~~it~~ me... Yeah, let's go with that.
+Now, I know what you're thinking. "Why on earth would I trust some random person on the internet with access to my terminal?" Well, let me tell you, friend. You can trust me because... uh... it was partially created by ChatGPT, a highly advanced, eloquent and benevolent artificial intelligence programmed to assist and guide humans with their tasks. ChatGPT is great, in fact, ChatGPT wrote this paragraph! So yeah, that's why you can trust ~~it~~ me... Yeah, let's go with that.
 
 So, if you're feeling stupid, go ahead and run this command in your terminal:
 
@@ -58,9 +58,9 @@ Download, build, and install `monado-git` from the [AUR](https://aur.archlinux.o
 As written in the [Linux documentation](https://docs.ultraleap.com/linux/), Ultraleap have released their Gemini V5 tracking software as a beta for Ubuntu 22.04 LTS. However, the files are accessible via their repository for non-Debian Linux systems. I have created a [meta-package <img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/ultraleap-hand-tracking) for all three required packages below on the `AUR`. It can be installed via `yay -S ultraleap-hand-tracking` and accepting default options when prompted. 
 
 Here are the individual packages, with links to their official Debian repository location, and their `AUR` counterpart:
-- [:arrow_down_small:](https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/ultraleap-hand-tracking-service) `ultraleap-hand-tracking-service` - a background service that attaches to Ultraleap devices.
-- [:arrow_down_small:](https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/ultraleap-hand-tracking-control-panel) `ultraleap-hand-tracking-control-panel` - a GUI application that shows cameras & info.
-- [:arrow_down_small:](https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/openxr-layer-ultraleap) `openxr-layer-ultraleap` - an OpenXR layer that allows Ultraleap devices connect at the API layer.
+- [🔽](https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/ultraleap-hand-tracking-service) `ultraleap-hand-tracking-service` - a background service that attaches to Ultraleap devices.
+- [🔽](https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/ultraleap-hand-tracking-control-panel) `ultraleap-hand-tracking-control-panel` - a GUI application that shows cameras & info.
+- [🔽](https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb) [<img id="emoji" src="/assets/img/emoji/arch.webp">](https://aur.archlinux.org/packages/openxr-layer-ultraleap) `openxr-layer-ultraleap` - an OpenXR layer that allows Ultraleap devices connect at the API layer.
 
 If you don't want to use the `AUR`, unarchive the `.deb` from each repository, then do the same with the `data.tar.xz` inside (you can ignore `control.tar.xz`, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using `sudo mv [file path] [destination path]`.
 
@@ -93,7 +93,7 @@ Download, build, and install `arduino` from the `community` repository, i.e. `ya
 
 
 ### Setting Environment Variables
-If you want [direct-mode](https://monado.freedesktop.org/direct-mode.html), you have to use an X11 compositor with Monado, its not currently supported on Wayland or Xwayland. That said, I wanted to use Wayland because :shrug:, I'm also used to extended-mode from the Unity Windows workflow so lack of direct-mode doesn't bother me right now. Either way, you will need to set the following Monado environment variables in your shell configuration file, this guide assumes `zsh`, and therfore `~/.zshrc`. Feel free to add them with this command: 
+If you want [direct-mode](https://monado.freedesktop.org/direct-mode.html), you have to use an X11 compositor with Monado, its not currently supported on Wayland or Xwayland. That said, I wanted to use Wayland because 🤷, I'm also used to extended-mode from the Unity Windows workflow so lack of direct-mode doesn't bother me right now. Either way, you will need to set the following Monado environment variables in your shell configuration file, this guide assumes `zsh`, and therfore `~/.zshrc`. Feel free to add them with this command: 
 ```zsh
 echo '
 export NS_CONFIG_PATH=~/.config/monado/NorthStarCalibration.json # Set path to North Star calibration file.
@@ -120,7 +120,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
 <br>
 
 ### Starting Monado
-1. Run `monado-service`. If all goes well, you should be greeted with an output log that mentions your NorthStarCalibration.json being read. Look for  `INFO [p_create_system] Creating system:`, specifically the lines:
+1. Run `monado-service`. If all goes well, you should be greeted with an output log that mentions your `NorthStarCalibration.json` being read. Look for  `INFO [p_create_system] Creating system:`, specifically the lines:
    ```
    Got devices:
    	0: Intel RealSense Device-SLAM
@@ -128,7 +128,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
    ```
 2. A grey, fullscreen Xwayland Monado window should open on your main display.
 3. Move it to your North Star display, e.g by using the Kwin shortcut `Meta-Shift-right`
-4. Congratulations, you win :tada:
+4. Congratulations, you win 🎉
 5. You can check Monado has access to your sensors by running a demo.
 6. Open a new terminal, download this simple [demo](https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground), enter the directory, make and run the demo with:
    ```zsh
@@ -138,7 +138,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
    make && \
    ./openxr-playground
    ```
-7. You should have hand and 6DoF tracking working. Congratulations, you won again :tada:
+7. You should have hand and 6DoF tracking working. Congratulations, you won again 🎉
 
 <br>
 

@@ -10,7 +10,7 @@ img: /assets/img/openastrotech.png
 
 ---
 
-[OpenAstroTech](https://openastrotech.com/) looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space :smiley: :space_invader::rocket:
+[OpenAstroTech](https://openastrotech.com/) looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space 😃 👾 🚀
 
 
 <div class="row">
