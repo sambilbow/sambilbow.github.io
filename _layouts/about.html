@@ -42,19 +42,19 @@ layout: default
 
           <!-- News -->
           {% if page.news -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">recent news :loudspeaker:</a></h2>
+            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">recent news 📢</a></h2>
             {%- include news.html %}
           {%- endif %}
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">blog posts :fountain_pen:</a></h2>
+            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">blog posts 🖋️</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">new writing :roll_of_paper:</a></h2>
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">new writing 🧻</a></h2>
             {%- include selected_papers.html %}
           {%- endif %}
 

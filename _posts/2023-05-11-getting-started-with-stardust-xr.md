@@ -10,11 +10,11 @@ img: /assets/img/emoji/stardust.gif
 ---
 ## Summary
 ---
-As part of [CoMuse](/projects/comuse/) I hope to move towards a fully open-source stack for multi-user musical AR experience. In my [last post](/blog/2023/north-star-on-linux) on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about [Stardust XR](https://stardustxr.org/).
+As part of [coMuse](/projects/comuse/) I hope to move towards a fully open-source stack for multi-user musical AR experience. In my [last post](/blog/2023/north-star-on-linux) on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about [Stardust XR](https://stardustxr.org/).
 
 Stardust is a system UI framework where multiple different clients (programs that connect to Stardust directly) can create objects for the user to interact with their apps and device. The user can choose to use the objects that work best for their current scenario, and default setups can easily be created so users start out with all the essentials.
 
-The value of this for [CoMuse](/projects/comuse/) lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.
+The value of this for [coMuse](/projects/comuse/) lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.
 
 Some preliminary ideas for developer workflow bindings
 - Gestural interactions with already visual languages like [PureData](https://puredata.info/)

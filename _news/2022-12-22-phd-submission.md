@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:sweat_smile: I submitted my PhD thesis today 
+😅 I submitted my PhD thesis today 

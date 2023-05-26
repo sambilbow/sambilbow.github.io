@@ -19,10 +19,10 @@ category: postdoctoral
 </div>
 
 ## Ensemble musical AR experience
-CoMuse will enable musicians to develop, design, play, compose, and perform novel and experimental instruments in AR in real time, and collaboratively. For audiences, this may look, sound, and feel like sharing a hybrid perceptual world with another person (or people!). This project builds on findings in [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/).
+coMuse will enable musicians to develop, design, play, compose, and perform novel and experimental instruments in AR in real time, and collaboratively. For audiences, this may look, sound, and feel like sharing a hybrid perceptual world with another person (or people!). This project builds on findings in [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/).
 
 ## Towards an Open-Source Workflow
-As part of CoMuse I hope to move towards a fully open-source stack for multi-user musical AR experience. Currently, [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/) both rely on the closed-source game engine Unity. While powerful in its own right, I felt like this next chapter of research might benefit from fully embracing open-source.
+As part of coMuse I hope to move towards a fully open-source stack for multi-user musical AR experience. Currently, [polaris~](/projects/polaris/) and [polygons~](/projects/polygons/) both rely on the closed-source game engine Unity. While powerful in its own right, I felt like this next chapter of research might benefit from fully embracing open-source.
 
 The advantages of this lie in the modularity, community, and spirit behind open-source projects. In all likelihood, this will mean moving to: 
 - [Linux](https://wiki.archlinux.org/) from [Windows](https://www.microsoft.com/en-gb/windows/windows-11) 

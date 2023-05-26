@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:paintbrush: Postdoc project [coMuse](/projects/comuse/) starts today! 
+🖌️ Postdoc project [coMuse](/projects/comuse/) starts today! 
