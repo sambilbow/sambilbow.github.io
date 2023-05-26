@@ -9,15 +9,15 @@ category: undergrad
 ---
 <div class="row">
     <div class="col-sm mt-1 mt-md-0">
-        {% include figure.html path="assets/projects/01-undergrad/pier/pier_2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/01-undergrad/pier/pier_2.jpg" title="Photograph of Kemptown seafront in Brighton, UK" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/01-undergrad/pier/pier_1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/01-undergrad/pier/pier_1.jpg" title="Condenser microphone aimed at the waves on Brighton beach" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/01-undergrad/pier/pier_3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/01-undergrad/pier/pier_3.jpg" title="Screenshot of project in Adobe Audition" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

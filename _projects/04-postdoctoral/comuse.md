@@ -8,7 +8,7 @@ permalink: /projects/comuse/
 category: postdoctoral
 ---
 
-![example image](/assets/projects/04-postdoctoral/comuse/banner.png){: .rounded .z-depth-1 .mx-auto .d-block height="200px"}
+![Stylised icon for the coMuse project](/assets/projects/04-postdoctoral/comuse/banner.png){: .rounded .z-depth-1 .mx-auto .d-block height="200px"}
 
 <div class="caption">
     <a href="#"><img src="https://img.shields.io/badge/Platform-Linux-yellow?style=flat-square&logo=linux&logoColor=white"></a>

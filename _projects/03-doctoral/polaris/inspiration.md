@@ -51,13 +51,13 @@ I therefore thought it would be a good platform to design my further studies wit
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-001.png" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-001.png" title="Promotional futuristic image of a woman wearing the original North Star headset" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-002.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-002.jpg" title="North Star headset showing the Windows logo on its displays" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-003.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-003.jpg" title="Early prototype image of the original North Star headset being worn by a dummy" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
                 

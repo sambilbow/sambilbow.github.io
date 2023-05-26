@@ -33,13 +33,13 @@ I started printing the parts [(which are available here)](https://github.com/Ahe
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-004.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-004.JPEG" title="£D printed parts for North Star headset calibration stand and headgear" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-005.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-005.JPEG" title="Original Leap Motion Controller optics bracket for North Star headset" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-006.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-006.JPEG" title="Assembled headgear with rails for North Star headset" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">
@@ -68,22 +68,22 @@ Building the headset involves assembling the electrical components and the senso
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-            {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-011.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+            {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-011.JPEG" title="North Star headset display trays with adaptors and flex cables showing" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-007.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-007.JPEG" title="Part-assembled North Star headset optics bracket with Leap Motion Controller, and Intel Realsense T261" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-008.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-008.JPEG" title="Assembled North Star headset (missing lid) with Leap Motion Controller, and Intel Realsense T261" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-            {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-009.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+            {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-009.JPEG" title="Printing the North Star headset lid." class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-010.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-010.JPEG" title="Me trying the North Star headset for the first time" class="img-fluid rounded z-depth-1" %}
     </div>
 
 </div>

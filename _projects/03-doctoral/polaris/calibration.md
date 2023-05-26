@@ -50,18 +50,18 @@ Historically, there are two different types of calibration, 3D and 2D. 3D came f
 
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-012.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-012.JPEG" title="North Star headset on the original calibration stand" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-013.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-013.JPEG" title="North Star headset with T261 being calibrated using the original stand" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-014.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-014.JPEG" title="North Star headset with T261 being calibrated using the new hybrid calibrator" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-015.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-015.JPEG" title="Front view of the North Star headset with T261 being calibrated using the new hybrid calibrator" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class = "caption">

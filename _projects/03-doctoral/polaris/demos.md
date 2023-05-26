@@ -22,13 +22,13 @@ In July I added a camera to the headset, to be specific, I have a Raspberry Pi Z
     
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-016.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-016.JPEG" title="Top view of North Star headset with a Pi Zero Cam setup" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-017.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-017.JPEG" title="Front view of North Star headset with a Pi Zero Cam setup" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-018.JPEG" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-018.JPEG" title="POV of North Star headset with a Pi Zero Cam setup" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class = "caption">
@@ -39,11 +39,11 @@ In July I added a camera to the headset, to be specific, I have a Raspberry Pi Z
 In order to take these videos, I use <a href="https://obsproject.com/">OBS</a> to composite my webcam, specific portions of my screen (during Unity Demos), as well as the through-combiner camera I have set up, and later on, binaural audio. Overall, whilst it looks and feels hacked together, and could probably do with a 3D printed enclosure, the system works perfectly well for documenting the experience of wearing the headset.
 <div class="row">
     <div class="col-sm mt-2 mt-md-0">
-        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-019.gif" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/03-doctoral/polaris/northstar-019.gif" title="Animated screenshot showing the OBS setup for using the Pi Zero Cam setup in a demo" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class = "caption">
-    Pressing a button whilst running the OBS camera/screen/audio compositing setup
+    Pressing a button while running the OBS camera/screen/audio compositing setup
 </div>
 
 ### Paint & Cubes
