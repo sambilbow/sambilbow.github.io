@@ -21,7 +21,7 @@ category: undergrad
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2021/W3077-creative-music-technologies"><img src="https://img.shields.io/badge/Module-Creative Music Technologies-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/01-undergrad/gloveduino/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/01-undergrad/gloveduino/essay.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
 The aims of my project were to create an easy to use, musical sounding sampler which operated through the use of a game controller. The idea of a controller being used in the composition has been around since the 1981 with the implementation of MIDI in keyboard controllers.

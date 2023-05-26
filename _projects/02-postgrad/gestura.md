@@ -24,8 +24,8 @@ This is a 360 / ambisonic video. that means that as long as you are viewing on d
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/business-school/internal/departments/spru/pgcourses/2021/L1522T/86284#tabs-outline"><img src="https://img.shields.io/badge/Module-Interactive Project Development-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/02-postgrad/gestura/journal.pdf"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
-    <a href="../assets/projects/02-postgrad/gestura/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/02-postgrad/gestura/journal.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/02-postgrad/gestura/essay.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
 

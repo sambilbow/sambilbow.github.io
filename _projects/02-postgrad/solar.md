@@ -24,7 +24,7 @@ category: postgrad
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/postgraduate/2021/828W3A-sonic-media-practice"><img src="https://img.shields.io/badge/Module-Sonic Media Practice-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/02-postgrad/solar/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/02-postgrad/solar/essay.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
  SolAR, in essence, is an exploration into a possible use case for mixed reality technology that shies away from the norm of visually augmented gaming and utility applications. I developed this application because I believe that it has the potential to scale into multiple settings, including networked interaction and installation models. With modern advancements in AR technology, i.e, the release of Apple’s ARKit 2.0 - it makes it more accessible for developers to create complex augmented and mixed reality applications.

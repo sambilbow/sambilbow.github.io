@@ -24,7 +24,7 @@ category: undergrad
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2023/W3081-interactive-music-systems"><img src="https://img.shields.io/badge/Module-Interactive Music Systems-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/01-undergrad/gloveduino/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/01-undergrad/gloveduino/essay.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
 This project was about creating an Arduino powered glove that enables to wearer to engage with music performance and composition on a gestural level. Inspiration for me, came from watching Imogen Heap’s demonstration of her Mi.Mu gloves at a conference. I was thoroughly impressed with the amount of flow that her instrument provided her in a performance setting. Learning about the New Instruments for Musical Expression conference also helped me set out to create not exactly a “new instrument” per se, but to allow me to explore my own compositional and performance based ideas through a gestural device of my own making. Joel Ryan proposed in his “Notes on STEIM” that the problem with computer music is the distance between the musician and the composition process (Ryan,1991). I saw the solution to this in the raw organic nature of the gestural glove.

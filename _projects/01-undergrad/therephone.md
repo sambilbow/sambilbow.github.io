@@ -21,8 +21,8 @@ category: undergrad
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2019/W3093-generative-arts-and-musical-machines"><img src="https://img.shields.io/badge/Module-Generative Art and Musical Machines-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/01-undergrad/therephone/journal.pdf"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
-    <a href="../assets/projects/01-undergrad/therephone/essay.pdf"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/01-undergrad/therephone/journal.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/01-undergrad/therephone/essay.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Essay-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
 

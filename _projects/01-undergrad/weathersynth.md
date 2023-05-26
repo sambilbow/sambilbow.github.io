@@ -21,7 +21,7 @@ category: undergrad
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2020/W3082-digital-music-cultures"><img src="https://img.shields.io/badge/Module-Digital Music Cultures-red?style=flat-square&logo=todoist&logoColor=white"></a>
-    <a href="../assets/projects/01-undergrad/weathersynth/journal.pdf"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
+    <a href="../../assets/projects/01-undergrad/weathersynth/journal.pdf" target="_blank"><img src="https://img.shields.io/badge/Coursework-Journal-green?style=flat-square&logo=readthedocs&logoColor=white"></a>
 </div>
 
 Ever since the [Interactive Music Systems module](https://sambilbow.com/projects/gloveduino), I have had a deep interest using VPLs (visual programming languages) to create systems that create music out of interesting and unusual data, data that you wouldn't normally attribute music to. After being shown a CNMAT Max patch created by Michael Zbyszynski that interprets XML weather data, I decided to focus on the weather as it is something that constantly changes over time and is never exactly the same in two places. The different weather conditions affect different parameters on the synthesiser.
