@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sentinel Self
-description: "Interaction Design w/ Sissel Marie Tonn (October 2022)"
+description: "Interaction Design. Installed @ MEET Milan. w/ Sissel Marie-Tonn Studios (October 2022)"
 img: assets/collaborations/sentinel-self/sentinel-self.jpg
 importance: 96
 permalink:  collaborations/sentinel-self/

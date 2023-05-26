@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cellobot
-description: "@ CROMT Robot Opera (June 2019)"
+description: "Hardware Design and Performance @ CROMT Robot Opera (June 2019)"
 img: assets/collaborations/cellobot/cellobot.jpg
 importance: 100
 permalink:  collaborations/cellobot/
