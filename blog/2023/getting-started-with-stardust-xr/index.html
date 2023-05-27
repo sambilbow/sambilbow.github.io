@@ -23,7 +23,7 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
     
@@ -84,7 +84,13 @@
                 <a class="nav-link" href="/publications/">publications</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">projects</a>
+                <a class="nav-link" href="/projects/">research</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/collaborations/">collaborations</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/workshops/">workshops</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/cv/">cv</a>
@@ -138,11 +144,11 @@
   <article class="post-content">
     <h2 id="summary">Summary</h2>
 <hr>
-<p>As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/" rel="external nofollow noopener" target="_blank">Stardust XR</a>.</p>
+<p>As part of <a href="/projects/comuse/">coMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/" rel="external nofollow noopener" target="_blank">Stardust XR</a>.</p>
 
 <p>Stardust is a system UI framework where multiple different clients (programs that connect to Stardust directly) can create objects for the user to interact with their apps and device. The user can choose to use the objects that work best for their current scenario, and default setups can easily be created so users start out with all the essentials.</p>
 
-<p>The value of this for <a href="/projects/comuse/">CoMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
+<p>The value of this for <a href="/projects/comuse/">coMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
 
 <p>Some preliminary ideas for developer workflow bindings</p>
 <ul>
@@ -241,7 +247,7 @@ cargo build <span class="nt">--release</span>
     <!-- Footer -->    <footer class="sticky-bottom mt-5">
       <div class="container">
         © Copyright 2023 Sam  Bilbow. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: May 11, 2023.
+Last updated: May 27, 2023.
       </div>
     </footer>
 

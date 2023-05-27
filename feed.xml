@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-11T15:08:48+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-27T22:03:00+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
 </subtitle><entry><title type="html">getting started with stardust xr</title><link href="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/" rel="alternate" type="text/html" title="getting started with stardust xr" /><published>2023-05-11T00:00:00+00:00</published><updated>2023-05-11T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/getting-started-with-stardust-xr</id><content type="html" xml:base="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/"><![CDATA[<h2 id="summary">Summary</h2>
 <hr />
-<p>As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/">Stardust XR</a>.</p>
+<p>As part of <a href="/projects/comuse/">coMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/">Stardust XR</a>.</p>
 
 <p>Stardust is a system UI framework where multiple different clients (programs that connect to Stardust directly) can create objects for the user to interact with their apps and device. The user can choose to use the objects that work best for their current scenario, and default setups can easily be created so users start out with all the essentials.</p>
 
-<p>The value of this for <a href="/projects/comuse/">CoMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
+<p>The value of this for <a href="/projects/comuse/">coMuse</a> lies in the ability to render and interact with software that exists in 2D forms without having to rebuild or port them to AR. This sits within the developer workflow nicely as it allows for a fully AR setup without switching between AR and 2D displays. Additionally it benefits the participant or audience, as they will likely be experiencing pre-composed Godot scenes or applications built with Stereokit that can sit within Stardust XR.</p>
 
 <p>Some preliminary ideas for developer workflow bindings</p>
 <ul>
@@ -184,7 +184,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
     </div>
 </div>
 <div class="caption">
-    Not great, not terrible, but lots of fun! :telescope:
+    Not great, not terrible, but lots of fun! 🔭
 </div>]]></content><author><name></name></author><category term="open-source" /><category term="astronomy" /><summary type="html"><![CDATA[free and open-source image stacking / editing]]></summary></entry><entry><title type="html">💎 jekyll + chatgpt</title><link href="https://sambilbow.com/blog/2023/jekyll-chatgpt/" rel="alternate" type="text/html" title="💎 jekyll + chatgpt" /><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/jekyll-chatgpt</id><content type="html" xml:base="https://sambilbow.com/blog/2023/jekyll-chatgpt/"><![CDATA[<h2 id="summary">Summary</h2>
 <p>I’ve been learning more Jekyll-related things like Ruby, some new Markdown tricks, and the web trio to make a nicer site. ChatGPT has been really helpful in moving towards a working understanding of how I can edit the template that I’m using (<a href="https://github.com/alshedivat/al-folio">al-folio</a>). It takes a fair amount of time to engineer prompts, but it helps that I know generally what the code I want should perform.</p>
 
@@ -258,7 +258,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
 <p>Additionally, I prompted ChatGPT to create a button in the top right hand corner of Gist codeblocks that links to their page, in the same style as the copy to clipboard button:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">gistUrl</span> <span class="o">=</span> <span class="nx">codeBlock</span><span class="p">.</span><span class="nf">closest</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">gistUrl</span><span class="p">;</span>
-<span class="nf">if </span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if </span><span class="p">(</span><span class="nx">gistUrl</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">githubButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">);</span>
     <span class="nx">githubButton</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">github</span><span class="dl">'</span><span class="p">;</span>
     <span class="nx">githubButton</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">button</span><span class="dl">'</span><span class="p">;</span>
@@ -284,7 +284,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>]]></content><author><name></name></author><category term="open-source" /><category term="website" /><summary type="html"><![CDATA[supercharged blog learning]]></summary></entry><entry><title type="html">🌔 open astro tech</title><link href="https://sambilbow.com/blog/2023/open-astro-tech/" rel="alternate" type="text/html" title="🌔 open astro tech" /><published>2023-04-17T12:00:00+00:00</published><updated>2023-04-17T12:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/open-astro-tech</id><content type="html" xml:base="https://sambilbow.com/blog/2023/open-astro-tech/"><![CDATA[<p><a href="https://openastrotech.com/">OpenAstroTech</a> looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space :smiley: :space_invader::rocket:</p>
+<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>]]></content><author><name></name></author><category term="open-source" /><category term="website" /><summary type="html"><![CDATA[supercharged blog learning]]></summary></entry><entry><title type="html">🌔 open astro tech</title><link href="https://sambilbow.com/blog/2023/open-astro-tech/" rel="alternate" type="text/html" title="🌔 open astro tech" /><published>2023-04-17T12:00:00+00:00</published><updated>2023-04-17T12:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/open-astro-tech</id><content type="html" xml:base="https://sambilbow.com/blog/2023/open-astro-tech/"><![CDATA[<p><a href="https://openastrotech.com/">OpenAstroTech</a> looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space 😃 👾 🚀</p>
 
 <div class="row">
     <div class="col-sm mt-1 mt-md-0" align="center">
@@ -325,7 +325,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
       
 
       <!-- Fallback to the original file -->
-      <img src="https://camo.githubusercontent.com/764767653f6faf61163d80047c5ba87caabe81d0ba7f92245b68e5dc04134857/68747470733a2f2f692e696d6775722e636f6d2f35454e757548762e6a7067" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+      <img src="https://camo.githubusercontent.com/764767653f6faf61163d80047c5ba87caabe81d0ba7f92245b68e5dc04134857/68747470733a2f2f692e696d6775722e636f6d2f35454e757548762e6a7067" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="The Open Astro Tracker with the Open Astro Guider" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
     </picture>
   
@@ -343,7 +343,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
       
 
       <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1626519451/Openastrotech/OAM_crop/OAM_crop.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1626519451/Openastrotech/OAM_crop/OAM_crop.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="The Open Astro Mount" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
     </picture>
   
@@ -366,7 +366,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
       
 
       <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199481/Openastrotech/Veil_500mm_dunkler_3674b531/Veil_500mm_dunkler-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199481/Openastrotech/Veil_500mm_dunkler_3674b531/Veil_500mm_dunkler-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Veil Nebula taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
     </picture>
   
@@ -384,7 +384,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
       
 
       <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1614199094/Openastrotech/50193493973_558caaa48e_o-794x1080_crop_1422b4677/50193493973_558caaa48e_o-794x1080_crop_1422b4677.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1614199094/Openastrotech/50193493973_558caaa48e_o-794x1080_crop_1422b4677/50193493973_558caaa48e_o-794x1080_crop_1422b4677.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="M32 taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
     </picture>
   
@@ -402,7 +402,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
       
 
       <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199485/Openastrotech/Cygnus-Wall_50-scaled_383eced5/Cygnus-Wall_50-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199485/Openastrotech/Cygnus-Wall_50-scaled_383eced5/Cygnus-Wall_50-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Cygnus taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
     </picture>
   
@@ -411,7 +411,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
     </div>
 </div>
 <div class="caption">
-    Some tracked shots using the OpenAstroTech devices with a DSLR camera. Veil Nebula :heart_eyes:, M32, and Cygnus 
+    Some tracked shots using the OpenAstroTech devices with a DSLR camera. Veil Nebula 😍, M32, and Cygnus 
 </div>]]></content><author><name></name></author><category term="open-source" /><category term="physics" /><category term="astronomy" /><summary type="html"><![CDATA[open-source astrophotography]]></summary></entry><entry><title type="html">northstar on linux</title><link href="https://sambilbow.com/blog/2023/north-star-on-linux/" rel="alternate" type="text/html" title="northstar on linux" /><published>2023-04-12T15:12:00+00:00</published><updated>2023-04-12T15:12:00+00:00</updated><id>https://sambilbow.com/blog/2023/north-star-on-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/north-star-on-linux/"><![CDATA[<h2 id="summary">Summary</h2>
 <hr />
 <p>The past few weeks have been spent getting familiar with a North Star (NS) headset workflow on Linux. As part of <a href="/projects/comuse/">CoMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. Here’s a bunch of instructions on how to get started with North Star on Linux. Instructions are for <a href="https://wiki.archlinux.org/">Arch-based systems</a>, e.g. <a href="https://endeavouros.com/">EndeavourOS</a>, and assumes a <a href="https://wiki.archlinux.org/title/wayland#Compositors">Wayland compositor</a>, rather than X11, e.g. <a href="https://community.kde.org/KWin/Wayland"><code class="language-plaintext highlighter-rouge">kwin_wayland</code></a>. Also familiarity with a terminal emulator, e.g. <code class="language-plaintext highlighter-rouge">alacritty</code>.</p>
@@ -431,7 +431,7 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
 
 <p>Hey there! If you’re feeling adventurous and trust me enough to run a bash script, then boy oh boy do I have a treat for you. I’ve created a script that will get you started with North Star on Linux.</p>
 
-<p>Now, I know what you’re thinking. “Why on earth would I trust some random person on the internet with access to my terminal?” Well, let me tell you, friend. You can trust me because… uh… it was partially created by ChatGPT, a highly advanced, eloquent and benevolent artificial intelligence programmed to assist and guide humans with their tasks. ChatGPT is great, in fact, ChatGPT wrote this paragraph! So yeah, thats why you can trust <del>it</del> me… Yeah, let’s go with that.</p>
+<p>Now, I know what you’re thinking. “Why on earth would I trust some random person on the internet with access to my terminal?” Well, let me tell you, friend. You can trust me because… uh… it was partially created by ChatGPT, a highly advanced, eloquent and benevolent artificial intelligence programmed to assist and guide humans with their tasks. ChatGPT is great, in fact, ChatGPT wrote this paragraph! So yeah, that’s why you can trust <del>it</del> me… Yeah, let’s go with that.</p>
 
 <p>So, if you’re feeling stupid, go ahead and run this command in your terminal:</p>
 
@@ -462,9 +462,9 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
 
 <p>Here are the individual packages, with links to their official Debian repository location, and their <code class="language-plaintext highlighter-rouge">AUR</code> counterpart:</p>
 <ul>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-service"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code> - a background service that attaches to Ultraleap devices.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-control-panel"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code> - a GUI application that shows cameras &amp; info.</li>
-  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">:arrow_down_small:</a> <a href="https://aur.archlinux.org/packages/openxr-layer-ultraleap"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code> - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-service/ultraleap-hand-tracking-service_5.6.3.0-18a4db52-1.0_amd64.deb">🔽</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-service"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-service</code> - a background service that attaches to Ultraleap devices.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/u/ultraleap-hand-tracking-control-panel/ultraleap-hand-tracking-control-panel_684937.deb">🔽</a> <a href="https://aur.archlinux.org/packages/ultraleap-hand-tracking-control-panel"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">ultraleap-hand-tracking-control-panel</code> - a GUI application that shows cameras &amp; info.</li>
+  <li><a href="https://repo.ultraleap.com/apt/pool/main/o/openxr-layer-ultraleap/openxr-layer-ultraleap_1.3.1_amd64.deb">🔽</a> <a href="https://aur.archlinux.org/packages/openxr-layer-ultraleap"><img id="emoji" src="/assets/img/emoji/arch.webp" /></a> <code class="language-plaintext highlighter-rouge">openxr-layer-ultraleap</code> - an OpenXR layer that allows Ultraleap devices connect at the API layer.</li>
 </ul>
 
 <p>If you don’t want to use the <code class="language-plaintext highlighter-rouge">AUR</code>, unarchive the <code class="language-plaintext highlighter-rouge">.deb</code> from each repository, then do the same with the <code class="language-plaintext highlighter-rouge">data.tar.xz</code> inside (you can ignore <code class="language-plaintext highlighter-rouge">control.tar.xz</code>, this only contains meta-information about the package). Place all sub-directory files in their respective folders on your operating system using <code class="language-plaintext highlighter-rouge">sudo mv [file path] [destination path]</code>.</p>
@@ -529,7 +529,7 @@ leapctl eula
 </div>
 
 <h3 id="setting-environment-variables">Setting Environment Variables</h3>
-<p>If you want <a href="https://monado.freedesktop.org/direct-mode.html">direct-mode</a>, you have to use an X11 compositor with Monado, its not currently supported on Wayland or Xwayland. That said, I wanted to use Wayland because :shrug:, I’m also used to extended-mode from the Unity Windows workflow so lack of direct-mode doesn’t bother me right now. Either way, you will need to set the following Monado environment variables in your shell configuration file, this guide assumes <code class="language-plaintext highlighter-rouge">zsh</code>, and therfore <code class="language-plaintext highlighter-rouge">~/.zshrc</code>. Feel free to add them with this command:</p>
+<p>If you want <a href="https://monado.freedesktop.org/direct-mode.html">direct-mode</a>, you have to use an X11 compositor with Monado, its not currently supported on Wayland or Xwayland. That said, I wanted to use Wayland because 🤷, I’m also used to extended-mode from the Unity Windows workflow so lack of direct-mode doesn’t bother me right now. Either way, you will need to set the following Monado environment variables in your shell configuration file, this guide assumes <code class="language-plaintext highlighter-rouge">zsh</code>, and therfore <code class="language-plaintext highlighter-rouge">~/.zshrc</code>. Feel free to add them with this command:</p>
 <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'
 export NS_CONFIG_PATH=~/.config/monado/NorthStarCalibration.json # Set path to North Star calibration file.
 export XRT_COMPOSITOR_DISABLE_DEFERRED=true # Keep Monado open even if no apps running.
@@ -560,7 +560,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
 
 <h3 id="starting-monado">Starting Monado</h3>
 <ol>
-  <li>Run <code class="language-plaintext highlighter-rouge">monado-service</code>. If all goes well, you should be greeted with an output log that mentions your NorthStarCalibration.json being read. Look for  <code class="language-plaintext highlighter-rouge">INFO [p_create_system] Creating system:</code>, specifically the lines:
+  <li>Run <code class="language-plaintext highlighter-rouge">monado-service</code>. If all goes well, you should be greeted with an output log that mentions your <code class="language-plaintext highlighter-rouge">NorthStarCalibration.json</code> being read. Look for  <code class="language-plaintext highlighter-rouge">INFO [p_create_system] Creating system:</code>, specifically the lines:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Got devices:
 	0: Intel RealSense Device-SLAM
 	1: North Star
@@ -568,7 +568,7 @@ export XRT_COMPOSITOR_XCB_FULLSCREEN=1 # Fullscreen variable for X11/Xwayland.
   </li>
   <li>A grey, fullscreen Xwayland Monado window should open on your main display.</li>
   <li>Move it to your North Star display, e.g by using the Kwin shortcut <code class="language-plaintext highlighter-rouge">Meta-Shift-right</code></li>
-  <li>Congratulations, you win :tada:</li>
+  <li>Congratulations, you win 🎉</li>
   <li>You can check Monado has access to your sensors by running a demo.</li>
   <li>Open a new terminal, download this simple <a href="https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground">demo</a>, enter the directory, make and run the demo with:
     <div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://gitlab.freedesktop.org/monado/demos/openxr-simple-playground <span class="o">&amp;&amp;</span> <span class="se">\</span>
@@ -578,7 +578,7 @@ make <span class="o">&amp;&amp;</span> <span class="se">\</span>
 ./openxr-playground
 </code></pre></div>    </div>
   </li>
-  <li>You should have hand and 6DoF tracking working. Congratulations, you won again :tada:</li>
+  <li>You should have hand and 6DoF tracking working. Congratulations, you won again 🎉</li>
 </ol>
 
 <p><br /></p>

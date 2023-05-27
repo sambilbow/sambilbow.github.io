@@ -84,11 +84,11 @@ body.sticky-bottom-footer {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 .profile img {
-  width: 100%;
+  width: 40%;
 }
 
 /******************************************************************************
@@ -496,6 +496,68 @@ footer.sticky-bottom {
   margin-bottom: 10px;
 }
 .projects h2.category {
+  color: var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-top: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.collaborations a {
+  text-decoration: none;
+}
+.collaborations a:hover .card-title {
+  color: var(--global-theme-color);
+}
+.collaborations .card img {
+  width: 100%;
+}
+.collaborations .card-item {
+  width: auto;
+  margin-bottom: 10px;
+}
+.collaborations .card-item .row {
+  display: flex;
+  align-items: center;
+}
+.collaborations .grid-sizer,
+.collaborations .grid-item {
+  width: 250px;
+  margin-bottom: 10px;
+}
+.collaborations h2.category {
+  color: var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-top: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.workshops a {
+  text-decoration: none;
+}
+.workshops a:hover .card-title {
+  color: var(--global-theme-color);
+}
+.workshops .card img {
+  width: 100%;
+}
+.workshops .card-item {
+  width: auto;
+  margin-bottom: 10px;
+}
+.workshops .card-item .row {
+  display: flex;
+  align-items: center;
+}
+.workshops .grid-sizer,
+.workshops .grid-item {
+  width: 250px;
+  margin-bottom: 10px;
+}
+.workshops h2.category {
   color: var(--global-divider-color);
   border-bottom: 1px solid var(--global-divider-color);
   padding-top: 0.5rem;
