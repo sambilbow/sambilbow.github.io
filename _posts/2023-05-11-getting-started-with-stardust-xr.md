@@ -35,7 +35,7 @@ North Star → OpenXR → Monado → Stardust XR → Application(s), both 2D and
 ---
 1. Install prerequisites found [here](https://stardustxr.org/docs/getting-started/install), i.e.: 
    ```sh
-   yay -S cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes --needed
+   yay -S cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes clang --needed
    ```
 3. Download [telescope](https://github.com/StardustXR/telescope), a bash setup guide for Stardust XR.
    ```sh

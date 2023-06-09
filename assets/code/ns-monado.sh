@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Install AUR packages
-echo "Installing AUR packages: openxr-git, monado-git, libuvc, ultraleap-hand-tracking, arduino..."
-yay -S --needed --noconfirm --batchinstall openxr-git monado-git libuvc ultraleap-hand-tracking arduino
+echo "Installing AUR packages: openxr, monado, libuvc, ultraleap-hand-tracking, arduino..."
+yay -S --needed --noconfirm --batchinstall openxr monado libuvc ultraleap-hand-tracking arduino
 
 # Create directory if it doesn't exist
 mkdir -p ~/.config/monado
