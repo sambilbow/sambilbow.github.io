@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "linux and email 🥱"
+title: "🥱 linux and email"
 date: 2023-06-09 00:00:00-0000
 description: "getting oauth2 and ews working on linux"
 tags: open-source linux software
