@@ -1,5 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-28T00:18:45+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">getting started with stardust xr</title><link href="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/" rel="alternate" type="text/html" title="getting started with stardust xr" /><published>2023-05-11T00:00:00+00:00</published><updated>2023-05-11T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/getting-started-with-stardust-xr</id><content type="html" xml:base="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/"><![CDATA[<h2 id="summary">Summary</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-12T08:31:14+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+</subtitle><entry><title type="html">linux and email 🥱</title><link href="https://sambilbow.com/blog/2023/mail-stuff/" rel="alternate" type="text/html" title="linux and email 🥱" /><published>2023-06-09T00:00:00+00:00</published><updated>2023-06-09T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/mail%20stuff</id><content type="html" xml:base="https://sambilbow.com/blog/2023/mail-stuff/"><![CDATA[<ul>
+  <li>I really don’t like webmail!</li>
+  <li>It frustrate, confuses, and distracts me!</li>
+  <li>I like dedicated mail clients!</li>
+</ul>
+
+<p>Since something got deprecated somewhere, and someone doesn’t want to do X because of Y, theres only one specific way to set up institutional email on Linux, no more IMAP, no more POP; and this method is via Exchange Web Services. Theres a more informational and less ranty account <a href="https://douglasrumbaugh.com/post/microsoft-email-on-linux/">here</a>.</p>
+
+<ul>
+  <li>On GNOME: <code class="language-plaintext highlighter-rouge">yay -S evolution evolution-ews</code></li>
+  <li>On KDE: <code class="language-plaintext highlighter-rouge">yay -S kmail kmailtransport kmail-account-wizard mbox-importer akonadi-import-wizard</code></li>
+</ul>
+
+<h2 id="evolution-gnome-project-email-client">Evolution (GNOME Project email client)</h2>
+<ul>
+  <li>Add an account with type <code class="language-plaintext highlighter-rouge">EWS</code></li>
+  <li>Include ‘Username’ in <code class="language-plaintext highlighter-rouge">username@domain.ac.uk</code> format</li>
+  <li>Set ‘Host URL’ to <code class="language-plaintext highlighter-rouge">https://outlook.office365.com/ews/exchange.asmx</code></li>
+  <li>Don’t click ‘Fetch URL’</li>
+  <li>Do not collect $200, and do not pass GO</li>
+  <li>Set ‘Authentication’ to OAuth2</li>
+  <li>Override settings</li>
+  <li>Check ‘Use protocol version 2.0’</li>
+  <li>Click ‘OK’</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/ews.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Screenshot showing Evolution EWS account settings" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<h2 id="kmail-kde-plasma-email-client">KMail (KDE Plasma email client)</h2>
+<ul>
+  <li>I gave up on KDE</li>
+  <li>It’s really ugly</li>
+  <li>Cluttered base UI</li>
+</ul>]]></content><author><name></name></author><category term="open-source" /><category term="linux" /><category term="software" /><summary type="html"><![CDATA[getting oauth2 and ews working on linux]]></summary></entry><entry><title type="html">getting started with stardust xr</title><link href="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/" rel="alternate" type="text/html" title="getting started with stardust xr" /><published>2023-05-11T00:00:00+00:00</published><updated>2023-05-11T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/getting-started-with-stardust-xr</id><content type="html" xml:base="https://sambilbow.com/blog/2023/getting-started-with-stardust-xr/"><![CDATA[<h2 id="summary">Summary</h2>
 <hr />
 <p>As part of <a href="/projects/comuse/">coMuse</a> I hope to move towards a fully open-source stack for multi-user musical AR experience. In my <a href="/blog/2023/north-star-on-linux">last post</a> on this topic, I went through how I set up Linux with Monado and OpenXR to recognise the North Star headset, and utilise its hand and head tracking sensors. This post will be about <a href="https://stardustxr.org/">Stardust XR</a>.</p>
 
@@ -30,7 +82,7 @@
 <hr />
 <ol>
   <li>Install prerequisites found <a href="https://stardustxr.org/docs/getting-started/install">here</a>, i.e.:
-    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes <span class="nt">--needed</span>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> cargo flatbuffers seatd fontconfig wayland openxr-git libglvnd mesa libx11 libxext libxfixes clang <span class="nt">--needed</span>
 </code></pre></div>    </div>
   </li>
   <li>Download <a href="https://github.com/StardustXR/telescope">telescope</a>, a bash setup guide for Stardust XR.

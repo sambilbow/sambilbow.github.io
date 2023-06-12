@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>2023 | Sam  Bilbow</title>    
+    <title>linux and email 🥱 | Sam  Bilbow</title>    
     <meta name="author" content="Sam  Bilbow">
-    <meta name="description" content="Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-">
+    <meta name="description" content="getting oauth2 and ews working on linux">
     <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
 
 
@@ -37,7 +36,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://sambilbow.com/blog/2023/">
+    <link rel="canonical" href="https://sambilbow.com/blog/2023/mail-stuff/">
     
     <!-- Dark Mode -->
     
@@ -120,70 +119,87 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-calendar fa-sm"></i> 2023 </h1>
-    <p class="post-description"> an archive of posts from this year </p>
+    <h1 class="post-title">linux and email 🥱</h1>
+    <p class="post-meta">June 9, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/open-source">
+          <i class="fas fa-hashtag fa-sm"></i> open-source</a>  
+          <a href="/blog/tag/linux">
+          <i class="fas fa-hashtag fa-sm"></i> linux</a>  
+          <a href="/blog/tag/software">
+          <i class="fas fa-hashtag fa-sm"></i> software</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Jun 9, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/mail-stuff/">linux and email 🥱</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">May 11, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/getting-started-with-stardust-xr/"><img id="emoji" src="/assets/img/emoji/stardust.gif"> getting started with stardust xr</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">May 10, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/bobovr-headgear/">🎩 moving to bobovr headgear</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Apr 26, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/siril/">🔭 siril + gimp for foss astrophotography</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Apr 22, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/jekyll-chatgpt/">💎 jekyll + chatgpt</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Apr 17, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/open-astro-tech/">🌔 open astro tech</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Apr 12, 2023</th>
-          <td>
-              <a class="post-link" href="/blog/2023/north-star-on-linux/"><img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  </article>
+  <article class="post-content">
+    <ul>
+  <li>I really don’t like webmail!</li>
+  <li>It frustrate, confuses, and distracts me!</li>
+  <li>I like dedicated mail clients!</li>
+</ul>
 
+<p>Since something got deprecated somewhere, and someone doesn’t want to do X because of Y, theres only one specific way to set up institutional email on Linux, no more IMAP, no more POP; and this method is via Exchange Web Services. Theres a more informational and less ranty account <a href="https://douglasrumbaugh.com/post/microsoft-email-on-linux/" rel="external nofollow noopener" target="_blank">here</a>.</p>
+
+<ul>
+  <li>On GNOME: <code class="language-plaintext highlighter-rouge">yay -S evolution evolution-ews</code>
+</li>
+  <li>On KDE: <code class="language-plaintext highlighter-rouge">yay -S kmail kmailtransport kmail-account-wizard mbox-importer akonadi-import-wizard</code>
+</li>
+</ul>
+
+<h2 id="evolution-gnome-project-email-client">Evolution (GNOME Project email client)</h2>
+<ul>
+  <li>Add an account with type <code class="language-plaintext highlighter-rouge">EWS</code>
+</li>
+  <li>Include ‘Username’ in <code class="language-plaintext highlighter-rouge">username@domain.ac.uk</code> format</li>
+  <li>Set ‘Host URL’ to <code class="language-plaintext highlighter-rouge">https://outlook.office365.com/ews/exchange.asmx</code>
+</li>
+  <li>Don’t click ‘Fetch URL’</li>
+  <li>Do not collect $200, and do not pass GO</li>
+  <li>Set ‘Authentication’ to OAuth2</li>
+  <li>Override settings</li>
+  <li>Check ‘Use protocol version 2.0’</li>
+  <li>Click ‘OK’</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm mt-1 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/ews.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Screenshot showing Evolution EWS account settings" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<h2 id="kmail-kde-plasma-email-client">KMail (KDE Plasma email client)</h2>
+<ul>
+  <li>I gave up on KDE</li>
+  <li>It’s really ugly</li>
+  <li>Cluttered base UI</li>
+</ul>
+
+  </article>
 </div>
 
     </div>
