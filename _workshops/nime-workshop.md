@@ -5,5 +5,5 @@ description: "(May 2023)"
 img: assets/img/publication_preview/2023-nime.png
 importance: 97
 category: conference
-redirect: https://thexrt.space/nime-workshop/
+redirect: https://sambilbow.github.io/thexrtspace/nime-workshop/
 ---
