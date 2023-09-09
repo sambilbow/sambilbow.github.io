@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Our NIME23 [workshop](https://www.thexrt.space/nime-workshop) was accepted! 
+🎉 Our NIME23 [workshop](https://www.sambilbow.github.io/thexrtspace/nime-workshop) was accepted! 
