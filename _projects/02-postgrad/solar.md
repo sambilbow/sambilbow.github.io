@@ -11,7 +11,7 @@ category: postgrad
 
 <div class="row">
     <div class="col-sm mt-1 mt-md-0">
-        {% include figure.html path="assets/projects/02-postgrad/solar/solar.jpg" title="User interface of the SolAR app" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/projects/02-postgrad/solar/solar.jpg" title="User interface of the SolAR app" class="img-fluid rounded z-depth-1 mx-auto d-block" %}
     </div>
 </div>
 <div class="caption">
@@ -19,7 +19,7 @@ category: postgrad
     <br>
     <br>
     <a href="https://www.apple.com/iphone/"><img src="https://img.shields.io/badge/Platform-iPhone-yellow?style=flat-square&logo=apple"></a>
-    <a href="https://developer.apple.com/xcode/"><img src="https://img.shields.io/badge/Environment-Swift%20&%20LibPd-orange?style=flat-square&logo=swift&logoColor=white"></a>
+    <a href="https://unity.com/"><img src="https://img.shields.io/badge/Environment-Unity-orange?style=flat-square&logo=unity&logoColor=white"></a>
     <a href="https://github.com/sambilbow/solar/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a>
     <br>
     <br>

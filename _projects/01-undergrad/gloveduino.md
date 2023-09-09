@@ -11,16 +11,15 @@ category: undergrad
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419610035?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419610035?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
     <div class="col-sm mt-3 mt-md-1">
-        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419612454?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+        <iframe width="100%" height="225px" src="https://player.vimeo.com/video/419612454?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 </div>
 <div class="caption">
     <a href="https://arduino.cc/"><img src="https://img.shields.io/badge/Platform-Arduino-yellow?style=flat-square&logo=arduino&logoColor=white"></a>
     <a href="https://puredata.info/"><img src="https://img.shields.io/badge/Environment-PureData-orange?style=flat-square&logo=max&logoColor=white"></a>
-    <!-- <a href="https://github.com/sambilbow/weathersynth/"><img src="https://img.shields.io/badge/Code-GitHub-blue?style=flat-square&logo=github&logoColor=white"></a> -->
     <br>
     <br>
     <a href="https://www.sussex.ac.uk/study/modules/undergraduate/2023/W3081-interactive-music-systems"><img src="https://img.shields.io/badge/Module-Interactive Music Systems-red?style=flat-square&logo=todoist&logoColor=white"></a>
