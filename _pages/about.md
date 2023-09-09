@@ -42,7 +42,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
       <tr>
         <th scope="row">Aug 2021</th>
         <td>
-          <a href="https://thexrt.space/">💬 The XRt Space</a>
+          <a href="https://sambilbow.github.io/thexrtspace/">💬 The XRt Space</a>
         </td>
       </tr>
       <!-- <tr>
