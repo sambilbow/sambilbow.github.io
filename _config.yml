@@ -5,7 +5,7 @@
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Sam
 middle_name: 
-last_name: Bilbow
+last_name: Bilbow, PhD
 email: s.bilbow@sussex.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
