@@ -1,5 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-08T16:10:45+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
-</subtitle><entry><title type="html">🥱 linux and email</title><link href="https://sambilbow.com/blog/2023/mail-stuff/" rel="alternate" type="text/html" title="🥱 linux and email" /><published>2023-06-09T00:00:00+00:00</published><updated>2023-06-09T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/mail%20stuff</id><content type="html" xml:base="https://sambilbow.com/blog/2023/mail-stuff/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-29T09:00:23+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - Software developer, experimental musician and postdoctoral researcher based in Norwich.
+</subtitle><entry><title type="html">📷 xvisio on linux</title><link href="https://sambilbow.com/blog/2023/xvisio-linux/" rel="alternate" type="text/html" title="📷 xvisio on linux" /><published>2023-07-20T00:00:00+00:00</published><updated>2023-07-20T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/xvisio-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2023/xvisio-linux/"><![CDATA[<h2 id="resources">Resources</h2>
+<p>Latest release at time of writing is the September 9th version. Links may die, <code class="language-plaintext highlighter-rouge">../</code> up the tree until you find the right files if necessary</p>
+
+<p>For Ubuntu</p>
+<ul>
+  <li><a href="https://download.xvisiotech.com/sdk-download/last_version/Select_Platform_Download/For%20Ubuntu/AMD64/xvsdk_3.2.0-20230907_bionic_amd64.deb">SDK (Bionic .deb)</a></li>
+  <li><a href="https://download.xvisiotech.com/sdk-download/last_version/Select_Platform_Download/For%20Ubuntu/AMD64/xvsdk_3.2.0-20230907_focal_amd64.deb">SDK (Focal .deb)</a></li>
+  <li><a href="https://download.xvisiotech.com/sdk-download/last_version/Select_Platform_Download/For%20Ubuntu/AMD64/xvsdk_3.2.0-20230907_amd64.snap">Viewer .snap</a></li>
+</ul>
+
+<p>For Arch (WIP)</p>
+<ul>
+  <li><a href="https://aur.archlinux.org/packages/xvsdk">SDK on AUR</a></li>
+  <li><a href="https://aur.archlinux.org/packages/xvsdk-viewer">Viewer on AUR (requires snapd)</a></li>
+</ul>
+
+<h2 id="monado-driver">Monado Driver</h2>
+<p>Work done by Mihir Patel on an open-source Xvisio driver can be found <a href="https://github.com/0xMihir/libxvisio/">on GitHub here</a>.</p>]]></content><author><name></name></author><category term="open-source" /><category term="linux" /><category term="software" /><category term="augmented-reality" /><summary type="html"><![CDATA[developing on arch linux]]></summary></entry><entry><title type="html">🥱 linux and email</title><link href="https://sambilbow.com/blog/2023/mail-stuff/" rel="alternate" type="text/html" title="🥱 linux and email" /><published>2023-06-09T00:00:00+00:00</published><updated>2023-06-09T00:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/mail%20stuff</id><content type="html" xml:base="https://sambilbow.com/blog/2023/mail-stuff/"><![CDATA[<ul>
   <li>I really don’t like webmail!</li>
   <li>It frustrate, confuses, and distracts me!</li>
   <li>I like dedicated mail clients!</li>
