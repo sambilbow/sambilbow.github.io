@@ -35,6 +35,7 @@ Progress will be recorded through development blogs, research papers, and worksh
 ## Development blogs
 - [<img id="emoji" src="/assets/img/emoji/collabora.png"> northstar on linux (2023-04-12)](/blog/2023/north-star-on-linux)
 - [<img id="emoji" src="/assets/img/emoji/stardust.gif"> getting started with stardust xr (2023-05-11)](/blog/2023/getting-started-with-stardust-xr)
+- [📷 xvisio on linux (2023-07-20)](/blog/2023/xvisio-linux/)
 
 {: .text-center}
 [![{coMuse Proposal}](https://ytcards.demolab.com/?id=lkLRmX3Kumw&title=coMuse+Proposal&lang=en&timestamp=1657900736&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&width=250&duration=157 "coMuse Proposal")](https://youtu.be/lkLRmX3Kumw)
