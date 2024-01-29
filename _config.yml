@@ -8,7 +8,7 @@ middle_name:
 last_name: Bilbow, PhD
 email: s.bilbow@sussex.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Sam Bilbow - Experimental musician, creative programmer, and postdoctoral researcher based in Brighton.
+  Sam Bilbow - Software developer, experimental musician and postdoctoral researcher based in Norwich.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: academic-website, portfolio-website, augmented-reality, music-technology  # add your own keywords or leave empty
