@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <i>Post-Doctoral Research Fellow, Experimental Music Technologies Lab, University of Sussex</i>
+subtitle: <i>XR and Audio Software Developer</i>
 
 profile:
   align: right
@@ -20,7 +20,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I am an experimental musician, creative programmer, and postdoctoral researcher based in Brighton. My current research is in computational art and music, collaborative augmented reality, and multi-sensory displays for human-computer interaction. Currently, I am awaiting viva examination. In Feb 2023, I was awarded funding for a Leverhulme funded post-doctoral project entitled Collective Musical Sensehacking [(coMuse)](projects/comuse/), a year-long investigation into open-source multiplayer musical AR experiences.
+I am an XR and Audio software developer based in Norwich. My current research is in computational art and music, collaborative augmented reality, and multi-sensory displays for human-computer interaction. I was awarded my Ph.D in Music Technologies (with a focus on Augmented Reality) in 2023.
 
 <!-- Table of recent projects -->
 <div class="news">
@@ -33,7 +33,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
           <a href="projects/comuse/">🖌️ coMuse</a>
         </td>
       </tr>
-      <tr>
+      <!-- <tr>
         <th scope="row">Feb 2022</th>
         <td>
           <a href="projects/polygons/"><img id="emoji" src="/assets/img/emoji/ul_wave.webp"> polygons~</a>
@@ -44,7 +44,7 @@ I am an experimental musician, creative programmer, and postdoctoral researcher 
         <td>
           <a href="https://sambilbow.github.io/thexrtspace/">💬 The XRt Space</a>
         </td>
-      </tr>
+      </tr> -->
       <!-- <tr>
         <th scope="row">May 2021</th>
         <td>
