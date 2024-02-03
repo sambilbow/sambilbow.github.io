@@ -5,7 +5,7 @@ description: Developing a Sound ARt Performance Practice (2022)
 img: assets/projects/03-doctoral/polygons/polygons.png
 importance: 1
 permalink: /projects/polygons/
-category: doctoral
+category: phd/postdoc
 ---
 
 <div class="row">

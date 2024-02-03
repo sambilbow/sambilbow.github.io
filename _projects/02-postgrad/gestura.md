@@ -5,7 +5,7 @@ description: "Mobile gestural synthesizer prototype (May 2019)"
 img: assets/projects/02-postgrad/gestura/gestura.jpg
 importance: 2
 permalink:  projects/gestura/
-category: postgrad
+category: masters
 ---
 
 

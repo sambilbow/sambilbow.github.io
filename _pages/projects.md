@@ -5,7 +5,7 @@ permalink: /projects/
 # description: A growing collection of your cool projects.
 nav: true
 nav_order: 2
-display_categories: [postdoctoral,doctoral,postgrad,undergrad]
+display_categories: [phd/postdoc,masters,undergrad]
 horizontal: false
 ---
 

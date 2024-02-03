@@ -5,7 +5,7 @@ description: "Collective Musical Sensehacking: Towards Ensemble Sound ARt  (2023
 img: assets/projects/04-postdoctoral/comuse/comuse.png
 importance: 100
 permalink: /projects/comuse/
-category: postdoctoral
+category: phd/postdoc
 ---
 
 ![Stylised icon for the coMuse project](/assets/projects/04-postdoctoral/comuse/banner.png){: .rounded .z-depth-1 .mx-auto .d-block height="200px"}

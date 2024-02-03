@@ -5,7 +5,7 @@ description: An Audiovisual Augmented Reality Experience Built on Open-Source Ha
 img: assets/projects/03-doctoral/polaris/polaris.jpg
 importance: 2
 permalink: /projects/polaris/
-category: doctoral
+category: phd/postdoc
 ---
 <b style="text-align: center;" id="bottom-nav"><a href="#"> </a><a href="inspiration/">Inspiration & Rationale →</a></b>
 <hr class="rounded">      

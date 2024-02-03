@@ -5,7 +5,7 @@ description: Exploring Real and Virtual Environments Through Gestural Ambisonics
 img: assets/projects/03-doctoral/area/area.jpg
 importance: 3
 permalink: projects/area/
-category: doctoral
+category: phd/postdoc
 ---
 
 
