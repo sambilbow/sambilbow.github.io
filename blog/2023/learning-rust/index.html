@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>🦀 learning rust | Sam  Bilbow, PhD</title>    
+    <meta name="author" content="Sam  Bilbow, PhD">
+    <meta name="description" content="brain dump / notes zone">
+    <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://sambilbow.com/blog/2023/learning-rust/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav sticky-bottom-footer">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="/">Sam Bilbow, PhD<span> </span><img class="rounded-circle" id="emoji" src="/assets/img/emoji/catsty.gif"></a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/publications/">publications</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/collaborations/">collaborations</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/workshops/">workshops</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/cv/">cv</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">🦀 learning rust [wip]</h1>
+    <p class="post-meta">May 12, 2023</p>
+    <p class="post-tags">
+      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
+        ·  
+        <a href="/blog/tag/programming">
+          <i class="fas fa-hashtag fa-sm"></i> programming,</a>  
+          <a href="/blog/tag/open-source">
+          <i class="fas fa-hashtag fa-sm"></i> open-source</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <h4 id="resources">Resources</h4>
+<hr>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=lzKeecy4OmQ" rel="external nofollow noopener" target="_blank">Jayson Lennon’s Rust 101 Crash Course (6h)</a></li>
+  <li><a href="https://doc.rust-lang.org/book/" rel="external nofollow noopener" target="_blank">The Rust Programming Book</a></li>
+</ul>
+
+<hr>
+<h3 id="000203-rust-introduction">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=123s" rel="external nofollow noopener" target="_blank">00:02:03</a> Rust Introduction</h3>
+<h4 id="why-rust">Why Rust?</h4>
+<ul>
+  <li>High level language features</li>
+  <li>Program behaviours enforced at compile time = reliability</li>
+  <li>Built in dependency management</li>
+  <li>Growing ecosystem of libraries</li>
+</ul>
+
+<h4 id="technical-goodies">Technical goodies</h4>
+<ul>
+  <li>First class multi-threading (compiler error to improperly access shared data)</li>
+  <li>Type System
+    <ul>
+      <li>Can uncover bugs at compile time</li>
+      <li>Makes refactoring simple</li>
+      <li>Reduces number of tests needed</li>
+    </ul>
+  </li>
+  <li>Module system makes code separation simple</li>
+  <li>Dependency is 1 line in a config file</li>
+  <li>Tooling
+    <ul>
+      <li>Generate docs, lint code, and auto-form</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<h3 id="000430-data-types">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=270s" rel="external nofollow noopener" target="_blank">00:04:30</a> Data types</h3>
+<h2 id="what-is-data">What is data?</h2>
+<ul>
+  <li>Memory only stores binary data
+    <ul>
+      <li>But don’t worry! Anything can be represented in binary</li>
+      <li>The program determines what this binary represents</li>
+    </ul>
+  </li>
+  <li>There are some basic types that are universally useful, and these are provided by the language</li>
+  <li>We’re not limited to these types, as we can make more</li>
+</ul>
+
+<h2 id="basic-data-types">Basic data types</h2>
+<ul>
+  <li>Boolean
+    <ul>
+      <li>True or false</li>
+    </ul>
+  </li>
+  <li>Integer
+    <ul>
+      <li>1, 2, 50, -2</li>
+    </ul>
+  </li>
+  <li>Double / Float
+    <ul>
+      <li>1.2, 5.5, 200.3</li>
+    </ul>
+  </li>
+  <li>Character
+    <ul>
+      <li>‘A’, ‘c’, ‘$’, ‘5’</li>
+    </ul>
+  </li>
+  <li>
+    <p>String</p>
+
+    <ul>
+      <li>“Hello”, “string”, “it’s 52”
+<!-- --- -->
+</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- ### [00:06:59](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=419s) Variables -->
+<h2 id="what-is-a-variable">What is a variable?</h2>
+<ul>
+  <li>A way to assign data to a temporary memory location
+    <ul>
+      <li>Allows programmer to easily work with memory</li>
+    </ul>
+  </li>
+  <li>Can be set to any value &amp; type</li>
+  <li>Immutable by default but can be mutable (less likely to make errors, and also faster since no checks needed)
+    <ul>
+      <li>Immutable: cannot be changed</li>
+      <li>Mutable: can be changed</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">two</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// let some variable named 'two' be assigned the value 2</span>
+<span class="k">let</span> <span class="n">hello</span> <span class="o">=</span> <span class="s">"hello"</span><span class="p">;</span>
+<span class="k">let</span> <span class="n">j</span> <span class="o">=</span> <span class="sc">'j'</span><span class="p">;</span>
+<span class="k">let</span> <span class="k">mut</span> <span class="n">my_name</span> <span class="o">=</span> <span class="s">"Sam"</span><span class="p">;</span> <span class="c1">// let mut makes the variable mutable</span>
+<span class="k">let</span> <span class="n">quit_program</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="k">let</span> <span class="n">your_half</span> <span class="o">=</span> <span class="n">my_half</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Variables make it easier to work with data, and therefore memory</li>
+  <li>Variables can be assigned to any value including other variables</li>
+</ul>
+
+<!-- --- -->
+
+<!-- ### [00:13:36](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=816s) Functions -->
+<h2 id="what-are-functions">What are functions</h2>
+<ul>
+  <li>A way to encapsulate program functionality</li>
+  <li>Optionally accept / return data</li>
+  <li>Utilised for code organisation
+    <ul>
+      <li>Makes code easier to read too!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="anatomy-of-a-function">Anatomy of a function</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">fn</code> function</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">add</code> name</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">(z: y)</code> parameters with name <code class="language-plaintext highlighter-rouge">z</code> with type <code class="language-plaintext highlighter-rouge">y</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">-&gt; x</code> return with type <code class="language-plaintext highlighter-rouge">x</code>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">{}</code>  body</li>
+  <li>Last expression is implicitly treated as the return, do not append it with <code class="language-plaintext highlighter-rouge">;</code>
+</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">i32</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="nb">i32</span> <span class="p">{</span>
+	<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="using-a-function">Using a function</h2>
+
+<ul>
+  <li>“Call” a function by using its name, and adding any ‘arguments’ you want to pass to the parameters in the function
+    <div class="language-rust highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">let</span> <span class="n">y</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">let</span> <span class="n">z</span> <span class="o">=</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div>    </div>
+    <hr>
+  </li>
+</ul>
+
+<h3 id="002152-println-macro">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=1312s" rel="external nofollow noopener" target="_blank">00:21:52</a> <code class="language-plaintext highlighter-rouge">println!</code> macro</h3>
+<ul>
+  <li>Macros (denoted with <code class="language-plaintext highlighter-rouge">!</code>) are similar to functions, but they expand into additional code</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">println</code> “Prints” information to the terminal, which is useful for debugging</li>
+  <li>It prints what is inside the quotation marks <code class="language-plaintext highlighter-rouge">""</code>
+</li>
+  <li>Tokens are substituted with the variable, and they are denoted with curly braces <code class="language-plaintext highlighter-rouge">{}</code>
+</li>
+  <li>After the <code class="language-plaintext highlighter-rouge">""</code> quotation marks, variables can be listed and comma-separated.</li>
+  <li>Alternatively they can be invoked in-line, e.g. <code class="language-plaintext highlighter-rouge">println!("{var:?}");</code> instead of <code class="language-plaintext highlighter-rouge">println!("{:?}", var);</code>
+</li>
+  <li>Debug only print by using <code class="language-plaintext highlighter-rouge">:?</code>
+</li>
+  <li>End-user display without <code class="language-plaintext highlighter-rouge">:?</code>, e.g. <code class="language-plaintext highlighter-rouge">println!("{var}");</code>
+</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">life</span><span class="p">:</span> <span class="nb">i32</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="nd">println!</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+<span class="nd">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span> <span class="n">life</span><span class="p">);</span>
+<span class="nd">println!</span><span class="p">(</span><span class="s">"{:?} {:?}"</span><span class="p">,</span> <span class="n">life</span><span class="p">,</span> <span class="n">life</span><span class="p">);</span>
+<span class="nd">println!</span><span class="p">(</span><span class="s">"the meaning is {life:?}"</span><span class="p">);</span> <span class="c1">// in line variable invocation</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="002457-control-flow-using-if">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=1497s" rel="external nofollow noopener" target="_blank">00:24:57</a> Control flow using if</h3>
+<ul>
+  <li>Add logic to programs, and decide which line of code is executed next</li>
+  <li>Code is normally executed line-by-line</li>
+  <li>Actions are performed &amp; control flow can be changed
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">if</code></li>
+      <li><code class="language-plaintext highlighter-rouge">else</code></li>
+      <li><code class="language-plaintext highlighter-rouge">else if</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="row">
+    <div class="col-sm">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/rust/simple-flow.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/rust/if-flow.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<p>Simple if else</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">99</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">99</span> <span class="p">{</span>
+	<span class="nd">println!</span><span class="p">(</span><span class="s">"big number"</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nd">println!</span><span class="p">(</span><span class="s">"small number"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Nested if else</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">201</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">99</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="p">{</span>
+		<span class="nd">println!</span><span class="p">(</span><span class="s">"huge number"</span><span class="p">);</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nd">println!</span><span class="p">(</span><span class="s">"big number"</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nd">println!</span><span class="p">(</span><span class="s">"small number"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Nested else if are like “or checks”</p>
+<ul>
+  <li>Important to check larger first, otherwise the condition will exit early!</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"huge number"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="mi">99</span> <span class="p">{</span>        
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"number number"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"small number"</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Always include <code class="language-plaintext highlighter-rouge">else</code> statements, unless there are truly no alternative cases</p>
+
+<hr>
+
+<h3 id="003338-repetition-using-loops">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=2018s" rel="external nofollow noopener" target="_blank">00:33:38</a> Repetition using loops</h3>
+<ul>
+  <li>Called “looping” or “iteration”</li>
+  <li>Multiple types of loops in Rust, these are invoked via their keywords:
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">loop</code> - infinite loop</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">while</code> - conditional loop</li>
+    </ul>
+  </li>
+  <li>Both loops can exit using <code class="language-plaintext highlighter-rouge">break</code>
+</li>
+</ul>
+
+<h4 id="loop">Loop</h4>
+<div class="row">
+    <div class="col-sm">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/rust/loop.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">let</span> <span class="k">mut</span> <span class="n">example</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">loop</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">example</span> <span class="o">==</span> <span class="mi">5</span><span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{example:?}"</span><span class="p">);</span>
+        <span class="n">example</span> <span class="o">=</span> <span class="n">example</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="while-loop">While loop</h4>
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">let</span> <span class="k">mut</span> <span class="n">example</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="n">example</span> <span class="o">!=</span> <span class="mi">5</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{example:?}"</span><span class="p">);</span>
+        <span class="n">example</span> <span class="o">=</span> <span class="n">example</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="004012-tool-installation">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=2412s" rel="external nofollow noopener" target="_blank">00:40:12</a> Tool Installation</h3>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">rustup</code> manages Rust installation, including all elements of the toolchain</li>
+  <li>To install on Linux (Arch):
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> rustup <span class="o">&amp;&amp;</span> <span class="se">\</span>
+rustup toolchain <span class="nb">install </span>stable
+</code></pre></div>    </div>
+  </li>
+  <li>Creating, building, and running a hello-world Rust project
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>cargo init hello-world <span class="o">&amp;&amp;</span> <span class="se">\</span>
+<span class="nb">cd </span>hello-world <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo build <span class="o">&amp;&amp;</span> <span class="se">\</span>
+cargo run <span class="nt">-q</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="004503-comments">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=2703s" rel="external nofollow noopener" target="_blank">00:45:03</a> Comments</h3>
+<ul>
+  <li>Comments are made using <code class="language-plaintext highlighter-rouge">//</code> or <code class="language-plaintext highlighter-rouge">/* */</code>
+</li>
+  <li>Make sure that they are informative, not unnecessary</li>
+</ul>
+
+<hr>
+
+<h3 id="004842-exercise---functions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=2922s" rel="external nofollow noopener" target="_blank">00:48:42</a> Exercise - Functions</h3>
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Functions</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Displays your first and last name</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a function to display your first name</span>
+<span class="c1">// * Use a function to display your last name</span>
+<span class="c1">// * Use the println macro to display messages to the terminal</span>
+
+<span class="k">fn</span> <span class="nf">first_name</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"Sam"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">last_name</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"Bilbow"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">first_name</span><span class="p">();</span>
+    <span class="nf">last_name</span><span class="p">();</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> a1
+Sam
+Bilbow
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="005554-basic-arithmetic">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=3354s" rel="external nofollow noopener" target="_blank">00:55:54</a> Basic Arithmetic</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">sub</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">i32</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="nb">i32</span> <span class="p">{</span>
+	<span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">let</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">5</span><span class="p">;</span>
+	<span class="k">let</span> <span class="n">division</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+	<span class="k">let</span> <span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">;</span>
+
+	<span class="k">let</span> <span class="n">five</span> <span class="o">=</span> <span class="nf">sub</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+	<span class="nd">println!</span><span class="p">(</span><span class="s">"{five:?}, {sum} {value} {division} {mult}"</span><span class="p">);</span>
+
+
+	<span class="k">let</span> <span class="n">rem</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 0 remainder division (modulo)</span>
+	<span class="k">let</span> <span class="n">rem2</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">4</span><span class="p">;</span> <span class="c1">// 1 (useful for even / odd ) e.g. if x % 2 !== 0 means odd</span>
+	<span class="n">rem2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="005933-exercise---arithmetic">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=3573s" rel="external nofollow noopener" target="_blank">00:59:33</a> Exercise - Arithmetic</h3>
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Basic arithmetic</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Displays the result of the sum of two numbers</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a function to add two numbers together</span>
+<span class="c1">// * Use a function to display the result</span>
+<span class="c1">// * Use the "{:?}" token in the println macro to display the result</span>
+
+<span class="k">fn</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">i32</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="nb">i32</span><span class="p">{</span>
+    <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">46</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"{x:?}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> a2
+69
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="10504-control-flow-if-and-else">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=3904s" rel="external nofollow noopener" target="_blank">1:05:04</a> Control Flow if and else</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"ok to purchase"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"cannot purchase"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="10740-exercise---3a-control-flow-with-if--else">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=4060s" rel="external nofollow noopener" target="_blank">1:07:40</a> Exercise - 3a Control flow with if &amp; else</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Flow control using if..else</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Displays a message based on the value of a boolean variable</span>
+<span class="c1">// * When the variable is set to true, display "hello"</span>
+<span class="c1">// * When the variable is set to false, display "goodbye"</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a variable set to either true or false</span>
+<span class="c1">// * Use an if..else block to determine which message to display</span>
+<span class="c1">// * Use the println macro to display messages to the terminal</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">var</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="nb">bool</span><span class="p">){</span>
+    <span class="k">if</span> <span class="n">var</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"goodbye"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="11145-exercise---3b-control-flow-with-if--else">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=4305s" rel="external nofollow noopener" target="_blank">1:11:45</a> Exercise - 3b Control flow with if &amp; else</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Flow control using if..else if..else</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Display "&gt;5", "&lt;5", or "=5" based on the value of a variable</span>
+<span class="c1">//   is &gt; 5, &lt; 5, or == 5, respectively</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a variable set to any integer value</span>
+<span class="c1">// * Use an if..else if..else block to determine which message to display</span>
+<span class="c1">// * Use the println macro to display messages to the terminal</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">var</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="nf">print_result</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="nf">print_result</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+    <span class="nf">print_result</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">print_result</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="nb">i32</span><span class="p">){</span>
+    <span class="k">if</span> <span class="n">var</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{var} is greater than 5"</span><span class="p">);</span>
+    <span class="p">}</span> 
+    <span class="k">else</span> <span class="k">if</span> <span class="n">var</span> <span class="o">==</span> <span class="mi">5</span><span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{var} is equal to 5"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{var} is less than 5"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="11700-match">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=4620s" rel="external nofollow noopener" target="_blank">1:17:00</a> Match</h3>
+<ul>
+  <li>Match expressions are similar to if else, and are used to add logic to the program</li>
+  <li>They are exhaustive, meaning all options <strong>must</strong> be accounted for.</li>
+  <li>Within the body of the <code class="language-plaintext highlighter-rouge">match</code> expression, you must list all accountable options.
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">=&gt;</code> denotes the action performed based on the expression matched.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">,</code> conditions are comma separated (match works on expressions <strong>not</strong> statements)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Example with boolean value</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">some_bool</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="k">match</span> <span class="n">some_bool</span> <span class="p">{</span>
+        <span class="k">true</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its true"</span><span class="p">),</span>
+        <span class="k">false</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its false"</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Example with integer</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">_</code> underscore denotes “everything else”
+    <div class="language-rust highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="n">some_int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="k">match</span> <span class="n">some_int</span> <span class="p">{</span>
+      <span class="mi">1</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its 1"</span><span class="p">),</span>
+      <span class="mi">2</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its 2"</span><span class="p">),</span>
+      <span class="mi">3</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its 3"</span><span class="p">),</span>
+      <span class="n">_</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"its something else: {some_int}"</span><span class="p">),</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">match</code> compared to <code class="language-plaintext highlighter-rouge">else..if</code></p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">match</code> will be checked by the compiler
+    <ul>
+      <li>compiler tells you if options are accounted for or not</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">else..if</code> is not checked by the compiler
+    <ul>
+      <li>compiler will not tell you if another option is added but not accounted for</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">match</code> leads to more robust code in these cases</li>
+</ul>
+
+<hr>
+
+<h3 id="12128-making-decisions-with-match">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=4888s" rel="external nofollow noopener" target="_blank">1:21:28</a> Making decisions with match</h3>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">match</code> helps you make decisions in the code, about where it should go next</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">my_name</span> <span class="o">=</span> <span class="s">"Bob"</span><span class="p">;</span>
+    <span class="k">match</span> <span class="n">my_name</span> <span class="p">{</span>
+        <span class="s">"Sam"</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"that is my name"</span><span class="p">),</span>
+        <span class="s">"Jayson"</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"that is his name"</span><span class="p">),</span>
+        <span class="s">"Bob"</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"not my name"</span><span class="p">),</span>
+        <span class="n">_</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"nice to meet you"</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="12442-exercise---4a-basic-match-expressions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=5082s" rel="external nofollow noopener" target="_blank">1:24:42</a> Exercise - 4a Basic Match expressions</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Decision making with match</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Display "it's true" or "it's false" based on the value of a variable</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a variable set to either true or false</span>
+<span class="c1">// * Use a match expression to determine which message to display</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">var</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="nb">bool</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">var</span> <span class="p">{</span>
+        <span class="k">true</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"it's true"</span><span class="p">),</span>
+        <span class="k">false</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"it's false"</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="12849-exercise---4b-basic-match-expressions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=5329s" rel="external nofollow noopener" target="_blank">1:28:49</a> Exercise - 4b Basic Match expressions</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Decision making with match</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Display "one", "two", "three", or "other" based on whether</span>
+<span class="c1">//   the value of a variable is 1, 2, 3, or some other number,</span>
+<span class="c1">//   respectively</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a variable set to any integer</span>
+<span class="c1">// * Use a match expression to determine which message to display</span>
+<span class="c1">// * Use an underscore (_) to match on any value</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">var</span> <span class="p">:</span> <span class="nb">i32</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">eval</span><span class="p">(</span><span class="n">var</span><span class="p">:</span> <span class="nb">i32</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">var</span> <span class="p">{</span>
+        <span class="mi">1</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"one"</span><span class="p">),</span>
+        <span class="mi">2</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"two"</span><span class="p">),</span>
+        <span class="mi">3</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"three"</span><span class="p">),</span>
+        <span class="n">_</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"other"</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="13403-repetition-using-loop">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=5643s" rel="external nofollow noopener" target="_blank">1:34:03</a> Repetition using loop</h3>
+<ul>
+  <li>Good for repeating things</li>
+  <li>Repeats forever until broken out of</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">countdown</span><span class="p">:</span> <span class="nb">i32</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">loop</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{countdown}"</span><span class="p">);</span>
+        <span class="n">countdown</span> <span class="o">=</span> <span class="n">countdown</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="n">countdown</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"GO!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> main
+3
+2
+1
+GO!
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="13854-exercise---repetition-using-loop">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=5934s" rel="external nofollow noopener" target="_blank">1:38:54</a> Exercise - Repetition using loop</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Looping using the loop statement</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Display "1" through "4" in the terminal</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a mutable integer variable</span>
+<span class="c1">// * Use a loop statement</span>
+<span class="c1">// * Print the variable within the loop statement</span>
+<span class="c1">// * Use break to exit the loop</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">i</span><span class="p">:</span> <span class="nb">i32</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">loop</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{i}"</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> a5
+1
+2
+3
+4
+</code></pre></div></div>
+
+<hr>
+
+<!-- ### [1:43:55](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=6235s) Demo - Repetition using while -->
+
+<!-- --- -->
+
+<h3 id="14722-exercise---repetition-using-while">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=6442s" rel="external nofollow noopener" target="_blank">1:47:22</a> Exercise - Repetition using while</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Looping using the while statement</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Counts down from 5 to 1, displays the countdown</span>
+<span class="c1">//   in the terminal, then prints "done!" when complete.</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a mutable integer variable</span>
+<span class="c1">// * Use a while statement</span>
+<span class="c1">// * Print the variable within the while loop</span>
+<span class="c1">// * Do not use break to exit the loop</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span><span class="mi">0</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{i}"</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">-=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"done!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="15210-lecture---enum">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=6730s" rel="external nofollow noopener" target="_blank">1:52:10</a> Lecture - Enum</h3>
+<ul>
+  <li>Working with data in a type safe manner</li>
+  <li>A piece of data that can be one of multiple different possiblities
+    <ul>
+      <li>Each possiblity is called a “variant”</li>
+    </ul>
+  </li>
+  <li>Provides information about your program to the compiler
+    <ul>
+      <li>Results in more robust programmes</li>
+    </ul>
+  </li>
+  <li>Outside of <code class="language-plaintext highlighter-rouge">fn main()</code>
+</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">enum</span> <span class="n">Direction</span> <span class="p">{</span>
+	<span class="n">Up</span><span class="p">,</span>
+	<span class="n">Down</span><span class="p">,</span>
+	<span class="n">Left</span><span class="p">,</span>
+	<span class="n">Right</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">which_way</span><span class="p">(</span><span class="n">go</span><span class="p">:</span> <span class="n">Direction</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">go</span> <span class="p">{</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Up</span> <span class="k">=&gt;</span> <span class="s">"up"</span><span class="p">,</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Down</span> <span class="k">=&gt;</span> <span class="s">"down"</span><span class="p">,</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Left</span> <span class="k">=&gt;</span> <span class="s">"left"</span><span class="p">,</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Right</span> <span class="k">=&gt;</span> <span class="s">"right"</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Direction</code> can be any one of four different variants.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">match</code>, use the syntax <code class="language-plaintext highlighter-rouge">enum::variant =&gt; "action",</code>
+</li>
+</ul>
+
+<hr>
+
+<h3 id="15523-demo---enum">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=6923s" rel="external nofollow noopener" target="_blank">1:55:23</a> Demo - Enum</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="n">Direction</span> <span class="p">{</span>
+    <span class="n">Left</span><span class="p">,</span>
+    <span class="n">Right</span><span class="p">,</span>
+    <span class="n">Up</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">go</span> <span class="o">=</span> <span class="nn">Direction</span><span class="p">::</span><span class="n">Left</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">go</span><span class="p">);</span>
+    <span class="n">go</span> <span class="o">=</span> <span class="nn">Direction</span><span class="p">::</span><span class="n">Right</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">go</span><span class="p">);</span>
+    <span class="n">go</span> <span class="o">=</span> <span class="nn">Direction</span><span class="p">::</span><span class="n">Up</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">go</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">eval</span><span class="p">(</span><span class="n">go</span><span class="p">:</span> <span class="n">Direction</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">go</span> <span class="p">{</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Left</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"we're going left!"</span><span class="p">),</span>
+        <span class="nn">Direction</span><span class="p">::</span><span class="n">Right</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"we're going right!"</span><span class="p">),</span>
+        <span class="n">_</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"we're going another direction!"</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="15910-exercise-enum">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=7150s" rel="external nofollow noopener" target="_blank">1:59:10</a> Exercise Enum</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Working with an enum</span>
+<span class="c1">//</span>
+<span class="c1">// Program requirements:</span>
+<span class="c1">// * Prints the name of a color to the terminal</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use an enum with color names as variants</span>
+<span class="c1">// * Use a function to print the color name</span>
+<span class="c1">// * The function must use the enum as a parameter</span>
+<span class="c1">// * Use a match expression to determine which color</span>
+<span class="c1">//   name to print</span>
+
+<span class="k">enum</span> <span class="n">Color</span><span class="p">{</span>
+    <span class="n">Red</span><span class="p">,</span>
+    <span class="n">Yellow</span><span class="p">,</span>
+    <span class="n">Blue</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">print_color</span><span class="p">(</span><span class="n">color</span><span class="p">:</span> <span class="n">Color</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">color</span><span class="p">{</span>
+        <span class="nn">Color</span><span class="p">::</span><span class="n">Red</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">{</span><span class="s">"The color is blood red"</span><span class="p">},</span>
+        <span class="nn">Color</span><span class="p">::</span><span class="n">Yellow</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">{</span><span class="s">"The color is a golden yellow"</span><span class="p">},</span>
+        <span class="nn">Color</span><span class="p">::</span><span class="n">Blue</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">{</span><span class="s">"The color is a rich blue"</span><span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">color</span> <span class="o">=</span> <span class="nn">Color</span><span class="p">::</span><span class="n">Red</span><span class="p">;</span>
+    <span class="nf">print_color</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="nn">Color</span><span class="p">::</span><span class="n">Yellow</span><span class="p">;</span>
+    <span class="nf">print_color</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="nn">Color</span><span class="p">::</span><span class="n">Blue</span><span class="p">;</span>
+    <span class="nf">print_color</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="20523-lecture---struct">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=7523s" rel="external nofollow noopener" target="_blank">2:05:23</a> Lecture - Struct</h3>
+<ul>
+  <li>Short for structure</li>
+  <li>I guess they’re kind of like objects that you can instantiate?</li>
+  <li>Data type that contains multiple pieces of data
+    <ul>
+      <li>All or nothing - cannot have some pieces of data and not others</li>
+      <li>No part of a structure and not others</li>
+    </ul>
+  </li>
+  <li>Each piece of data is called a ‘field’</li>
+  <li>Makes working with data easier
+    <ul>
+      <li>Similar data can be grouped together</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">struct</code> fields are in its body, and are comma separated, and have types.</li>
+  <li>Fields can be accessed by using <code class="language-plaintext highlighter-rouge">.</code> on an instanced structure</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">CourierBox</span> <span class="p">{</span>
+    <span class="n">weight</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+    <span class="n">depth</span><span class="p">:</span>  <span class="nb">i32</span><span class="p">,</span>
+    <span class="n">width</span><span class="p">:</span>  <span class="nb">i32</span><span class="p">,</span>
+    <span class="n">height</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="k">let</span> <span class="n">new_courier_box</span> <span class="o">=</span> <span class="n">CourierBox</span><span class="p">{</span>
+        <span class="n">weight</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="n">depth</span><span class="p">:</span>  <span class="mi">432</span><span class="p">,</span>
+        <span class="n">width</span><span class="p">:</span>  <span class="mi">291</span><span class="p">,</span> 
+        <span class="n">height</span><span class="p">:</span> <span class="mi">921</span><span class="p">,</span>
+    <span class="p">};</span>
+
+    <span class="k">let</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">new_courier_box</span><span class="py">.weight</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">depth</span> <span class="o">=</span> <span class="n">new_courier_box</span><span class="py">.depth</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">width</span> <span class="o">=</span> <span class="n">new_courier_box</span><span class="py">.width</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">height</span> <span class="o">=</span> <span class="n">new_courier_box</span><span class="py">.height</span><span class="p">;</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"your box is {weight}kg"</span><span class="p">);</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"your box is {depth}mm deep"</span><span class="p">);</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"your box is {width}mm wide"</span><span class="p">);</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"your box is {height}mm tall"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="20813-demo---struct">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=7693s" rel="external nofollow noopener" target="_blank">2:08:13</a> Demo - Struct</h3>
+<ul>
+  <li>When matching <code class="language-plaintext highlighter-rouge">enums</code>, be careful not to try and print them! They are not strings.</li>
+</ul>
+
+<hr>
+
+<h3 id="21107-exercise---struct">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=7867s" rel="external nofollow noopener" target="_blank">2:11:07</a> Exercise - Struct</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Organizing similar data using structs</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print the flavor of a drink and it's fluid ounces</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use an enum to create different flavors of drinks</span>
+<span class="c1">// * Use a struct to store drink flavor and fluid ounce information</span>
+<span class="c1">// * Use a function to print out the drink flavor and ounces</span>
+<span class="c1">// * Use a match expression to print the drink flavor</span>
+
+<span class="k">enum</span> <span class="n">Flavours</span><span class="p">{</span>
+    <span class="n">Apple</span><span class="p">,</span>
+    <span class="n">Orange</span><span class="p">,</span>
+    <span class="n">Lychee</span><span class="p">,</span>
+    <span class="n">Mango</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="n">Drink</span><span class="p">{</span>
+    <span class="n">flavour</span><span class="p">:</span> <span class="n">Flavours</span><span class="p">,</span>
+    <span class="n">volume</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">apple_juice_from_concentrate</span><span class="p">:</span> <span class="n">Drink</span> <span class="o">=</span> <span class="n">Drink</span><span class="p">{</span>
+        <span class="n">flavour</span><span class="p">:</span> <span class="nn">Flavours</span><span class="p">::</span><span class="n">Apple</span><span class="p">,</span>
+        <span class="n">volume</span><span class="p">:</span> <span class="mi">330</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nf">print_flavour</span><span class="p">(</span><span class="n">apple_juice_from_concentrate</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">fresh_orange_juice</span><span class="p">:</span> <span class="n">Drink</span> <span class="o">=</span> <span class="n">Drink</span><span class="p">{</span>
+        <span class="n">flavour</span><span class="p">:</span> <span class="nn">Flavours</span><span class="p">::</span><span class="n">Orange</span><span class="p">,</span>
+        <span class="n">volume</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nf">print_flavour</span><span class="p">(</span><span class="n">fresh_orange_juice</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">lychee_flavoured_water</span><span class="p">:</span> <span class="n">Drink</span> <span class="o">=</span> <span class="n">Drink</span><span class="p">{</span>
+        <span class="n">flavour</span><span class="p">:</span> <span class="nn">Flavours</span><span class="p">::</span><span class="n">Lychee</span><span class="p">,</span>
+        <span class="n">volume</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nf">print_flavour</span><span class="p">(</span><span class="n">lychee_flavoured_water</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">mango_nectar</span><span class="p">:</span> <span class="n">Drink</span> <span class="o">=</span> <span class="n">Drink</span><span class="p">{</span>
+        <span class="n">flavour</span><span class="p">:</span> <span class="nn">Flavours</span><span class="p">::</span><span class="n">Mango</span><span class="p">,</span>
+        <span class="n">volume</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="nf">print_flavour</span><span class="p">(</span><span class="n">mango_nectar</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">print_flavour</span><span class="p">(</span><span class="n">drink</span><span class="p">:</span> <span class="n">Drink</span><span class="p">){</span>
+    <span class="k">match</span> <span class="n">drink</span><span class="py">.flavour</span><span class="p">{</span>
+        <span class="nn">Flavours</span><span class="p">::</span><span class="n">Apple</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"The drink you've chosen has an apple flavour, and contains {}ml of liquid."</span><span class="p">,</span> <span class="n">drink</span><span class="py">.volume</span><span class="p">),</span>
+        <span class="nn">Flavours</span><span class="p">::</span><span class="n">Orange</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"The drink you've chosen has an orange flavour, and contains {}ml of liquid."</span><span class="p">,</span> <span class="n">drink</span><span class="py">.volume</span><span class="p">),</span>
+        <span class="nn">Flavours</span><span class="p">::</span><span class="n">Lychee</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"The drink you've chosen has a lychee flavour, and contains {}ml of liquid."</span><span class="p">,</span> <span class="n">drink</span><span class="py">.volume</span><span class="p">),</span>
+        <span class="nn">Flavours</span><span class="p">::</span><span class="n">Mango</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"The drink you've chosen has a mango flavour, and contains {}ml of liquid."</span><span class="p">,</span> <span class="n">drink</span><span class="py">.volume</span><span class="p">),</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="22038-lecture---tuple">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=8438s" rel="external nofollow noopener" target="_blank">2:20:38</a> Lecture - Tuple</h3>
+<ul>
+  <li>A type of ‘record’
+    <ul>
+      <li>A line of information on a piece of paper</li>
+    </ul>
+  </li>
+  <li>A way to access each piece of data in that record</li>
+  <li>Store data anonymously
+    <ul>
+      <li>No need to name fields like in an enum variant or struct field</li>
+    </ul>
+  </li>
+  <li>Useful to return pairs of data fom functions</li>
+  <li>Can be destructured easily into variables</li>
+  <li>Tuples are surrounded in parentheses and are comma separated.</li>
+  <li>Tuple values are accessed using <code class="language-plaintext highlighter-rouge">.x</code> where <code class="language-plaintext highlighter-rouge">x</code> is the value index starting from 0</li>
+  <li>Alternatively they can be assigned to a new tuple variable and accessed by name:</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/rust/tuples.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<hr>
+
+<h3 id="22412-demo---tuples">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=8652s" rel="external nofollow noopener" target="_blank">2:24:12</a> Demo - Tuples</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Enumeration containing variants based on type of access</span>
+<span class="k">enum</span> <span class="n">Access</span> <span class="p">{</span>
+    <span class="n">Full</span><span class="p">,</span>
+    <span class="n">Partial</span><span class="p">,</span>
+    <span class="n">Guest</span>
+<span class="p">}</span>
+
+<span class="c1">// Structured data containing member information</span>
+<span class="k">struct</span> <span class="n">NewMember</span><span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="n">age</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+    <span class="n">species</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="n">access</span><span class="p">:</span> <span class="n">Access</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1">// Function that creates a vector containing members, defines new members, and prints those members using a for loop that features match and tuple.</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">member_list</span> <span class="o">=</span> <span class="nd">vec!</span><span class="p">[];</span>
+
+    <span class="k">let</span> <span class="n">celine</span> <span class="o">=</span> <span class="n">NewMember</span><span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Celine"</span><span class="p">),</span>
+        <span class="n">age</span><span class="p">:</span> <span class="mi">94</span><span class="p">,</span>
+        <span class="n">species</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Octopus"</span><span class="p">),</span>
+        <span class="n">access</span><span class="p">:</span> <span class="nn">Access</span><span class="p">::</span><span class="n">Full</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">member_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">celine</span><span class="p">);</span>
+
+    <span class="k">let</span> <span class="n">otto</span> <span class="o">=</span> <span class="n">NewMember</span><span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Otto"</span><span class="p">),</span>
+        <span class="n">age</span><span class="p">:</span> <span class="mi">83</span><span class="p">,</span>
+        <span class="n">species</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Octopus"</span><span class="p">),</span>
+        <span class="n">access</span><span class="p">:</span> <span class="nn">Access</span><span class="p">::</span><span class="n">Partial</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">member_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">otto</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">diane</span> <span class="o">=</span> <span class="n">NewMember</span><span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Diane"</span><span class="p">),</span>
+        <span class="n">age</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">species</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Cat"</span><span class="p">),</span>
+        <span class="n">access</span><span class="p">:</span> <span class="nn">Access</span><span class="p">::</span><span class="n">Guest</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">member_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">diane</span><span class="p">);</span>
+
+    <span class="k">let</span> <span class="n">george</span> <span class="o">=</span> <span class="n">NewMember</span><span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"George"</span><span class="p">),</span>
+        <span class="n">age</span><span class="p">:</span> <span class="mi">62</span><span class="p">,</span>
+        <span class="n">species</span><span class="p">:</span> <span class="nn">String</span><span class="p">::</span><span class="nf">from</span><span class="p">(</span><span class="s">"Panda"</span><span class="p">),</span>
+        <span class="n">access</span><span class="p">:</span> <span class="nn">Access</span><span class="p">::</span><span class="n">Guest</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">member_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">george</span><span class="p">);</span>
+
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"List of Socialist Revolutionaries:"</span><span class="p">);</span>
+    
+    <span class="k">for</span> <span class="n">member</span> <span class="k">in</span> <span class="n">member_list</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="n">access_str</span><span class="p">:</span> <span class="o">&amp;</span><span class="nb">str</span><span class="p">;</span>
+        <span class="k">match</span> <span class="n">member</span><span class="py">.access</span> <span class="p">{</span>
+            <span class="nn">Access</span><span class="p">::</span><span class="n">Full</span> <span class="k">=&gt;</span> <span class="n">access_str</span> <span class="o">=</span> <span class="s">"full"</span><span class="p">,</span>
+            <span class="nn">Access</span><span class="p">::</span><span class="n">Partial</span> <span class="k">=&gt;</span> <span class="n">access_str</span> <span class="o">=</span> <span class="s">"partial"</span><span class="p">,</span>
+            <span class="nn">Access</span><span class="p">::</span><span class="n">Guest</span> <span class="k">=&gt;</span> <span class="n">access_str</span> <span class="o">=</span> <span class="s">"guest"</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="k">let</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">access</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">member</span><span class="py">.name</span><span class="p">,</span> <span class="n">member</span><span class="py">.age</span><span class="p">,</span><span class="n">member</span><span class="py">.species</span><span class="p">,</span> <span class="n">access_str</span><span class="p">);</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"Staff member {0} ({1}), is {2}, and has {3} access."</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">access</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> main
+List of Socialist Revolutionaries:
+Staff member Celine <span class="o">(</span>Octopus<span class="o">)</span>, is 94, and has full access.
+Staff member Otto <span class="o">(</span>Octopus<span class="o">)</span>, is 83, and has partial access.
+Staff member Diane <span class="o">(</span>Cat<span class="o">)</span>, is 2, and has guest access.
+Staff member George <span class="o">(</span>Panda<span class="o">)</span>, is 2, and has guest access.
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="23005-exercise---tuples">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=9005s" rel="external nofollow noopener" target="_blank">2:30:05</a> Exercise - Tuples</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Data management using tuples</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print whether the y-value of a cartesian coordinate is</span>
+<span class="c1">//   greater than 5, less than 5, or equal to 5</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a function that returns a tuple</span>
+<span class="c1">// * Destructure the return value into two variables</span>
+<span class="c1">// * Use an if..else if..else block to determine what to print</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">coordinates</span> <span class="o">=</span> <span class="nf">tuplizer</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+    <span class="nf">print_y_value</span><span class="p">(</span><span class="n">coordinates</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">tuplizer</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">i32</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="p">(</span><span class="nb">i32</span><span class="p">,</span> <span class="nb">i32</span><span class="p">){</span>
+    <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">print_y_value</span><span class="p">(</span><span class="n">coordinates</span><span class="p">:</span> <span class="p">(</span><span class="nb">i32</span><span class="p">,</span> <span class="nb">i32</span><span class="p">)){</span>
+    <span class="k">let</span> <span class="p">(</span><span class="n">_x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">coordinates</span><span class="na">.0</span><span class="p">,</span> <span class="n">coordinates</span><span class="na">.1</span><span class="p">);</span>
+    <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"The y coordinate: {y} is greater than 5"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"The y coordinate: {y} is less than 5"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"The y coordinate: {y} is equal to 5"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ cargo run <span class="nt">-q</span> <span class="nt">--bin</span> a9
+The y coordinate: 2 is less than 5
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="23601-lecture---expressions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=9361s" rel="external nofollow noopener" target="_blank">2:36:01</a> Lecture - Expressions</h3>
+<ul>
+  <li>Rust is an expression-based language
+    <ul>
+      <li>Most things are evaluated and return some value</li>
+    </ul>
+  </li>
+  <li>Expression values coalesce to a single point
+    <ul>
+      <li>As a result expressions can be used for nesting logic</li>
+    </ul>
+  </li>
+  <li>Assigning condition outputs to variables:</li>
+  <li>Good way of compressing LoC</li>
+  <li>Best not to use more than two or three nests</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">is_x_5</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">{</span>
+        <span class="k">true</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">false</span>
+    <span class="p">};</span>
+    
+    <span class="k">let</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">is_y_5</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="23953-demo---expressions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=9593s" rel="external nofollow noopener" target="_blank">2:39:53</a> Demo - Expressions</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="n">Access</span> <span class="p">{</span>
+    <span class="n">Admin</span><span class="p">,</span>
+    <span class="n">Manager</span><span class="p">,</span>
+    <span class="n">User</span><span class="p">,</span>
+    <span class="n">Guest</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">access_level</span><span class="p">:</span> <span class="n">Access</span> <span class="o">=</span> <span class="nn">Access</span><span class="p">::</span><span class="n">Guest</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">can_access_file</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="k">match</span> <span class="n">access_level</span> <span class="p">{</span>
+        <span class="nn">Access</span><span class="p">::</span><span class="n">Admin</span> <span class="k">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+        <span class="n">_</span> <span class="k">=&gt;</span> <span class="k">false</span>
+    <span class="p">};</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"can access? {can_access_file}"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="24505-exercise---expressions">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=9905s" rel="external nofollow noopener" target="_blank">2:45:05</a> Exercise - Expressions</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Working with expressions</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print "its big" if a variable is &gt; 100</span>
+<span class="c1">// * Print "its small" if a variable is &lt;= 100</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a boolean variable set to the result of</span>
+<span class="c1">//   an if..else expression to store whether the value</span>
+<span class="c1">//   is &gt; 100 or &lt;= 100</span>
+<span class="c1">// * Use a function to print the messages</span>
+<span class="c1">// * Use a match expression to determine which message</span>
+<span class="c1">//   to print</span>
+
+<span class="k">fn</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">var</span><span class="p">:</span> <span class="nb">i32</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">var_gt_100</span> <span class="o">=</span> <span class="n">var</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="nf">eval</span><span class="p">(</span><span class="n">var_gt_100</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">eval</span> <span class="p">(</span><span class="n">var_gt_100</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">match</span> <span class="n">var_gt_100</span><span class="p">{</span>
+        <span class="k">true</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"{var_gt_100}, it is bigger than 100"</span><span class="p">)</span> <span class="p">,</span>
+        <span class="k">false</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"{var_gt_100}, it is less than or equal to 100"</span><span class="p">)</span> <span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="25218-lecture---memory-intermediate">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=10338s" rel="external nofollow noopener" target="_blank">2:52:18</a> Lecture - Memory Intermediate</h3>
+<ul>
+  <li>Memory is stored using binary
+    <ul>
+      <li>Bits: 0 or 1</li>
+      <li>Smallest data type</li>
+    </ul>
+  </li>
+  <li>Computer optimized for bytes
+    <ul>
+      <li>1 byte == 8 contiguous bits</li>
+    </ul>
+  </li>
+  <li>Memory can be thought of a fully contiguous string of bits</li>
+</ul>
+
+<h4 id="addresses">Addresses</h4>
+<ul>
+  <li>All data in memory has an address
+    <ul>
+      <li>This is used to locate data</li>
+      <li>They are always the same, only the data changes</li>
+    </ul>
+  </li>
+  <li>We don’t usually utilize addresses directly
+    <ul>
+      <li>Variables do most of this hard work</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="offsets">Offsets</h4>
+<ul>
+  <li>Items can be located at an address using an “offset”</li>
+  <li>Offsets begin at 0</li>
+  <li>This represents the number of bytes away from the original addresses
+    <ul>
+      <li>Normally we don’t deal with offsets, we deal with indexes, and the compiler calculates the offset from this.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="row">
+    <div class="col-sm">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp"></source>
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp"></source>
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/rust/addresses.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="a photo" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<hr>
+
+<h3 id="25555-lecture--ownership">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=10555s" rel="external nofollow noopener" target="_blank">2:55:55</a> Lecture- Ownership</h3>
+<ul>
+  <li>Ownership allows performant compilation</li>
+  <li>All programs must track their memory usage
+    <ul>
+      <li>Otherwise you get leaks where new memory keeps getting allocated! 🚰</li>
+    </ul>
+  </li>
+  <li>Rust utilises an ownership model to manage memory
+    <ul>
+      <li>The “owner” of the memory is responsible for clearing up memory when it is no longer needed</li>
+      <li>This automatically occurs at the end of the scope</li>
+      <li>The owner is the function in which the variable is declared.</li>
+    </ul>
+  </li>
+  <li>Memory can either be moved or borrowed.</li>
+</ul>
+
+<h4 id="moving">Moving</h4>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="n">Light</span> <span class="p">{</span>
+    <span class="n">Bright</span><span class="p">,</span>
+    <span class="n">Dull</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">display_light</span><span class="p">(</span><span class="n">light</span><span class="p">:</span> <span class="n">Light</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">match</span> <span class="n">light</span> <span class="p">{</span>
+        <span class="nn">Light</span><span class="p">::</span><span class="n">Bright</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"light!"</span><span class="p">),</span>
+        <span class="nn">Light</span><span class="p">::</span> <span class="n">Dull</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"dull"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">dull</span> <span class="o">=</span> <span class="nn">Light</span><span class="p">::</span><span class="n">Dull</span><span class="p">;</span> <span class="c1">// dull is owned by main()</span>
+    <span class="nf">display_light</span><span class="p">(</span><span class="n">dull</span><span class="p">);</span> <span class="c1">// dull is now owned by display_light()</span>
+    <span class="nf">display_light</span><span class="p">(</span><span class="n">dull</span><span class="p">);</span> <span class="c1">// Error here, as dull's ownership has moved to display_light(), and dull doesn't exist within the scope of this function anymore.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="borrowing">Borrowing</h4>
+<ul>
+  <li>Borrowing or referencing data is denoted by using the ampersand <code class="language-plaintext highlighter-rouge">&amp;</code>, use on parameter type, e.g. (<code class="language-plaintext highlighter-rouge">int: &amp;i32</code>). Remember by “borrowed type”</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">enum</span> <span class="n">Light</span> <span class="p">{</span>
+    <span class="n">Bright</span><span class="p">,</span>
+    <span class="n">Dull</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">display_light</span><span class="p">(</span><span class="n">light</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">Light</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">match</span> <span class="n">light</span> <span class="p">{</span>
+        <span class="nn">Light</span><span class="p">::</span><span class="n">Bright</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"bright!"</span><span class="p">),</span>
+        <span class="nn">Light</span><span class="p">::</span> <span class="n">Dull</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"dull"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">dull</span> <span class="o">=</span> <span class="nn">Light</span><span class="p">::</span><span class="n">Dull</span><span class="p">;</span> <span class="c1">// dull is owned by main()</span>
+    <span class="nf">display_light</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dull</span><span class="p">);</span> <span class="c1">// dull is now borrowed by display_light()</span>
+    <span class="nf">display_light</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dull</span><span class="p">);</span> <span class="c1">// main() still owns and can lend dull a second time.</span>
+<span class="p">}</span> <span class="c1">// dull is unallocated now</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="30216-demo---ownership">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=10936s" rel="external nofollow noopener" target="_blank">3:02:16</a> Demo - Ownership</h3>
+<ul>
+  <li>Cleaning memory is called a <code class="language-plaintext highlighter-rouge">drop</code>
+</li>
+  <li>Happens automatically once the end of the function comes (scope / block)</li>
+</ul>
+
+<hr>
+
+<h3 id="30826-exercise---ownership">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=11306s" rel="external nofollow noopener" target="_blank">3:08:26</a> Exercise - Ownership</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Ownership</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print out the quantity and id number of a grocery item</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a struct for the grocery item</span>
+<span class="c1">// * Use two i32 fields for the quantity and id number</span>
+<span class="c1">// * Create a function to display the quantity, with the struct as a parameter</span>
+<span class="c1">// * Create a function to display the id number, with the struct as a parameter</span>
+
+<span class="k">struct</span> <span class="n">GroceryItem</span> <span class="p">{</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="n">quantity</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+    <span class="n">id_number</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="k">mut</span> <span class="n">shopping_list</span> <span class="o">=</span> <span class="nd">vec!</span><span class="p">[];</span>
+
+    <span class="k">let</span> <span class="n">tofu</span> <span class="o">=</span> <span class="n">GroceryItem</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="s">"Tofu"</span><span class="nf">.to_string</span><span class="p">(),</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="n">id_number</span><span class="p">:</span> <span class="mi">9348912</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">shopping_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">tofu</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">beansprouts</span> <span class="o">=</span> <span class="n">GroceryItem</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="s">"Beansprouts"</span><span class="nf">.to_string</span><span class="p">(),</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+        <span class="n">id_number</span><span class="p">:</span> <span class="mi">2342341</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">shopping_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">beansprouts</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">gochujang</span> <span class="o">=</span> <span class="n">GroceryItem</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="s">"Gochujang"</span><span class="nf">.to_string</span><span class="p">(),</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">id_number</span><span class="p">:</span> <span class="mi">4326116</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">shopping_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">gochujang</span><span class="p">);</span>
+    
+    <span class="k">let</span> <span class="n">peanut_butter</span> <span class="o">=</span> <span class="n">GroceryItem</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="s">"Peanut Butter"</span><span class="nf">.to_string</span><span class="p">(),</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="n">id_number</span><span class="p">:</span> <span class="mi">343946</span><span class="p">,</span>
+    <span class="p">};</span>
+    <span class="n">shopping_list</span><span class="nf">.push</span><span class="p">(</span><span class="n">peanut_butter</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="n">item</span> <span class="k">in</span> <span class="n">shopping_list</span> <span class="p">{</span>
+        <span class="nf">display_information</span><span class="p">(</span><span class="o">&amp;</span><span class="n">item</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">display_information</span><span class="p">(</span><span class="n">grocery_item</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">GroceryItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">name</span> <span class="o">=</span> <span class="n">grocery_item</span><span class="py">.name</span><span class="nf">.to_string</span><span class="p">();</span>
+    <span class="k">let</span> <span class="n">quantity</span> <span class="o">=</span> <span class="n">grocery_item</span><span class="py">.quantity</span><span class="p">;</span>
+    <span class="k">let</span> <span class="n">id_number</span> <span class="o">=</span> <span class="n">grocery_item</span><span class="py">.id_number</span><span class="p">;</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"There are {quantity} of item {id_number} ({name})"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="31326-demo---impl">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=11606s" rel="external nofollow noopener" target="_blank">3:13:26</a> Demo - Impl</h3>
+<ul>
+  <li>Allows you to implement functionality on <code class="language-plaintext highlighter-rouge">enum</code> and <code class="language-plaintext highlighter-rouge">Struct</code>
+</li>
+  <li>More organised code</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">impl</code> keyword followed by the name of the <code class="language-plaintext highlighter-rouge">enum</code> or <code class="language-plaintext highlighter-rouge">Struct</code>
+</li>
+  <li>Place functions inside the scope</li>
+  <li>Access with <code class="language-plaintext highlighter-rouge">Struct::Fn</code>
+</li>
+  <li>You can take a reference to self to make it more ‘organised’ with <code class="language-plaintext highlighter-rouge">&amp;self</code>. Refers to itself as a <code class="language-plaintext highlighter-rouge">Struct</code> or <code class="language-plaintext highlighter-rouge">enum</code>
+</li>
+</ul>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Temperature</span> <span class="p">{</span>
+    <span class="n">degrees_f</span><span class="p">:</span> <span class="nb">f64</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_temp</span> <span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="n">Temperature</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"{:?} degrees F"</span><span class="p">,</span> <span class="n">temp</span><span class="py">.degrees_f</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">hot</span> <span class="o">=</span> <span class="n">Temperature</span> <span class="p">{</span> <span class="n">degrees_f</span><span class="p">:</span> <span class="mf">99.9</span> <span class="p">};</span>
+    <span class="nf">show_temp</span><span class="p">(</span><span class="n">hot</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tidied up</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Temperature</span> <span class="p">{</span>
+    <span class="n">degrees_f</span><span class="p">:</span> <span class="nb">f64</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span> <span class="n">Temperature</span> <span class="p">{</span>
+    <span class="k">fn</span> <span class="nf">show_temp</span> <span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{:?} degrees F"</span><span class="p">,</span> <span class="k">self</span><span class="py">.degrees_f</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">hot</span> <span class="o">=</span> <span class="n">Temperature</span> <span class="p">{</span> <span class="n">degrees_f</span><span class="p">:</span> <span class="mf">99.9</span> <span class="p">};</span>
+    <span class="n">hot</span><span class="nf">.show_temp</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Variables placed within the <code class="language-plaintext highlighter-rouge">impl</code> as Self (type) referring return functions</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Temperature</span> <span class="p">{</span>
+    <span class="n">degrees_f</span><span class="p">:</span> <span class="nb">f64</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span> <span class="n">Temperature</span> <span class="p">{</span>
+    <span class="k">fn</span> <span class="nf">hot</span><span class="p">()</span> <span class="k">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">Self</span> <span class="p">{</span> <span class="n">degrees_f</span><span class="p">:</span> <span class="mf">99.9</span> <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">fn</span> <span class="nf">freezing</span><span class="p">()</span> <span class="k">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">Self</span> <span class="p">{</span> <span class="n">degrees_f</span><span class="p">:</span> <span class="mf">32.0</span> <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">fn</span> <span class="nf">boiling</span><span class="p">()</span> <span class="k">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">Self</span> <span class="p">{</span> <span class="n">degrees_f</span><span class="p">:</span> <span class="mf">212.0</span> <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">fn</span> <span class="nf">show_temp</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"{:?} degrees F"</span><span class="p">,</span> <span class="k">self</span><span class="py">.degrees_f</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nn">Temperature</span><span class="p">::</span><span class="nf">hot</span><span class="p">()</span><span class="nf">.show_temp</span><span class="p">();</span>
+    <span class="nn">Temperature</span><span class="p">::</span><span class="nf">freezing</span><span class="p">()</span><span class="nf">.show_temp</span><span class="p">();</span>
+    <span class="nn">Temperature</span><span class="p">::</span><span class="nf">boiling</span><span class="p">()</span><span class="nf">.show_temp</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="32250-exercise---impl">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=12170s" rel="external nofollow noopener" target="_blank">3:22:50</a> Exercise - Impl</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Implementing functionality with the impl keyword</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print the characteristics of a shipping box</span>
+<span class="c1">// * Must include dimensions, weight, and color</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a struct to encapsulate the box characteristics</span>
+<span class="c1">// * Use an enum for the box color</span>
+<span class="c1">// * Implement functionality on the box struct to create a new box</span>
+<span class="c1">// * Implement functionality on the box struct to print the characteristics</span>
+
+<span class="k">enum</span> <span class="n">BoxColor</span><span class="p">{</span>
+    <span class="n">Blue</span><span class="p">,</span>
+    <span class="n">Yellow</span><span class="p">,</span>
+    <span class="n">Red</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="n">ShippingBox</span> <span class="p">{</span>
+    <span class="n">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="nb">f32</span><span class="p">;</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">weight</span><span class="p">:</span> <span class="nb">f32</span><span class="p">,</span>
+    <span class="n">color</span><span class="p">:</span> <span class="n">BoxColor</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span> <span class="n">ShippingBox</span> <span class="p">{</span>
+    <span class="k">fn</span> <span class="nf">create</span><span class="p">(</span><span class="n">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="nb">f32</span><span class="p">;</span><span class="mi">3</span><span class="p">],</span> <span class="n">weight</span><span class="p">:</span> <span class="nb">f32</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">BoxColor</span><span class="p">)</span> <span class="k">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+        <span class="k">Self</span> <span class="p">{</span> <span class="n">dimensions</span><span class="p">:</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="n">weight</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">color</span> <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">fn</span> <span class="nf">p_box</span><span class="p">(</span><span class="o">&amp;</span><span class="k">self</span><span class="p">){</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"The box has the following characteristics"</span><span class="p">);</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"- It is {}mm wide"</span><span class="p">,</span> <span class="k">self</span><span class="py">.dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"- It is {}mm tall"</span><span class="p">,</span> <span class="k">self</span><span class="py">.dimensions</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"- It is {}mm deep"</span><span class="p">,</span> <span class="k">self</span><span class="py">.dimensions</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"- It is {}kg"</span><span class="p">,</span> <span class="k">self</span><span class="py">.weight</span><span class="p">);</span>
+        <span class="k">let</span> <span class="n">color_str</span> <span class="o">=</span> <span class="k">match</span> <span class="o">&amp;</span><span class="k">self</span><span class="py">.color</span> <span class="p">{</span>
+            <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Blue</span> <span class="k">=&gt;</span> <span class="s">"blue"</span><span class="p">,</span>
+            <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Yellow</span> <span class="k">=&gt;</span> <span class="s">"yellow"</span><span class="p">,</span>
+            <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Red</span> <span class="k">=&gt;</span> <span class="s">"red"</span><span class="p">,</span>
+        <span class="p">};</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"- It is {color_str}"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">heavy_blue_box</span><span class="p">:</span> <span class="n">ShippingBox</span> <span class="o">=</span> <span class="nn">ShippingBox</span><span class="p">::</span><span class="nf">create</span><span class="p">([</span><span class="mf">232.3</span><span class="p">,</span><span class="mf">235.2</span><span class="p">,</span><span class="mf">512.3</span><span class="p">],</span> <span class="mf">65.32</span><span class="p">,</span> <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Blue</span><span class="p">);</span>
+    <span class="n">heavy_blue_box</span><span class="nf">.p_box</span><span class="p">();</span>
+
+    <span class="k">let</span> <span class="n">tiny_yellow_box</span><span class="p">:</span> <span class="n">ShippingBox</span> <span class="o">=</span> <span class="nn">ShippingBox</span><span class="p">::</span><span class="nf">create</span><span class="p">([</span><span class="mf">12.2</span><span class="p">,</span><span class="mf">25.5</span><span class="p">,</span><span class="mf">21.2</span><span class="p">],</span> <span class="mf">2.1</span><span class="p">,</span> <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Yellow</span><span class="p">);</span>
+    <span class="n">tiny_yellow_box</span><span class="nf">.p_box</span><span class="p">();</span>
+    
+    <span class="k">let</span> <span class="n">massive_red_box</span><span class="p">:</span> <span class="n">ShippingBox</span> <span class="o">=</span> <span class="nn">ShippingBox</span><span class="p">::</span><span class="nf">create</span><span class="p">([</span><span class="mf">1267.2</span><span class="p">,</span><span class="mf">2567.5</span><span class="p">,</span><span class="mf">2671.2</span><span class="p">],</span> <span class="mf">223.1</span><span class="p">,</span> <span class="nn">BoxColor</span><span class="p">::</span><span class="n">Red</span><span class="p">);</span>
+    <span class="n">massive_red_box</span><span class="nf">.p_box</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<hr>
+
+<h3 id="33922-lecture---vectors">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=13162s" rel="external nofollow noopener" target="_blank">3:39:22</a> Lecture - Vectors</h3>
+<ul>
+  <li>Vector is a data type that lets you store multiple pieces of data
+    <ul>
+      <li>These must be of the same type.</li>
+    </ul>
+  </li>
+  <li>Used for lists of information</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">let x = vec![data,data2,data3]</code> for known</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">let mut y = Vec::new();</code> for mutable, or</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">z: vec![type;amount],</code> in Struct fields</li>
+  <li>You can add, remove and traverse these entries.
+    <ul>
+      <li>add via the <code class="language-plaintext highlighter-rouge">.push(&lt;item to add&gt;)</code> function</li>
+      <li>remove via the <code class="language-plaintext highlighter-rouge">.pop(&lt;index to remove&gt;)</code> function</li>
+      <li>return length via the <code class="language-plaintext highlighter-rouge">.len()</code> function</li>
+      <li>access via the slice notation <code class="language-plaintext highlighter-rouge">&lt;vector name&gt;[&lt;index&gt;]</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3 id="34419-demo---vectors">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=13459s" rel="external nofollow noopener" target="_blank">3:44:19</a> Demo - Vectors</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">Test</span> <span class="p">{</span>
+    <span class="n">score</span><span class="p">:</span> <span class="nb">i32</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span> <span class="p">(){</span>
+     <span class="k">let</span> <span class="n">my_scores</span><span class="p">:</span> <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Test</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nd">vec!</span><span class="p">[</span>
+        <span class="n">Test</span> <span class="p">{</span> <span class="n">score</span><span class="p">:</span> <span class="mi">89</span> <span class="p">},</span>
+        <span class="n">Test</span> <span class="p">{</span> <span class="n">score</span><span class="p">:</span> <span class="mi">65</span> <span class="p">},</span>
+        <span class="n">Test</span> <span class="p">{</span> <span class="n">score</span><span class="p">:</span> <span class="mi">74</span> <span class="p">},</span>
+        <span class="n">Test</span> <span class="p">{</span> <span class="n">score</span><span class="p">:</span> <span class="mi">12</span> <span class="p">},</span>
+        <span class="n">Test</span> <span class="p">{</span> <span class="n">score</span><span class="p">:</span> <span class="mi">32</span> <span class="p">},</span>
+     <span class="p">];</span>
+
+     <span class="k">for</span> <span class="n">test</span> <span class="k">in</span> <span class="n">my_scores</span> <span class="p">{</span>
+        <span class="nd">println!</span><span class="p">(</span><span class="s">"score = {:?}"</span><span class="p">,</span> <span class="n">test</span><span class="py">.score</span><span class="p">);</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="34651-exercise---vectors">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=13611s" rel="external nofollow noopener" target="_blank">3:46:51</a> Exercise - Vectors</h3>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Topic: Vectors</span>
+<span class="c1">//</span>
+<span class="c1">// Requirements:</span>
+<span class="c1">// * Print 10, 20, "thirty", and 40 in a loop</span>
+<span class="c1">// * Print the total number of elements in a vector</span>
+<span class="c1">//</span>
+<span class="c1">// Notes:</span>
+<span class="c1">// * Use a vector to store 4 numbers</span>
+<span class="c1">// * Iterate through the vector using a for..in loop</span>
+<span class="c1">// * Determine whether to print the number or print "thirty" inside the loop</span>
+<span class="c1">// * Use the .len() function to print the number of elements in a vector</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="n">numbers</span><span class="p">:</span> <span class="nb">Vec</span><span class="o">&lt;</span><span class="nb">i32</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nd">vec!</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">];</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="o">&amp;</span><span class="n">numbers</span> <span class="p">{</span>
+        <span class="k">match</span> <span class="n">i</span> <span class="p">{</span>
+            <span class="mi">30</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"thirty"</span><span class="p">),</span>
+            <span class="n">_</span> <span class="k">=&gt;</span> <span class="nd">println!</span><span class="p">(</span><span class="s">"{:?}"</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nd">println!</span><span class="p">(</span><span class="s">"The vector </span><span class="se">\"</span><span class="s">numbers</span><span class="se">\"</span><span class="s"> contains {:?} items"</span><span class="p">,</span> <span class="n">numbers</span><span class="nf">.len</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr>
+
+<h3 id="35341-lecture---string">
+<a href="https://www.youtube.com/watch?v=lzKeecy4OmQ&amp;t=14021s" rel="external nofollow noopener" target="_blank">3:53:41</a> Lecture - String</h3>
+<ul>
+  <li>Strings are used to store text information
+    <ul>
+      <li>Two common types are:</li>
+      <li>String - <strong>owned</strong>
+</li>
+      <li>&amp;str - <strong>borrowed</strong> String slice</li>
+    </ul>
+  </li>
+  <li>Using String data in a struct requires an owned String</li>
+  <li>Use &amp;str when passing to a function</li>
+</ul>
+
+<p>Example - Pass to function</p>
+
+<div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<hr>
+
+<!-- ### [3:57:44](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=14264s) Demo - Strings -->
+
+<!-- --- -->
+
+<!-- ### [4:02:15](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=14535s) Exercise - Strings -->
+
+<!-- --- -->
+
+<!-- ### [4:09:40](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=14980s) Demo - Derive -->
+
+<!-- --- -->
+
+<!-- ### [4:15:51](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=15351s) Lecture - Type Annotations -->
+
+<!-- --- -->
+
+<!-- ### [4:20:02](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=15602s) Lecture - Enum Revisited -->
+
+<!-- --- -->
+
+<!-- ### [4:24:04](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=15844s) Demo Advanced Match -->
+
+<!-- --- -->
+
+<!-- ### [4:32:04](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=16324s) Exercise Advanced Match -->
+
+<!-- --- -->
+
+<!-- ### [4:42:49](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=16969s) Lecture - Option -->
+
+<!-- --- -->
+
+<!-- ### [4:49:18](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=17358s) Demo - Option -->
+
+<!-- --- -->
+
+<!-- ### [4:53:48](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=17628s) Activity Option -->
+
+<!-- --- -->
+
+<!-- ### [4:58:52](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=17932s) Demo Documentation -->
+
+<!-- --- -->
+
+<!-- ### [5:01:20](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=18080s) Demo - Standard Library -->
+
+<!-- --- -->
+
+<!-- ### [5:04:56](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=18296s) Exercise - Utilizing SLF -->
+
+<!-- --- -->
+
+<!-- ### [5:08:45](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=18525s) Lecture - Result -->
+
+<!-- --- -->
+
+<!-- ### [5:13:28](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=18808s) Demo - Result -->
+
+<!-- --- -->
+
+<!-- ### [5:27:47](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=19667s) Exercise - Result -->
+
+<!-- --- -->
+
+<!-- ### [5:34:29](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=20069s) Exercise - Result and ? Operator -->
+
+<!-- --- -->
+
+<!-- ### [5:42:23](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=20543s) Lecture - Hashmap -->
+
+<!-- --- -->
+
+<!-- ### [5:46:46](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=20806s) Demo - Hashmap -->
+
+<!-- --- -->
+
+<!-- ### [5:52:21](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=21141s) Exercise - Hashmap -->
+
+<!-- --- -->
+
+<!-- ### [6:00:49](https://www.youtube.com/watch?v=lzKeecy4OmQ&t=21649s) Where to keep learning & how to get hired as a Rust Developer -->
+
+  </article>
+</div>
+
+    </div>
+
+    <!-- Footer -->    <footer class="sticky-bottom mt-5">
+      <div class="container">
+        © Copyright 2024 Sam  Bilbow, PhD. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a>, and hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+Last updated: February 10, 2024.
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+  <script defer src="/assets/js/copy_code.js" type="text/javascript"></script>
+
+    
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
