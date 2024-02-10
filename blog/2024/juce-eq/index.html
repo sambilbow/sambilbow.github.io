@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>🎛️ making a simple EQ with juce on linux | Sam  Bilbow, PhD</title>    
+    <title>making a simple EQ with juce on linux | Sam  Bilbow, PhD</title>    
     <meta name="author" content="Sam  Bilbow, PhD">
     <meta name="description" content="exploring plugin design with a well established framework">
     <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
@@ -152,25 +152,103 @@
     JUCE Tutorial from <a href="https://www.youtube.com/matkatmusic" rel="external nofollow noopener" target="_blank">MadKat Music</a>        
 </div>
 
-<h1 id="summary">Summary</h1>
-<p>While not the most glamorous audio application to start off with, I think an EQ will be a great start to learning the JUCE framework! I’ll be following the above tutorial as a springboard for learning and implementing the JUCE framework <a href="/projects/juce">here</a></p>
+<h2 id="summary">Summary</h2>
+<p>While not the most glamorous audio application to start off with, I think an EQ will be a great start to learning the JUCE framework! I’ll be following the above tutorial as a springboard for learning and implementing the JUCE framework <a href="/projects/juce">here</a>.</p>
 
-<h1 id="tutorial-parts">Tutorial Parts</h1>
-<h2 id="part-1---intro">Part 1 - Intro</h2>
+<h2 id="part-1---introduction">Part 1 - Introduction</h2>
+<ul>
+  <li>Goal is to create a simple EQ, with a high and low cut (with gain and CF), and a central peak (with gain, Q, and freq)</li>
+  <li>JUCE is a framework built on C++ for developing audio applications and plugins.</li>
+  <li>Projucer is used to create projects and automatically populating the classes for you.</li>
+</ul>
+
 <h2 id="part-2---setting-up-the-project">Part 2 - Setting up the Project</h2>
+<ul>
+  <li>Follow steps <a href="/blog/2024/juce-linux">here</a>
+</li>
+  <li>Audio plugins in JUCE have two main <code class="language-plaintext highlighter-rouge">.cpp / .h</code> pairs, <code class="language-plaintext highlighter-rouge">PluginProcessor</code> and <code class="language-plaintext highlighter-rouge">PluginEditor</code>.
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">PluginProcessor</code> handles our DSP and audio manipulation code</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">PluginEditor</code> handles the GUI</li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="part-3---creating-audio-parameters">Part 3 - Creating Audio Parameters</h2>
+<p><code class="language-plaintext highlighter-rouge">PluginProcessor.h</code> holds our class, which is pre-populated with a few class methods, the most important being</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">void prepareToPlay (double sampleRate, int samplesPerBlock) override;</code> <a href="https://docs.juce.com/master/classAudioProcessor.html#a44b74778247a35a669a3a994d814389e" rel="external nofollow noopener" target="_blank">docs page</a>
+</li>
+  <li><code class="language-plaintext highlighter-rouge">void processBlock (juce::AudioBuffer&lt;float&gt;&amp;, juce::MidiBuffer&amp;) override;</code></li>
+</ul>
+
+<p>We’re going to start by creating what is called a <code class="language-plaintext highlighter-rouge">AudioProcessorValueStateTree</code>, in our <code class="language-plaintext highlighter-rouge">PluginProcessor</code> header file, a class that will hold all of the values for our plugin parameters. However, one of the values it requires in its construction is a parameter layout, which we must first declare, and then define in our <code class="language-plaintext highlighter-rouge">PluginProccessor.cpp</code> file (snippet shown below).</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// PluginProcessor.cpp</span>
+    <span class="c1">// Define the create layout function declared in the header file which returns a parameter layout</span>
+    <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="n">SimpleEQAudioProcessor</span><span class="o">::</span><span class="n">createParameterLayout</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Create new parameter layout object</span>
+        <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="n">layout</span><span class="p">;</span>
+
+        <span class="c1">// Add parameters to layout object</span>
+        <span class="c1">// New parameter for low cut frequency</span>
+        <span class="n">layout</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">juce</span><span class="o">::</span><span class="n">AudioParameterFloat</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s">"LowCut Freq"</span><span class="p">,</span> 
+            <span class="s">"LowCut Freq"</span><span class="p">,</span> 
+            <span class="n">juce</span><span class="o">::</span><span class="n">NormalisableRange</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">20.0</span><span class="n">f</span><span class="p">,</span> <span class="mf">20000.0</span><span class="n">f</span><span class="p">,</span><span class="mf">1.0</span><span class="n">f</span><span class="p">,</span><span class="mf">1.0</span><span class="n">f</span><span class="p">),</span>
+            <span class="mf">20.0</span><span class="n">f</span>
+            <span class="p">));</span>
+        
+        <span class="c1">// Create a string array to hold the dB/Oct choices</span>
+        <span class="n">juce</span><span class="o">::</span><span class="n">StringArray</span> <span class="n">slopeArray</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Create new string</span>
+            <span class="n">juce</span><span class="o">::</span><span class="n">String</span> <span class="n">str</span><span class="p">;</span>
+            <span class="c1">// Store iterated value e.g. 12 + 0*12 = 12..24..36..48</span>
+            <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">12</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">12</span><span class="p">);</span>
+            <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="s">" dB/Oct"</span><span class="p">;</span>
+            <span class="n">slopeArray</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// New parameter for Low Cut Slope</span>
+        <span class="n">layout</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">juce</span><span class="o">::</span><span class="n">AudioParameterChoice</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s">"LowCut Slope"</span><span class="p">,</span> <span class="c1">// parameter ID</span>
+            <span class="s">"LowCut Slope"</span><span class="p">,</span> <span class="c1">// parmeter name</span>
+            <span class="n">slopeArray</span><span class="p">,</span> <span class="c1">// array of choices</span>
+            <span class="mi">0</span> <span class="c1">// default index</span>
+        <span class="p">));</span>
+        
+        <span class="c1">// return the layout</span>
+        <span class="k">return</span> <span class="n">layout</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// PluginProcessor.h (in public)</span>
+    <span class="c1">// Declare parameter layout function that returns a parmateter layout</span>
+    <span class="k">static</span> <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="nf">createParameterLayout</span><span class="p">();</span>
+
+    <span class="c1">// Declare ValueStateTree object that holds all of the parameter values</span>
+    <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span> <span class="n">apvts</span> <span class="p">{</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="s">"Parameters"</span><span class="p">,</span> <span class="n">createParameterLayout</span><span class="p">()};</span>
+</code></pre></div></div>
+<p>Creating the parameter layout meant using some JUCE types, notably the <code class="language-plaintext highlighter-rouge">juce::AudioProcessorValueTreeState::ParameterLayout</code>, <code class="language-plaintext highlighter-rouge">juce::AudioParameterFloat&gt;</code>, and <code class="language-plaintext highlighter-rouge">juce::AudioParameterChoice</code> types. For the latter two, they were initialised as unique pointers using <code class="language-plaintext highlighter-rouge">std::make_unique&lt;datatype&gt;()</code> keyword. Additionally, <code class="language-plaintext highlighter-rouge">juce::NormalisableRange&lt;float&gt;()</code>was encountered, which is a in-built JUCE function that provides a range of values, it requires min, max, interval, and slew (linearity).</p>
+
 <h2 id="part-4---setting-up-the-dsp">Part 4 - Setting up the DSP</h2>
-<h2 id="part-5---setting-up-audio-plugin-host">Part 5 - Setting up Audio Plugin Host</h2>
-<h2 id="part-6---connecting-the-peak-params">Part 6 - Connecting the Peak Params</h2>
-<h2 id="part-7---connecting-the-lowcut-params">Part 7 - Connecting the LowCut Params</h2>
-<h2 id="part-8---refactoring-the-dsp">Part 8 - Refactoring the DSP</h2>
-<h2 id="part-9---adding-sliders-to-gui">Part 9 - Adding Sliders to GUI</h2>
-<h2 id="part-10---draw-the-response-curve">Part 10 - Draw the Response Curve</h2>
-<h2 id="part-11---build-the-response-curve-component">Part 11 - Build the Response Curve Component</h2>
-<h2 id="part-12---customize-slider-visuals">Part 12 - Customize Slider Visuals</h2>
-<h2 id="part-13----response-curve-grid">Part 13 -  Response Curve Grid</h2>
-<h2 id="part-14---spectrum-analyzer">Part 14 - Spectrum Analyzer</h2>
-<h2 id="part-15---bypass-buttons">Part 15 - Bypass Buttons</h2>
+<!-- ## Part 5 - Setting up Audio Plugin Host 
+## Part 6 - Connecting the Peak Params 
+## Part 7 - Connecting the LowCut Params 
+## Part 8 - Refactoring the DSP
+## Part 9 - Adding Sliders to GUI
+## Part 10 - Draw the Response Curve
+## Part 11 - Build the Response Curve Component
+## Part 12 - Customize Slider Visuals
+## Part 13 -  Response Curve Grid
+## Part 14 - Spectrum Analyzer
+## Part 15 - Bypass Buttons -->
 
   </article>
 </div>

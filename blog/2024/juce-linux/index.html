@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>music | Sam  Bilbow, PhD</title>    
+    <title>🐧 juce development on linux | Sam  Bilbow, PhD</title>    
     <meta name="author" content="Sam  Bilbow, PhD">
-    <meta name="description" content="Sam Bilbow - XR and Audio Software Developer based in Norwich.
-">
+    <meta name="description" content="exploring juce tutorials">
     <meta name="keywords" content="academic-website, portfolio-website, augmented-reality, music-technology">
 
 
@@ -37,7 +36,7 @@
     <link rel="shortcut icon" href="/assets/img/favicon.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://sambilbow.com/blog/tag/music/">
+    <link rel="canonical" href="https://sambilbow.com/blog/2024/juce-linux/">
     
     <!-- Dark Mode -->
     
@@ -120,35 +119,62 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title"> <i class="fas fa-hashtag fa-sm"></i> music </h1>
-    <p class="post-description"> an archive of posts with this tag </p>
+    <h1 class="post-title">🐧 juce development on linux</h1>
+    <p class="post-meta">February 10, 2024</p>
+    <p class="post-tags">
+      <a href="/blog/2024"> <i class="fas fa-calendar fa-sm"></i> 2024 </a>
+        ·  
+        <a href="/blog/tag/music">
+          <i class="fas fa-hashtag fa-sm"></i> music</a>  
+          <a href="/blog/tag/opensource">
+          <i class="fas fa-hashtag fa-sm"></i> opensource</a>  
+          <a href="/blog/tag/software">
+          <i class="fas fa-hashtag fa-sm"></i> software</a>  
+          
+
+    </p>
   </header>
 
-  <article>
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
-        
-        <tr>
-          <th scope="row">Feb 10, 2024</th>
-          <td>
-              <a class="post-link" href="/blog/2024/juce-eq/">🎛️ making a simple EQ with juce on linux</a>
-          </td>
-        </tr>
-      
-        <tr>
-          <th scope="row">Feb 10, 2024</th>
-          <td>
-              <a class="post-link" href="/blog/2024/juce-linux/">🐧 juce development on linux</a>
-          </td>
-        </tr>
-      
-      </table>
-    </div>
-  </article>
+  <article class="post-content">
+    <h2 id="arch-linux--endeavouros-install">Arch Linux / EndeavourOS install</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">yay -S juce</code> This seems to install JUCE to <code class="language-plaintext highlighter-rouge">/usr/share/docs/juce</code> and <code class="language-plaintext highlighter-rouge">/usr/share/juce</code>, comes with Projucer, but doesn’t include examples. Therefore lets manually install them:</li>
+  <li><code class="language-plaintext highlighter-rouge">git clone https://github.com/juce-framework/juce &lt;install_directory&gt;</code></li>
+  <li>Change to the directory, and build the examples using:</li>
+  <li><code class="language-plaintext highlighter-rouge">cmake . -B cmake-build -DJUCE_BUILD_EXAMPLES=ON -DJUCE_BUILD_EXTRAS=ON</code></li>
+  <li>
+<code class="language-plaintext highlighter-rouge">cmake --build cmake-build --target DemoRunner</code> (DemoRunner seems to crash straight away on my PC – lets ignore this for the moment 😂)</li>
+  <li>[Optional] Point Projucer to the repository files rather than the defaults <code class="language-plaintext highlighter-rouge">File &gt; Global Paths</code> then choose where you’ve installed the JUCE git repository</li>
+  <li>Projucer should now see the examples</li>
+</ul>
 
+<h2 id="setting-up-a-juce-projects">Setting up a JUCE Projects</h2>
+<ul>
+  <li>Use Projucer to create a new audio plugin</li>
+  <li>Open the project in VS Code</li>
+  <li>Import <code class="language-plaintext highlighter-rouge">.vscode</code> and <code class="language-plaintext highlighter-rouge">.gitignore</code>, stored <a href="https://github.com/sambilbow/juce-template-vscode" rel="external nofollow noopener" target="_blank">here</a>
+    <ul>
+      <li>Inspiration comes from  <a href="https://github.com/catman85/juce-plugin-template-vscode" rel="external nofollow noopener" target="_blank">catman85/juce-plugin-template-vscode</a>
+</li>
+      <li>Additionally <a href="https://github.com/icq4ever/emptyJUCEProject" rel="external nofollow noopener" target="_blank">icq4ever/emptyJUCEProject</a>
+</li>
+      <li>Maybe look at WolfSound’s <a href="https://github.com/JanWilczek/audio-plugin-template" rel="external nofollow noopener" target="_blank">setup</a> one day.</li>
+    </ul>
+  </li>
+  <li>Make debug using <code class="language-plaintext highlighter-rouge">ctrl-shift-b</code> and select <code class="language-plaintext highlighter-rouge">Build debug</code>
+</li>
+  <li>Run the standalone by <code class="language-plaintext highlighter-rouge">cd Builds/LinuxMakeile/builds</code> and <code class="language-plaintext highlighter-rouge">./&lt;project_name&gt;</code>
+</li>
+</ul>
+
+
+  </article>
 </div>
 
     </div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-10T11:07:59+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - XR and Audio Software Developer based in Norwich.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-10T14:20:46+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - XR and Audio Software Developer based in Norwich.
 </subtitle><entry><title type="html">🎛️ making a simple EQ with juce on linux</title><link href="https://sambilbow.com/blog/2024/juce-eq/" rel="alternate" type="text/html" title="🎛️ making a simple EQ with juce on linux" /><published>2024-02-10T09:00:00+00:00</published><updated>2024-02-10T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/juce-eq</id><content type="html" xml:base="https://sambilbow.com/blog/2024/juce-eq/"><![CDATA[<div class="row">
     <div class="col-sm mt-1 mt-md-0" align="center">
         <div class="embed-responsive embed-responsive-16by9">
@@ -10,25 +10,122 @@
     JUCE Tutorial from <a href="https://www.youtube.com/matkatmusic">MadKat Music</a>        
 </div>
 
-<h1 id="summary">Summary</h1>
-<p>While not the most glamorous audio application to start off with, I think an EQ will be a great start to learning the JUCE framework! I’ll be following the above tutorial as a springboard for learning and implementing the JUCE framework <a href="/projects/juce">here</a></p>
+<h2 id="summary">Summary</h2>
+<p>While not the most glamorous audio application to start off with, I think an EQ will be a great start to learning the JUCE framework! I’ll be following the above tutorial as a springboard for learning and implementing the JUCE framework <a href="/projects/juce">here</a>.</p>
 
-<h1 id="tutorial-parts">Tutorial Parts</h1>
-<h2 id="part-1---intro">Part 1 - Intro</h2>
+<h2 id="part-1---introduction">Part 1 - Introduction</h2>
+<ul>
+  <li>Goal is to create a simple EQ, with a high and low cut (with gain and CF), and a central peak (with gain, Q, and freq)</li>
+  <li>JUCE is a framework built on C++ for developing audio applications and plugins.</li>
+  <li>Projucer is used to create projects and automatically populating the classes for you.</li>
+</ul>
+
 <h2 id="part-2---setting-up-the-project">Part 2 - Setting up the Project</h2>
+<ul>
+  <li>Follow steps <a href="/blog/2024/juce-linux">here</a></li>
+  <li>Audio plugins in JUCE have two main <code class="language-plaintext highlighter-rouge">.cpp / .h</code> pairs, <code class="language-plaintext highlighter-rouge">PluginProcessor</code> and <code class="language-plaintext highlighter-rouge">PluginEditor</code>.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PluginProcessor</code> handles our DSP and audio manipulation code</li>
+      <li><code class="language-plaintext highlighter-rouge">PluginEditor</code> handles the GUI</li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="part-3---creating-audio-parameters">Part 3 - Creating Audio Parameters</h2>
+<p><code class="language-plaintext highlighter-rouge">PluginProcessor.h</code> holds our class, which is pre-populated with a few class methods, the most important being</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">void prepareToPlay (double sampleRate, int samplesPerBlock) override;</code> <a href="https://docs.juce.com/master/classAudioProcessor.html#a44b74778247a35a669a3a994d814389e">docs page</a></li>
+  <li><code class="language-plaintext highlighter-rouge">void processBlock (juce::AudioBuffer&lt;float&gt;&amp;, juce::MidiBuffer&amp;) override;</code></li>
+</ul>
+
+<p>We’re going to start by creating what is called a <code class="language-plaintext highlighter-rouge">AudioProcessorValueStateTree</code>, in our <code class="language-plaintext highlighter-rouge">PluginProcessor</code> header file, a class that will hold all of the values for our plugin parameters. However, one of the values it requires in its construction is a parameter layout, which we must first declare, and then define in our <code class="language-plaintext highlighter-rouge">PluginProccessor.cpp</code> file (snippet shown below).</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// PluginProcessor.cpp</span>
+    <span class="c1">// Define the create layout function declared in the header file which returns a parameter layout</span>
+    <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="n">SimpleEQAudioProcessor</span><span class="o">::</span><span class="n">createParameterLayout</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Create new parameter layout object</span>
+        <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="n">layout</span><span class="p">;</span>
+
+        <span class="c1">// Add parameters to layout object</span>
+        <span class="c1">// New parameter for low cut frequency</span>
+        <span class="n">layout</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">juce</span><span class="o">::</span><span class="n">AudioParameterFloat</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s">"LowCut Freq"</span><span class="p">,</span> 
+            <span class="s">"LowCut Freq"</span><span class="p">,</span> 
+            <span class="n">juce</span><span class="o">::</span><span class="n">NormalisableRange</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mf">20.0</span><span class="n">f</span><span class="p">,</span> <span class="mf">20000.0</span><span class="n">f</span><span class="p">,</span><span class="mf">1.0</span><span class="n">f</span><span class="p">,</span><span class="mf">1.0</span><span class="n">f</span><span class="p">),</span>
+            <span class="mf">20.0</span><span class="n">f</span>
+            <span class="p">));</span>
+        
+        <span class="c1">// Create a string array to hold the dB/Oct choices</span>
+        <span class="n">juce</span><span class="o">::</span><span class="n">StringArray</span> <span class="n">slopeArray</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Create new string</span>
+            <span class="n">juce</span><span class="o">::</span><span class="n">String</span> <span class="n">str</span><span class="p">;</span>
+            <span class="c1">// Store iterated value e.g. 12 + 0*12 = 12..24..36..48</span>
+            <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="mi">12</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">12</span><span class="p">);</span>
+            <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="s">" dB/Oct"</span><span class="p">;</span>
+            <span class="n">slopeArray</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// New parameter for Low Cut Slope</span>
+        <span class="n">layout</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">juce</span><span class="o">::</span><span class="n">AudioParameterChoice</span><span class="o">&gt;</span><span class="p">(</span>
+            <span class="s">"LowCut Slope"</span><span class="p">,</span> <span class="c1">// parameter ID</span>
+            <span class="s">"LowCut Slope"</span><span class="p">,</span> <span class="c1">// parmeter name</span>
+            <span class="n">slopeArray</span><span class="p">,</span> <span class="c1">// array of choices</span>
+            <span class="mi">0</span> <span class="c1">// default index</span>
+        <span class="p">));</span>
+        
+        <span class="c1">// return the layout</span>
+        <span class="k">return</span> <span class="n">layout</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1">// PluginProcessor.h (in public)</span>
+    <span class="c1">// Declare parameter layout function that returns a parmateter layout</span>
+    <span class="k">static</span> <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span><span class="o">::</span><span class="n">ParameterLayout</span> <span class="nf">createParameterLayout</span><span class="p">();</span>
+
+    <span class="c1">// Declare ValueStateTree object that holds all of the parameter values</span>
+    <span class="n">juce</span><span class="o">::</span><span class="n">AudioProcessorValueTreeState</span> <span class="n">apvts</span> <span class="p">{</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="nb">nullptr</span><span class="p">,</span> <span class="s">"Parameters"</span><span class="p">,</span> <span class="n">createParameterLayout</span><span class="p">()};</span>
+</code></pre></div></div>
+<p>Creating the parameter layout meant using some JUCE types, notably the <code class="language-plaintext highlighter-rouge">juce::AudioProcessorValueTreeState::ParameterLayout</code>, <code class="language-plaintext highlighter-rouge">juce::AudioParameterFloat&gt;</code>, and <code class="language-plaintext highlighter-rouge">juce::AudioParameterChoice</code> types. For the latter two, they were initialised as unique pointers using <code class="language-plaintext highlighter-rouge">std::make_unique&lt;datatype&gt;()</code> keyword. Additionally, <code class="language-plaintext highlighter-rouge">juce::NormalisableRange&lt;float&gt;()</code>was encountered, which is a in-built JUCE function that provides a range of values, it requires min, max, interval, and slew (linearity).</p>
+
 <h2 id="part-4---setting-up-the-dsp">Part 4 - Setting up the DSP</h2>
-<h2 id="part-5---setting-up-audio-plugin-host">Part 5 - Setting up Audio Plugin Host</h2>
-<h2 id="part-6---connecting-the-peak-params">Part 6 - Connecting the Peak Params</h2>
-<h2 id="part-7---connecting-the-lowcut-params">Part 7 - Connecting the LowCut Params</h2>
-<h2 id="part-8---refactoring-the-dsp">Part 8 - Refactoring the DSP</h2>
-<h2 id="part-9---adding-sliders-to-gui">Part 9 - Adding Sliders to GUI</h2>
-<h2 id="part-10---draw-the-response-curve">Part 10 - Draw the Response Curve</h2>
-<h2 id="part-11---build-the-response-curve-component">Part 11 - Build the Response Curve Component</h2>
-<h2 id="part-12---customize-slider-visuals">Part 12 - Customize Slider Visuals</h2>
-<h2 id="part-13----response-curve-grid">Part 13 -  Response Curve Grid</h2>
-<h2 id="part-14---spectrum-analyzer">Part 14 - Spectrum Analyzer</h2>
-<h2 id="part-15---bypass-buttons">Part 15 - Bypass Buttons</h2>]]></content><author><name></name></author><category term="music" /><category term="opensource" /><category term="software" /><summary type="html"><![CDATA[exploring plugin design with a well established framework]]></summary></entry><entry><title type="html">🥽 i got a lynx-r1!</title><link href="https://sambilbow.com/blog/2024/lynxr1/" rel="alternate" type="text/html" title="🥽 i got a lynx-r1!" /><published>2024-01-31T09:00:00+00:00</published><updated>2024-01-31T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/lynxr1</id><content type="html" xml:base="https://sambilbow.com/blog/2024/lynxr1/"><![CDATA[<div class="row">
+<!-- ## Part 5 - Setting up Audio Plugin Host 
+## Part 6 - Connecting the Peak Params 
+## Part 7 - Connecting the LowCut Params 
+## Part 8 - Refactoring the DSP
+## Part 9 - Adding Sliders to GUI
+## Part 10 - Draw the Response Curve
+## Part 11 - Build the Response Curve Component
+## Part 12 - Customize Slider Visuals
+## Part 13 -  Response Curve Grid
+## Part 14 - Spectrum Analyzer
+## Part 15 - Bypass Buttons -->]]></content><author><name></name></author><category term="music" /><category term="opensource" /><category term="software" /><summary type="html"><![CDATA[exploring plugin design with a well established framework]]></summary></entry><entry><title type="html">🐧 juce development on linux</title><link href="https://sambilbow.com/blog/2024/juce-linux/" rel="alternate" type="text/html" title="🐧 juce development on linux" /><published>2024-02-10T08:00:00+00:00</published><updated>2024-02-10T08:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/juce-linux</id><content type="html" xml:base="https://sambilbow.com/blog/2024/juce-linux/"><![CDATA[<h2 id="arch-linux--endeavouros-install">Arch Linux / EndeavourOS install</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">yay -S juce</code> This seems to install JUCE to <code class="language-plaintext highlighter-rouge">/usr/share/docs/juce</code> and <code class="language-plaintext highlighter-rouge">/usr/share/juce</code>, comes with Projucer, but doesn’t include examples. Therefore lets manually install them:</li>
+  <li><code class="language-plaintext highlighter-rouge">git clone https://github.com/juce-framework/juce &lt;install_directory&gt;</code></li>
+  <li>Change to the directory, and build the examples using:</li>
+  <li><code class="language-plaintext highlighter-rouge">cmake . -B cmake-build -DJUCE_BUILD_EXAMPLES=ON -DJUCE_BUILD_EXTRAS=ON</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cmake --build cmake-build --target DemoRunner</code> (DemoRunner seems to crash straight away on my PC – lets ignore this for the moment 😂)</li>
+  <li>[Optional] Point Projucer to the repository files rather than the defaults <code class="language-plaintext highlighter-rouge">File &gt; Global Paths</code> then choose where you’ve installed the JUCE git repository</li>
+  <li>Projucer should now see the examples</li>
+</ul>
+
+<h2 id="setting-up-a-juce-projects">Setting up a JUCE Projects</h2>
+<ul>
+  <li>Use Projucer to create a new audio plugin</li>
+  <li>Open the project in VS Code</li>
+  <li>Import <code class="language-plaintext highlighter-rouge">.vscode</code> and <code class="language-plaintext highlighter-rouge">.gitignore</code>, stored <a href="https://github.com/sambilbow/juce-template-vscode">here</a>
+    <ul>
+      <li>Inspiration comes from  <a href="https://github.com/catman85/juce-plugin-template-vscode">catman85/juce-plugin-template-vscode</a></li>
+      <li>Additionally <a href="https://github.com/icq4ever/emptyJUCEProject">icq4ever/emptyJUCEProject</a></li>
+      <li>Maybe look at WolfSound’s <a href="https://github.com/JanWilczek/audio-plugin-template">setup</a> one day.</li>
+    </ul>
+  </li>
+  <li>Make debug using <code class="language-plaintext highlighter-rouge">ctrl-shift-b</code> and select <code class="language-plaintext highlighter-rouge">Build debug</code></li>
+  <li>Run the standalone by <code class="language-plaintext highlighter-rouge">cd Builds/LinuxMakeile/builds</code> and <code class="language-plaintext highlighter-rouge">./&lt;project_name&gt;</code></li>
+</ul>]]></content><author><name></name></author><category term="music" /><category term="opensource" /><category term="software" /><summary type="html"><![CDATA[exploring juce tutorials]]></summary></entry><entry><title type="html">🥽 i got a lynx-r1!</title><link href="https://sambilbow.com/blog/2024/lynxr1/" rel="alternate" type="text/html" title="🥽 i got a lynx-r1!" /><published>2024-01-31T09:00:00+00:00</published><updated>2024-01-31T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/lynxr1</id><content type="html" xml:base="https://sambilbow.com/blog/2024/lynxr1/"><![CDATA[<div class="row">
     <div class="col-sm mt-2 mt-md-0">
         <figure>
   
@@ -2168,132 +2265,4 @@ BoboVR Deck X with Bollé Welding Headgear Deck X in the background on an origin
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>]]></content><author><name></name></author><category term="open-source" /><category term="website" /><summary type="html"><![CDATA[supercharged blog learning]]></summary></entry><entry><title type="html">🌔 open astro tech</title><link href="https://sambilbow.com/blog/2023/open-astro-tech/" rel="alternate" type="text/html" title="🌔 open astro tech" /><published>2023-04-17T12:00:00+00:00</published><updated>2023-04-17T12:00:00+00:00</updated><id>https://sambilbow.com/blog/2023/open-astro-tech</id><content type="html" xml:base="https://sambilbow.com/blog/2023/open-astro-tech/"><![CDATA[<p><a href="https://openastrotech.com/">OpenAstroTech</a> looks like a really fun project to get involved with! They are a community of open-source makers, trying to make astrophotography cheaper and more accessible. There are three projects, shown below. Watch this space 😃 👾 🚀</p>
-
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-  <video autoplay="" muted="" playsinline="" class="img-fluid rounded z-depth-1" width="auto" height="auto">
-  <source src="https://openastrotech.com/wp-content/uploads/revslider/Hero-Website-42/OAT_Assembly.mp4" type="video/mp4" />&lt;/source&gt;
-</video>
-
-<script>
-  function reverse(video) {
-    if (video.currentTime == 0) {
-      video.playbackRate = 1;
-    }
-    if (video.currentTime == video.duration) {
-      video.currentTime = video.duration;
-      video.playbackRate = -1;
-    }
-  }
-</script>
-
-
-  
-</figure>
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://camo.githubusercontent.com/764767653f6faf61163d80047c5ba87caabe81d0ba7f92245b68e5dc04134857/68747470733a2f2f692e696d6775722e636f6d2f35454e757548762e6a7067" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="The Open Astro Tracker with the Open Astro Guider" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1626519451/Openastrotech/OAM_crop/OAM_crop.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="The Open Astro Mount" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    The OpenAstroTracker (OAT) with OpenAstroGuider (OAG), and OpenAstroMount (OAM)
-</div>
-<div class="row">
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199481/Openastrotech/Veil_500mm_dunkler_3674b531/Veil_500mm_dunkler-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Veil Nebula taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/f_auto,q_auto/v1614199094/Openastrotech/50193493973_558caaa48e_o-794x1080_crop_1422b4677/50193493973_558caaa48e_o-794x1080_crop_1422b4677.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="M32 taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-    <div class="col-sm mt-1 mt-md-0" align="center">
-        <figure>
-  
-    <picture>
-      
-      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
-      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
-      
-
-      <!-- Fallback to the original file -->
-      <img src="https://res.cloudinary.com/djoyuj7kf/images/w_1024,h_576,c_scale/f_auto,q_auto/v1614199485/Openastrotech/Cygnus-Wall_50-scaled_383eced5/Cygnus-Wall_50-1024x576.jpg?_i=AA" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Cygnus taken using the OAT" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-    </picture>
-  
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Some tracked shots using the OpenAstroTech devices with a DSLR camera. Veil Nebula 😍, M32, and Cygnus 
-</div>]]></content><author><name></name></author><category term="open-source" /><category term="physics" /><category term="astronomy" /><summary type="html"><![CDATA[open-source astrophotography]]></summary></entry></feed>
+<p>I might add some snippets here and there to future blog posts about Jekyll, but for the moment, I hope this shows the power of ChatGPT in playing with libraries and languages you’re not to familiar with.</p>]]></content><author><name></name></author><category term="open-source" /><category term="website" /><summary type="html"><![CDATA[supercharged blog learning]]></summary></entry></feed>
