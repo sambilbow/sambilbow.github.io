@@ -45,7 +45,8 @@ JUCE provides a great framework for building audio applications, and could be th
 JUCE + Blender + Godot + Monado = Open Source XR Fun on the Lynx-R1? 
 
 ## Development blogs
-- [🎛️ making a simple EQ with juce (2024-02-10)](/blog/2024/juce-eq)
+- [🐧 juce development on linux](/blog/2024/juce-linux)
+- [🎛️ making a simple EQ with juce](/blog/2024/juce-eq)
 
 <!-- youtube videos embed -->
 <!-- {: .text-center}
