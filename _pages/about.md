@@ -27,7 +27,14 @@ I am an XR and Audio software developer based in Norwich. My current research is
 <h2><a href="/projects/" style="color: inherit;">ongoing projects 🎉</a></h2>
   <div class="table-responsive">
     <table class="table table-sm table-borderless">          
-      <tbody id="blog-post-home"><tr>
+      <tbody id="blog-post-home">
+      <tr>
+        <th scope="row">Feb 2024</th>
+        <td>
+          <a href="projects/juce/">🎛️ C++ with JUCE</a>
+        </td>
+      </tr>
+      <tr>
         <th scope="row">Feb 2023</th>
         <td>
           <a href="projects/comuse/">🖌️ coMuse</a>

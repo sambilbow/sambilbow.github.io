@@ -28,3 +28,6 @@ img: /assets/img/juce-tutorial-0.png
 - Make debug using `ctrl-shift-b` and select `Build debug`
 - Run the standalone by `cd Builds/LinuxMakeile/builds` and `./<project_name>`
 
+## Create a basic Audio/MIDI plugin, Part 1: Setting up
+Source Tutorial: [@ JUCE Docs](https://docs.juce.com/master/tutorial_create_projucer_basic_plugin.html)
+
