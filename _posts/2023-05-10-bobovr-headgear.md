@@ -4,7 +4,7 @@ title: 🎩 moving to bobovr headgear
 seo_title: 🎩 moving to bobovr headgear
 date: 2023-05-10 00:00:00-0000
 description: a comfier headgear solution
-tags: open-source augmented-reality
+tags: open-source augmented-reality hardware
 related_posts: false
 img: /assets/img/bobovr-1.png
 ---

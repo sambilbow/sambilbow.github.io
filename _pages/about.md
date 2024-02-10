@@ -24,7 +24,7 @@ I am an XR and Audio software developer based in Norwich. My current research is
 
 <!-- Table of recent projects -->
 <div class="news">
-<h2><a href="/projects/" style="color: inherit;">ongoing research 🎉</a></h2>
+<h2><a href="/projects/" style="color: inherit;">ongoing projects 🎉</a></h2>
   <div class="table-responsive">
     <table class="table table-sm table-borderless">          
       <tbody id="blog-post-home"><tr>
