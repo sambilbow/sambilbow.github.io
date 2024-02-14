@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-10T14:27:18+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - XR and Audio Software Developer based in Norwich.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://sambilbow.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sambilbow.com/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-14T11:47:46+00:00</updated><id>https://sambilbow.com/feed.xml</id><title type="html">blank</title><subtitle>Sam Bilbow - XR and Audio Software Developer based in Norwich.
 </subtitle><entry><title type="html">🎛️ making a simple EQ with juce</title><link href="https://sambilbow.com/blog/2024/juce-eq/" rel="alternate" type="text/html" title="🎛️ making a simple EQ with juce" /><published>2024-02-10T09:00:00+00:00</published><updated>2024-02-10T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/juce-eq</id><content type="html" xml:base="https://sambilbow.com/blog/2024/juce-eq/"><![CDATA[<div class="row">
     <div class="col-sm mt-1 mt-md-0" align="center">
         <div class="embed-responsive embed-responsive-16by9">
@@ -124,11 +124,154 @@
     </ul>
   </li>
   <li>Make debug using <code class="language-plaintext highlighter-rouge">ctrl-shift-b</code> and select <code class="language-plaintext highlighter-rouge">Build debug</code></li>
-  <li>Run the standalone by <code class="language-plaintext highlighter-rouge">cd Builds/LinuxMakeile/builds</code> and <code class="language-plaintext highlighter-rouge">./&lt;project_name&gt;</code></li>
+  <li>Run the standalone by <code class="language-plaintext highlighter-rouge">./Builds/LinuxMakeile/builds/&lt;project_name&gt;</code></li>
 </ul>
 
-<h2 id="create-a-basic-audiomidi-plugin-part-1-setting-up">Create a basic Audio/MIDI plugin, Part 1: Setting up</h2>
-<p>Source Tutorial: <a href="https://docs.juce.com/master/tutorial_create_projucer_basic_plugin.html">@ JUCE Docs</a></p>]]></content><author><name></name></author><category term="music" /><category term="opensource" /><category term="software" /><summary type="html"><![CDATA[exploring juce tutorials]]></summary></entry><entry><title type="html">🥽 i got a lynx-r1!</title><link href="https://sambilbow.com/blog/2024/lynxr1/" rel="alternate" type="text/html" title="🥽 i got a lynx-r1!" /><published>2024-01-31T09:00:00+00:00</published><updated>2024-01-31T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/lynxr1</id><content type="html" xml:base="https://sambilbow.com/blog/2024/lynxr1/"><![CDATA[<div class="row">
+<hr />
+
+<h2 id="tutorial-create-a-basic-audiomidi-plugin-part-1-setting-up">Tutorial: Create a basic Audio/MIDI plugin, Part 1: Setting up</h2>
+<p>Source Tutorial: <a href="https://docs.juce.com/master/tutorial_create_projucer_basic_plugin.html">@ JUCE Docs</a></p>
+
+<ul>
+  <li>Create a new Projucer project</li>
+  <li>Select Plugin MIDI Input/Output under project settings</li>
+  <li>Save</li>
+  <li>Open it in VSCode</li>
+  <li>Follow previous section for setting up the VSC project</li>
+  <li>Build the debug target (<code class="language-plaintext highlighter-rouge">ctrl-shift-b</code>)</li>
+</ul>
+
+<h3 id="audiopluginhost">AudioPluginHost</h3>
+<ul>
+  <li>Install dependcies (<code class="language-plaintext highlighter-rouge">yay -S ladspa</code>)</li>
+  <li>Navigate the build directory <code class="language-plaintext highlighter-rouge">cd ~/JUCE/extras/AudioPluginHost/Builds/LinuxMakeFile</code></li>
+  <li>Make the app <code class="language-plaintext highlighter-rouge">make</code></li>
+  <li>Run the app <code class="language-plaintext highlighter-rouge">./build/AudioPluginHost</code></li>
+  <li>Double click and sort out Audio Input (it probably looks like a mess thanks to PA/PW etc.)</li>
+</ul>
+
+<p>Add our Demo Plugin</p>
+<ul>
+  <li>Options &gt; Edit List &gt; Options &gt; Scan for New &gt; OK</li>
+  <li>Create New &gt; yourcompany &gt; JUCE Demo Plugin</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/juce-projucer.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/juce-audiopluginhost.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<hr />
+
+<h2 id="tutorial-create-a-basic-audiomidi-plugin-part-2-coding-your-plug-in">Tutorial: Create a basic Audio/MIDI plugin, Part 2: Coding your plug-in</h2>
+<p>Source Tutorial: <a href="https://docs.juce.com/master/tutorial_code_basic_plugin.html">@ JUCE Docs</a></p>
+
+<h3 id="processor-and-editor">Processor and Editor</h3>
+<p><em>“A newly-created audio plug-in project contains two main classes: PluginProcessor handles the audio and MIDI IO and processing logic, and PluginEditor handles any on screen GUI controls or visualisations.”</em></p>
+
+<p><em>“When passing information between these two it is best to consider the processor as the parent of the editor. There is only one plug-in processor whereas you can create multiple editors. Each editor has a reference to the processor such that it can edit or access information and parameters from the audio thread. It is the editor’s job to set and get information on this processor thread and not the other way around.”</em></p>
+
+<p><em>“The main function we will be editing in the PluginProcessor.cpp file is the processBlock() method. This receives and produces both audio and MIDI data to the plug-in output. The main function we will change in the PluginEditor.cpp file is the constructor, where we initialise and set up our window and GUI objects, and also the paint() method where we can draw extra controls and custom GUI components.”</em></p>
+
+<h3 id="midi-volume-slider">MIDI volume slider</h3>
+<ul>
+  <li>Following the tutorial created a Midi Volume slider in the PluginEditor file.</li>
+  <li>We then added the functionality for this to have an effect on DSP/MIDI processes by adding a listener, and iterating through the midiMessages list and replacing messages with our volume slider value.</li>
+  <li>We can see the changes by listening to the plugins MIDI out and passing it messages from a MIDI controller.</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/juce-tutorialplugin.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/juce-buffer.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+    <div class="col-sm mt-2 mt-md-0">
+        <figure>
+  
+    <picture>
+      
+      <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="-480.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="-800.webp" />
+      <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="-1400.webp" />
+      
+
+      <!-- Fallback to the original file -->
+      <img src="/assets/img/juce-midiplugin.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+    </picture>
+  
+</figure>
+
+    </div>
+</div>
+
+<hr />]]></content><author><name></name></author><category term="music" /><category term="opensource" /><category term="software" /><summary type="html"><![CDATA[exploring juce tutorials]]></summary></entry><entry><title type="html">🥽 i got a lynx-r1!</title><link href="https://sambilbow.com/blog/2024/lynxr1/" rel="alternate" type="text/html" title="🥽 i got a lynx-r1!" /><published>2024-01-31T09:00:00+00:00</published><updated>2024-01-31T09:00:00+00:00</updated><id>https://sambilbow.com/blog/2024/lynxr1</id><content type="html" xml:base="https://sambilbow.com/blog/2024/lynxr1/"><![CDATA[<div class="row">
     <div class="col-sm mt-2 mt-md-0">
         <figure>
   
